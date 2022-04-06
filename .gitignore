@@ -101,10 +101,14 @@ iOSInjectionProject/
 
 ### Xcode Patch ###
 *.xcodeproj/*
-!*.xcodeproj/project.pbxproj
-!*.xcodeproj/xcshareddata/
-!*.xcworkspace/contents.xcworkspacedata
+*.xcodeproj/project.pbxproj
+*.xcodeproj/xcshareddata/
+*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift,firebase
+
+
+# User Settings
+.DS_Store
