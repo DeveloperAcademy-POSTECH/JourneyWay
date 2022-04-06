@@ -13,6 +13,13 @@
 		DDD4187227FD26E400A46DD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD4187127FD26E400A46DD2 /* Preview Assets.xcassets */; };
 		DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187327FD26E400A46DD2 /* Persistence.swift */; };
 		DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */; };
+		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
+		EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119D27FD28EB004414A8 /* ModelTemp.swift */; };
+		EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */; };
+		EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */; };
+		EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A327FD2907004414A8 /* StatisticTemp.swift */; };
+		EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A527FD290C004414A8 /* TrackingTemp.swift */; };
+		EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A727FD2910004414A8 /* HomeTemp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		DDD4187127FD26E400A46DD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DDD4187327FD26E400A46DD2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DDD4187627FD26E400A46DD2 /* WheelchairRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WheelchairRun.xcdatamodel; sourceTree = "<group>"; };
+		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
+		EF77119D27FD28EB004414A8 /* ModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTemp.swift; sourceTree = "<group>"; };
+		EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTemp.swift; sourceTree = "<group>"; };
+		EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorTemp.swift; sourceTree = "<group>"; };
+		EF7711A327FD2907004414A8 /* StatisticTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTemp.swift; sourceTree = "<group>"; };
+		EF7711A527FD290C004414A8 /* TrackingTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTemp.swift; sourceTree = "<group>"; };
+		EF7711A727FD2910004414A8 /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +69,8 @@
 		DDD4186927FD26E200A46DD2 /* WheelchairRun */ = {
 			isa = PBXGroup;
 			children = (
-				DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */,
-				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
-				DDD4186E27FD26E400A46DD2 /* Assets.xcassets */,
-				DDD4187327FD26E400A46DD2 /* Persistence.swift */,
-				DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */,
+				EF77119127FD2891004414A8 /* Resource */,
+				EF77119027FD288D004414A8 /* Source */,
 				DDD4187027FD26E400A46DD2 /* Preview Content */,
 			);
 			path = WheelchairRun;
@@ -71,6 +82,112 @@
 				DDD4187127FD26E400A46DD2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF77119027FD288D004414A8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */,
+				EF77119927FD28CB004414A8 /* Global */,
+				EF77119827FD28C1004414A8 /* Model */,
+				EF77119727FD28BA004414A8 /* ViewModel */,
+				EF77119227FD2896004414A8 /* View */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		EF77119127FD2891004414A8 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DDD4186E27FD26E400A46DD2 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EF77119227FD2896004414A8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF77119627FD28AC004414A8 /* VoiceMentor */,
+				EF77119527FD28A4004414A8 /* Statistic */,
+				EF77119427FD289E004414A8 /* Tracking */,
+				EF77119327FD289B004414A8 /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF77119327FD289B004414A8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
+				EF7711A727FD2910004414A8 /* HomeTemp.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EF77119427FD289E004414A8 /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+				EF7711A527FD290C004414A8 /* TrackingTemp.swift */,
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		EF77119527FD28A4004414A8 /* Statistic */ = {
+			isa = PBXGroup;
+			children = (
+				EF7711A327FD2907004414A8 /* StatisticTemp.swift */,
+			);
+			path = Statistic;
+			sourceTree = "<group>";
+		};
+		EF77119627FD28AC004414A8 /* VoiceMentor */ = {
+			isa = PBXGroup;
+			children = (
+				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
+			);
+			path = VoiceMentor;
+			sourceTree = "<group>";
+		};
+		EF77119727FD28BA004414A8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EF77119827FD28C1004414A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF77119D27FD28EB004414A8 /* ModelTemp.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF77119927FD28CB004414A8 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				EF7711A927FD294A004414A8 /* Core Data */,
+				EF77119A27FD28D0004414A8 /* Extension */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		EF77119A27FD28D0004414A8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF77119B27FD28D8004414A8 /* UIView+Woody.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EF7711A927FD294A004414A8 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				DDD4187327FD26E400A46DD2 /* Persistence.swift */,
+				DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +260,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */,
+				EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */,
+				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
+				EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */,
+				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
+				EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
+				EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
