@@ -213,5 +213,6 @@ struct EmergencyButton: View {
 struct TrackingView_Previews: PreviewProvider {
     static var previews: some View {
         TrackingView()
+            .previewInterfaceOrientation(.portrait)
     }
 }
