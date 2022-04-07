@@ -8,10 +8,21 @@
 import SwiftUI
 
 struct HomeView: View {
-    
     var body: some View {
+        VStack {
+            Hello_Profile()
+            pushNgo()
+            Today_Record()
+            with_voice_mentor()
+        }
+    }
+}
+
+struct Hello_Profile: View {
+    var body: some View {
+        
+        Spacer()
         VStack(alignment: .center, spacing: 10) {
-            Spacer()
             HStack(alignment: .top, spacing: 10){
                 Spacer()
                 VStack(alignment: .leading, spacing: 5){
@@ -36,14 +47,27 @@ struct HomeView: View {
                 }
                 Spacer()
             }
-            Spacer()
-            Button(action: {print("pushNgo_Button")}){
-                Image("pushNgo_img")
-                    .resizable()
-                    .frame(width: 220, height: 220)
-            }
-            Spacer()
-            
+        }
+    }
+}
+
+
+struct pushNgo: View {
+    var body: some View {
+        Spacer()
+        Button(action: {print("pushNgo_Button")}){
+            Image("pushNgo_img")
+                .resizable()
+                .frame(width: 220, height: 220)
+        }
+        Spacer()
+    }
+}
+
+
+struct Today_Record: View {
+    var body: some View {
+        VStack(alignment: .center, spacing: 10) {
             
             Button {
                 print("Today_Record_Button")
@@ -113,17 +137,23 @@ struct HomeView: View {
                     
                 }
             }
-            
-            Spacer()
-            Button(action: {print("with_voice_mentor_Button")}){
-                Image("with_voice_mentor_img")
-                    .resizable()
-                    .frame(width: 230, height: 50)
-            }
         }
-        .padding(.vertical, 20)
     }
 }
+
+struct with_voice_mentor: View {
+    var body: some View {
+        Spacer()
+        Button(action: {print("with_voice_mentor_Button")}){
+            Image("with_voice_mentor_img")
+                .resizable()
+                .frame(width: 230, height: 50)
+        }
+        .padding(.vertical, 20)
+        
+    }
+}
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
