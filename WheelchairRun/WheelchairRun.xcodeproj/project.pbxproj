@@ -19,7 +19,9 @@
 		EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */; };
 		EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A327FD2907004414A8 /* StatisticTemp.swift */; };
 		EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A527FD290C004414A8 /* TrackingTemp.swift */; };
-		EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A727FD2910004414A8 /* HomeTemp.swift */; };
+		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
+		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
+		EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +38,9 @@
 		EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorTemp.swift; sourceTree = "<group>"; };
 		EF7711A327FD2907004414A8 /* StatisticTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTemp.swift; sourceTree = "<group>"; };
 		EF7711A527FD290C004414A8 /* TrackingTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTemp.swift; sourceTree = "<group>"; };
-		EF7711A727FD2910004414A8 /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
+		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
+		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
+		EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
-				EF7711A727FD2910004414A8 /* HomeTemp.swift */,
+				EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
+				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
 			);
 			path = VoiceMentor;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				EF77119B27FD28D8004414A8 /* UIView+Woody.swift */,
+				EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -264,10 +270,12 @@
 				EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */,
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
 				EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */,
+				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
 				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
-				EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */,
+				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
+				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
 				EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */,
