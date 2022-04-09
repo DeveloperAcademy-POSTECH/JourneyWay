@@ -37,6 +37,10 @@ struct VoiceMentor<TimeType> where TimeType: BinaryInteger {
         stats.distance += distanceUpdate
     }
     
+    mutating func markComplete() {
+        isComplete = true
+    }
+    
     struct ExerciseStats {
         var pushCount: Float = 0.0
         var distance: Float = 0.0
@@ -45,12 +49,13 @@ struct VoiceMentor<TimeType> where TimeType: BinaryInteger {
 
 class DummyProgram: ObservableObject {
     @Published private var model = VoiceMentor<Int>(mentorName: "Voice Walking Test",
-                                                    playbackTime: 420)
+                                                    playbackTime: 10)
     var mentorName: String { model.mentorName }
     var playbackTime: Int { model.playbackTime }
     var isRunning: Bool { model.isRunning }
     var stats: VoiceMentor<Int>.ExerciseStats { model.stats }
     var progressValue: Int { model.progressValue }
+    var isComplete: Bool { model.isComplete }
     
     func toggleRunningStatus() {
         model.toggleRunningStatus()
@@ -63,6 +68,10 @@ class DummyProgram: ObservableObject {
     func updateStats_test() {
         model.updateStats_test(pushUpdate: 0.6, distanceUpdate: 0.0012)
     }
+    
+    func markComplete() {
+        model.markComplete()
+    }
 }
 
 
@@ -71,19 +80,81 @@ struct TrackingView: View {
     
     var body: some View {
         VStack {
-            EmergencyButton()
-                .padding()
-            Text(program.mentorName)
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .lineLimit(1)
-                .padding()
-            ProgramProgressBar(program: program)
-                .padding(30)
-            StatsInfoModule(program: program)
-            Spacer(minLength: 50)
-            PlayBackController(program: program)
+            if !program.isComplete {
+                EmergencyButton()
+                    .padding()
+                Text(program.mentorName)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .lineLimit(1)
+                    .padding()
+                ProgramProgressBar(program: program)
+                    .padding(30)
+                StatsInfoModule(program: program)
+                Spacer(minLength: 50)
+                PlayBackController(program: program)
+            } else {
+                CompleteView(program: program)
+            }
         }
+    }
+}
+
+struct CompleteView: View {
+    @ObservedObject var program: DummyProgram
+    
+    var body: some View {
+        Spacer()
+        Text("Congratulation!")
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .padding()
+        Spacer()
+        VStack {
+            VStack {
+                Text("Time")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text(VoiceMentor<Int>.secondsToTime(time: program.progressValue))
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .padding(.vertical, 5)
+            VStack {
+                Text("Distance")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text(String(format: "%.2f", program.stats.distance))
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .padding(.vertical, 5)
+            VStack {
+                Text("Push")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Text(String(format: "%d", Int(program.stats.pushCount)))
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            .padding(.vertical, 5)
+        }
+        .padding(50)
+        Spacer()
+        Button {
+            // Back To Home
+        } label: {
+            Circle()
+                .foregroundColor(.black)
+                .overlay(Image(systemName: "checkmark")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 25)
+                    .foregroundColor(.green))
+                .frame(width: 100, height: 100)
+                .padding()
+        }
+        Spacer()
     }
 }
 
@@ -116,14 +187,14 @@ struct ProgramProgressBar: View {
                             }
                         } else {
                             timer.upstream.connect().cancel()
-                            // navigate to complete page
+                            program.markComplete()
                         }
                     }
                 Text("/ \(VoiceMentor.secondsToTime(time: program.playbackTime))")
                     .fontWeight(.bold)
             }
         }
-        .frame(width: 300, height: 300)
+        .frame(maxWidth: 300, maxHeight: 300)
     }
 }
 
@@ -176,16 +247,16 @@ struct PlayBackController: View {
             Button {
                 program.toggleRunningStatus()
             } label: {
-                    Circle()
-                        .foregroundColor(.black)
-                        .overlay(Image(systemName: program.isRunning ? "pause.fill" : "chevron.right")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 25)
-                            .foregroundColor(.green))
-                        .frame(width: 100, height: 100)
-                        .padding()
-                        .animation(.linear, value: program.isRunning)
+                Circle()
+                    .foregroundColor(.black)
+                    .overlay(Image(systemName: program.isRunning ? "pause.fill" : "chevron.right")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25)
+                        .foregroundColor(.green))
+                    .frame(width: 100, height: 100)
+                    .padding()
+                    .animation(.linear, value: program.isRunning)
             }
         }
     }
