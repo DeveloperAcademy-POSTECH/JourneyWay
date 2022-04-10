@@ -19,7 +19,7 @@ struct RecentVoiceMentorList: View {
                 .padding(.leading, 24)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 12) {
-                    Color.clear.padding(2)
+                    Color.clear.padding(0)
                     ForEach(1..<100) { _ in
                         VoiceMentorCardView()
                     }

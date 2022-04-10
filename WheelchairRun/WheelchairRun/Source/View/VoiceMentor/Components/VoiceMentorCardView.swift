@@ -40,12 +40,12 @@ struct VoiceMentorCardView: View {
                 }
             }
             .cornerRadius(15)
-            .shadow(radius: 10)
+            .shadow(radius: 3)
             .frame(width: 164, height: 124, alignment: .center)
     }
 }
 
-struct VoiceMentorView_Previews: PreviewProvider {
+struct VoiceMentorCardView_Previews: PreviewProvider {
     static var previews: some View {
         VoiceMentorCardView()
     }
