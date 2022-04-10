@@ -13,7 +13,6 @@ struct VoiceMentor {
     var isRunning: Bool = true
     var progressValue: Double = 0.0
     var stats: ExerciseStats = ExerciseStats()
-    var isComplete: Bool = false
     
     static func secondsToTime(time: TimeInterval) -> String {
         let timeVal = Int(time)
@@ -36,10 +35,6 @@ struct VoiceMentor {
     mutating func updateStats_test(pushUpdate: Float, distanceUpdate: Float) {
         stats.pushCount += pushUpdate
         stats.distance += distanceUpdate
-    }
-    
-    mutating func markComplete() {
-        isComplete = true
     }
     
     struct ExerciseStats {

@@ -10,12 +10,14 @@ import Foundation
 class DummyProgramViewModel: ObservableObject {
     @Published private var model = VoiceMentor(mentorName: "Voice Walking Test",
                                                     playbackTime: 10)
+    @Published var isComplete: Bool = false
+    
     var mentorName: String { model.mentorName }
     var playbackTime: TimeInterval { model.playbackTime }
     var isRunning: Bool { model.isRunning }
     var stats: VoiceMentor.ExerciseStats { model.stats }
     var progressValue: Double { model.progressValue }
-    var isComplete: Bool { model.isComplete }
+    
     
     func toggleRunningStatus() {
         model.toggleRunningStatus()
@@ -30,6 +32,6 @@ class DummyProgramViewModel: ObservableObject {
     }
     
     func markComplete() {
-        model.markComplete()
+        isComplete = true
     }
 }
