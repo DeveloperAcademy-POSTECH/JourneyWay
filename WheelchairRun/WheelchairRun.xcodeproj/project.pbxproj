@@ -13,6 +13,8 @@
 		DDD4187227FD26E400A46DD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD4187127FD26E400A46DD2 /* Preview Assets.xcassets */; };
 		DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187327FD26E400A46DD2 /* Persistence.swift */; };
 		DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */; };
+		DDD4187E27FD367F00A46DD2 /* VoiceCardPopupView..swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187D27FD367F00A46DD2 /* VoiceCardPopupView..swift */; };
+		DDD431932802A64400119835 /* VoiceCardPopupView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD431922802A64400119835 /* VoiceCardPopupView2.swift */; };
 		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
 		EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119D27FD28EB004414A8 /* ModelTemp.swift */; };
 		EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */; };
@@ -30,6 +32,8 @@
 		DDD4187127FD26E400A46DD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DDD4187327FD26E400A46DD2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DDD4187627FD26E400A46DD2 /* WheelchairRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WheelchairRun.xcdatamodel; sourceTree = "<group>"; };
+		DDD4187D27FD367F00A46DD2 /* VoiceCardPopupView..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupView..swift; sourceTree = "<group>"; };
+		DDD431922802A64400119835 /* VoiceCardPopupView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupView2.swift; sourceTree = "<group>"; };
 		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
 		EF77119D27FD28EB004414A8 /* ModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTemp.swift; sourceTree = "<group>"; };
 		EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTemp.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
+				DDD4187D27FD367F00A46DD2 /* VoiceCardPopupView..swift */,
+				DDD431922802A64400119835 /* VoiceCardPopupView2.swift */,
 			);
 			path = VoiceMentor;
 			sourceTree = "<group>";
@@ -267,8 +273,10 @@
 				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
 				EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */,
+				DDD431932802A64400119835 /* VoiceCardPopupView2.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
+				DDD4187E27FD367F00A46DD2 /* VoiceCardPopupView..swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
 				EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */,
 			);
@@ -415,7 +423,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -443,7 +451,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
