@@ -94,6 +94,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EF6C515528027548008D83A5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
+				EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */,
+				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		EF77119027FD288D004414A8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,11 +163,9 @@
 		EF77119627FD28AC004414A8 /* VoiceMentor */ = {
 			isa = PBXGroup;
 			children = (
-				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
-				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
-				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
-				EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */,
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
+				EF6C515528027548008D83A5 /* Components */,
+				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
 			);
 			path = VoiceMentor;
 			sourceTree = "<group>";
