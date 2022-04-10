@@ -169,6 +169,7 @@
 				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
 				EF6C515528027548008D83A5 /* Components */,
 				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
+				EFDF4ABB27FD3E4C000C175B /* MentorModel_woody.swift */,
 			);
 			path = VoiceMentor;
 			sourceTree = "<group>";
@@ -303,6 +304,7 @@
 				EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */,
 				EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */,
 				EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */,
+				EFDF4ABC27FD3E4C000C175B /* MentorModel_woody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
