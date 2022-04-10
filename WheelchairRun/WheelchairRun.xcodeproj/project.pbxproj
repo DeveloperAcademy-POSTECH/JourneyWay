@@ -15,6 +15,7 @@
 		DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */; };
 		EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */; };
 		EF6C51522802737F008D83A5 /* VoiceMentorCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */; };
+		EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */; };
 		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
 		EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119D27FD28EB004414A8 /* ModelTemp.swift */; };
 		EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */; };
@@ -37,6 +38,7 @@
 		DDD4187627FD26E400A46DD2 /* WheelchairRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WheelchairRun.xcdatamodel; sourceTree = "<group>"; };
 		EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentVoiceMentorList.swift; sourceTree = "<group>"; };
 		EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardRow.swift; sourceTree = "<group>"; };
+		EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorView.swift; sourceTree = "<group>"; };
 		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
 		EF77119D27FD28EB004414A8 /* ModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTemp.swift; sourceTree = "<group>"; };
 		EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTemp.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
+				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
 				EF6C515528027548008D83A5 /* Components */,
 				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
 			);
@@ -297,6 +300,7 @@
 				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
+				EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */,
 				EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */,
 				EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */,
 			);
