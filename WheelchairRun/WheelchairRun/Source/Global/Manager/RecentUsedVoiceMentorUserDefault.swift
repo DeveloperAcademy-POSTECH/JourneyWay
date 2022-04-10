@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RecentUsedVoiceMentorManager: UserDefaultProtocol {
+struct RecentUsedVoiceMentorUserDefault: UserDefaultProtocol {
     typealias T = [VoiceMentor]
     private let key: String = UserDefaultsKeyName.recentUsed.rawValue
     
