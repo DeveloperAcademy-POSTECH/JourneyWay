@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAA27FD332100ADA500 /* TrackingView.swift */; };
 		AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77751B27FD3713001BCA2F /* HomeView.swift */; };
-		AFEC52B92802C10800190241 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = AFEC52B82802C10800190241 /* Shimmer */; };
+		AFEC52BB2802C31A00190241 /* SwiftUI-Shimmer-main in Resources */ = {isa = PBXBuildFile; fileRef = AFEC52BA2802C31A00190241 /* SwiftUI-Shimmer-main */; };
+		AFEC52BD2802C36A00190241 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = AFEC52BC2802C36A00190241 /* Shimmer */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
 		DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186C27FD26E200A46DD2 /* ContentView.swift */; };
 		DDD4186F27FD26E400A46DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD4186E27FD26E400A46DD2 /* Assets.xcassets */; };
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		ABEDFDAA27FD332100ADA500 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		AF77751B27FD3713001BCA2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		AFEC52B72802C10100190241 /* SwiftUI-Shimmer-main */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SwiftUI-Shimmer-main"; path = "../../../../Downloads/SwiftUI-Shimmer-main"; sourceTree = "<group>"; };
+		AFEC52BA2802C31A00190241 /* SwiftUI-Shimmer-main */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SwiftUI-Shimmer-main"; path = "../../../../Downloads/SwiftUI-Shimmer-main"; sourceTree = "<group>"; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
 		DDD4186C27FD26E200A46DD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEC52B92802C10800190241 /* Shimmer in Frameworks */,
+				AFEC52BD2802C36A00190241 /* Shimmer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +77,7 @@
 		AFEC52A627FE8BC500190241 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				AFEC52B72802C10100190241 /* SwiftUI-Shimmer-main */,
+				AFEC52BA2802C31A00190241 /* SwiftUI-Shimmer-main */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -265,7 +266,7 @@
 			);
 			name = WheelchairRun;
 			packageProductDependencies = (
-				AFEC52B82802C10800190241 /* Shimmer */,
+				AFEC52BC2802C36A00190241 /* Shimmer */,
 			);
 			productName = WheelchairRun;
 			productReference = DDD4186727FD26E200A46DD2 /* WheelchairRun.app */;
@@ -309,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFEC52BB2802C31A00190241 /* SwiftUI-Shimmer-main in Resources */,
 				DDD4187227FD26E400A46DD2 /* Preview Assets.xcassets in Resources */,
 				DDD4186F27FD26E400A46DD2 /* Assets.xcassets in Resources */,
 			);
@@ -542,7 +544,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AFEC52B82802C10800190241 /* Shimmer */ = {
+		AFEC52BC2802C36A00190241 /* Shimmer */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Shimmer;
 		};
