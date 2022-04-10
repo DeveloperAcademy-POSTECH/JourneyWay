@@ -7,77 +7,8 @@
 
 import SwiftUI
 
-struct VoiceMentor {
-    let mentorName: String
-    let playbackTime: TimeInterval
-    var isRunning: Bool = true
-    var progressValue: Double = 0.0
-    var stats: ExerciseStats = ExerciseStats()
-    var isComplete: Bool = false
-    
-    static func secondsToTime(time: TimeInterval) -> String {
-        let timeVal = Int(time)
-        let (h,m,s) = (timeVal / 3600, (timeVal % 3600) / 60, (timeVal % 3600) % 60)
-        let h_string = h < 10 ? "0\(h)" : "\(h)"
-        let m_string =  m < 10 ? "0\(m)" : "\(m)"
-        let s_string =  s < 10 ? "0\(s)" : "\(s)"
-        
-        return "\(h_string):\(m_string):\(s_string)"
-    }
-    
-    mutating func toggleRunningStatus() {
-        isRunning.toggle()
-    }
-    
-    mutating func countSeconds() {
-        progressValue += 1
-    }
-    
-    mutating func updateStats_test(pushUpdate: Float, distanceUpdate: Float) {
-        stats.pushCount += pushUpdate
-        stats.distance += distanceUpdate
-    }
-    
-    mutating func markComplete() {
-        isComplete = true
-    }
-    
-    struct ExerciseStats {
-        var pushCount: Float = 0.0
-        var distance: Float = 0.0
-    }
-}
-
-class DummyProgram: ObservableObject {
-    @Published private var model = VoiceMentor(mentorName: "Voice Walking Test",
-                                                    playbackTime: 10)
-    var mentorName: String { model.mentorName }
-    var playbackTime: TimeInterval { model.playbackTime }
-    var isRunning: Bool { model.isRunning }
-    var stats: VoiceMentor.ExerciseStats { model.stats }
-    var progressValue: Double { model.progressValue }
-    var isComplete: Bool { model.isComplete }
-    
-    func toggleRunningStatus() {
-        model.toggleRunningStatus()
-    }
-    
-    func countSecond() {
-        model.countSeconds()
-    }
-    
-    func updateStats_test() {
-        model.updateStats_test(pushUpdate: 0.6, distanceUpdate: 0.0012)
-    }
-    
-    func markComplete() {
-        model.markComplete()
-    }
-}
-
-
 struct TrackingView: View {
-    @ObservedObject var program = DummyProgram()
+    @ObservedObject var program = DummyProgramViewModel()
     
     var body: some View {
         VStack {
@@ -102,7 +33,7 @@ struct TrackingView: View {
 }
 
 struct CompleteView: View {
-    @ObservedObject var program: DummyProgram
+    @ObservedObject var program: DummyProgramViewModel
     
     var body: some View {
         Spacer()
@@ -160,7 +91,7 @@ struct CompleteView: View {
 }
 
 struct ProgramProgressBar: View {
-    @ObservedObject var program: DummyProgram
+    @ObservedObject var program: DummyProgramViewModel
     let timer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
     let lineWidth = 15.0
     
@@ -200,7 +131,7 @@ struct ProgramProgressBar: View {
 }
 
 struct StatsInfoModule: View {
-    @ObservedObject var program: DummyProgram
+    @ObservedObject var program: DummyProgramViewModel
     
     var body: some View {
         HStack {
@@ -226,7 +157,7 @@ struct StatsInfoModule: View {
 }
 
 struct PlayBackController: View {
-    @ObservedObject var program: DummyProgram
+    @ObservedObject var program: DummyProgramViewModel
     
     var body: some View {
         HStack {
