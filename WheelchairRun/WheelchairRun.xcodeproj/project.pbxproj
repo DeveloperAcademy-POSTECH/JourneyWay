@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAA27FD332100ADA500 /* TrackingView.swift */; };
 		AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77751B27FD3713001BCA2F /* HomeView.swift */; };
-		AFEC52B127FE8D5C00190241 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = AFEC52B027FE8D5C00190241 /* Shimmer */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
 		DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186C27FD26E200A46DD2 /* ContentView.swift */; };
 		DDD4186F27FD26E400A46DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD4186E27FD26E400A46DD2 /* Assets.xcassets */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		ABEDFDAA27FD332100ADA500 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		AF77751B27FD3713001BCA2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		AFEC52A727FE8BC500190241 /* SwiftUI-Shimmer-main */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SwiftUI-Shimmer-main"; path = "../../../../Downloads/SwiftUI-Shimmer-main"; sourceTree = "<group>"; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
 		DDD4186C27FD26E200A46DD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEC52B127FE8D5C00190241 /* Shimmer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +73,6 @@
 		AFEC52A627FE8BC500190241 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				AFEC52A727FE8BC500190241 /* SwiftUI-Shimmer-main */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -170,7 +166,6 @@
 			children = (
 				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
 				EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */,
-				EF7711A727FD2910004414A8 /* HomeTemp.swift */,
 				AF77751B27FD3713001BCA2F /* HomeView.swift */,
 			);
 			path = Home;
@@ -266,7 +261,6 @@
 			);
 			name = WheelchairRun;
 			packageProductDependencies = (
-				AFEC52B027FE8D5C00190241 /* Shimmer */,
 			);
 			productName = WheelchairRun;
 			productReference = DDD4186727FD26E200A46DD2 /* WheelchairRun.app */;
@@ -331,10 +325,8 @@
 				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
 				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
-				EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */,
 				DDD431932802A64400119835 /* VoiceCardPopupView2.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
-				EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */,
 				ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
 				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
@@ -543,13 +535,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AFEC52B027FE8D5C00190241 /* Shimmer */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Shimmer;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */ = {

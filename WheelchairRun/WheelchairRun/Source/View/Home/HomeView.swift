@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Shimmer
 
 struct HomeView: View {
     var body: some View {
@@ -60,7 +59,7 @@ struct pushNgo: View {
         Button(action: {print("pushNgo_Button")}){
             Text("Push & Go")
                 .fontWeight(.bold)
-                .shimmering(active: true, duration: 1, bounce: false)
+//                .shimmering(active: true, duration: 1, bounce: false)
                 .foregroundColor(Color(hue: 0.454, saturation: 1.0, brightness: 0.994))
                 .font(.largeTitle)
                 .background(Image("Circle_gradation")
