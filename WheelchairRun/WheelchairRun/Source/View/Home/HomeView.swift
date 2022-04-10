@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Shimmer
 
 struct HomeView: View {
     var body: some View {
@@ -48,6 +49,7 @@ struct Hello_Profile: View {
                 Spacer()
             }
         }
+        Spacer()
     }
 }
 
@@ -56,9 +58,14 @@ struct pushNgo: View {
     var body: some View {
         Spacer()
         Button(action: {print("pushNgo_Button")}){
-            Image("pushNgo_img")
-                .resizable()
-                .frame(width: 220, height: 220)
+            Text("Push & Go")
+                .fontWeight(.bold)
+                .shimmering(active: true, duration: 1, bounce: false)
+                .foregroundColor(Color(hue: 0.454, saturation: 1.0, brightness: 0.994))
+                .font(.largeTitle)
+                .background(Image("Circle_gradation")
+                    .resizable()
+                    .frame(width: 220, height: 220))
         }
         Spacer()
     }
@@ -67,6 +74,7 @@ struct pushNgo: View {
 
 struct Today_Record: View {
     var body: some View {
+        Spacer()
         VStack(alignment: .center, spacing: 10) {
             
             Button {
@@ -143,13 +151,16 @@ struct Today_Record: View {
 
 struct with_voice_mentor: View {
     var body: some View {
-        Spacer()
         Button(action: {print("with_voice_mentor_Button")}){
-            Image("with_voice_mentor_img")
-                .resizable()
-                .frame(width: 230, height: 50)
+            Text("with Voice Mentor")
+                .font(.body)
+                .fontWeight(.bold)
+                .foregroundColor(Color(red: 0.431, green: 0.995, blue: 0.838))
+                .background( Image("with_voice_mentor_background")
+                    .resizable()
+                    .frame(width: 230, height: 50))
         }
-        .padding(.vertical, 20)
+        .padding(.vertical, 50)
         
     }
 }
