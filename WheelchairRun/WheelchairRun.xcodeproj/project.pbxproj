@@ -22,6 +22,7 @@
 		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
 		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
 		EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */; };
+		EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
 		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
+		EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
+				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
 			);
 			path = VoiceMentor;
@@ -278,6 +281,7 @@
 				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
+				EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */,
 				EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

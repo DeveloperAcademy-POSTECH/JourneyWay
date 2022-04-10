@@ -10,6 +10,7 @@ import SwiftUI
 /// 앱에 사용되는 모든 색상
 struct Pallete {
     static let background: Color        = .white
+    static let white: Color             = .white
     static let cardPointColor1: Color   = .init(hex: "#7900FF")
     static let cardPointColor2: Color   = .init(hex: "#F89D55")
     static let cardPointColor3: Color   = .init(hex: "#E45151")
