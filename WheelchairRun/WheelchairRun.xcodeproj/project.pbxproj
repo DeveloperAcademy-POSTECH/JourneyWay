@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAA27FD332100ADA500 /* TrackingView.swift */; };
+		AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77751B27FD3713001BCA2F /* HomeView.swift */; };
+		AFEC52B127FE8D5C00190241 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = AFEC52B027FE8D5C00190241 /* Shimmer */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
 		DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186C27FD26E200A46DD2 /* ContentView.swift */; };
 		DDD4186F27FD26E400A46DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD4186E27FD26E400A46DD2 /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		ABEDFDAA27FD332100ADA500 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
+		AF77751B27FD3713001BCA2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AFEC52A727FE8BC500190241 /* SwiftUI-Shimmer-main */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SwiftUI-Shimmer-main"; path = "../../../../Downloads/SwiftUI-Shimmer-main"; sourceTree = "<group>"; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
 		DDD4186C27FD26E200A46DD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,17 +66,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFEC52B127FE8D5C00190241 /* Shimmer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AFEC52A627FE8BC500190241 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				AFEC52A727FE8BC500190241 /* SwiftUI-Shimmer-main */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		AFEC52A927FE8CC000190241 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DDD4185E27FD26E200A46DD2 = {
 			isa = PBXGroup;
 			children = (
+				AFEC52A627FE8BC500190241 /* Packages */,
 				DDD4186927FD26E200A46DD2 /* WheelchairRun */,
 				DDD4186827FD26E200A46DD2 /* Products */,
+				AFEC52A927FE8CC000190241 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +170,8 @@
 			children = (
 				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
 				EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */,
+				EF7711A727FD2910004414A8 /* HomeTemp.swift */,
+				AF77751B27FD3713001BCA2F /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -241,6 +265,9 @@
 			dependencies = (
 			);
 			name = WheelchairRun;
+			packageProductDependencies = (
+				AFEC52B027FE8D5C00190241 /* Shimmer */,
+			);
 			productName = WheelchairRun;
 			productReference = DDD4186727FD26E200A46DD2 /* WheelchairRun.app */;
 			productType = "com.apple.product-type.application";
@@ -313,6 +340,7 @@
 				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
 				DDD4187E27FD367F00A46DD2 /* VoiceCardPopupView..swift in Sources */,
+				AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
 				EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */,
 				EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */,
@@ -515,6 +543,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AFEC52B027FE8D5C00190241 /* Shimmer */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Shimmer;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */ = {
