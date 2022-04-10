@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-struct VoiceMentor<TimeType> where TimeType: BinaryInteger {
+struct VoiceMentor {
     let mentorName: String
-    let playbackTime: TimeType
+    let playbackTime: TimeInterval
     var isRunning: Bool = true
-    var progressValue: Int = 0
+    var progressValue: Double = 0.0
     var stats: ExerciseStats = ExerciseStats()
     var isComplete: Bool = false
     
-    static func secondsToTime(time: TimeType) -> String {
-        let (h,m,s) = (time / 3600, (time % 3600) / 60, (time % 3600) % 60)
+    static func secondsToTime(time: TimeInterval) -> String {
+        let timeVal = Int(time)
+        let (h,m,s) = (timeVal / 3600, (timeVal % 3600) / 60, (timeVal % 3600) % 60)
         let h_string = h < 10 ? "0\(h)" : "\(h)"
         let m_string =  m < 10 ? "0\(m)" : "\(m)"
         let s_string =  s < 10 ? "0\(s)" : "\(s)"
@@ -48,13 +49,13 @@ struct VoiceMentor<TimeType> where TimeType: BinaryInteger {
 }
 
 class DummyProgram: ObservableObject {
-    @Published private var model = VoiceMentor<Int>(mentorName: "Voice Walking Test",
+    @Published private var model = VoiceMentor(mentorName: "Voice Walking Test",
                                                     playbackTime: 10)
     var mentorName: String { model.mentorName }
-    var playbackTime: Int { model.playbackTime }
+    var playbackTime: TimeInterval { model.playbackTime }
     var isRunning: Bool { model.isRunning }
-    var stats: VoiceMentor<Int>.ExerciseStats { model.stats }
-    var progressValue: Int { model.progressValue }
+    var stats: VoiceMentor.ExerciseStats { model.stats }
+    var progressValue: Double { model.progressValue }
     var isComplete: Bool { model.isComplete }
     
     func toggleRunningStatus() {
@@ -114,7 +115,7 @@ struct CompleteView: View {
             VStack {
                 Text("Time")
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text(VoiceMentor<Int>.secondsToTime(time: program.progressValue))
+                Text(VoiceMentor.secondsToTime(time: program.progressValue))
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -176,7 +177,7 @@ struct ProgramProgressBar: View {
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.linear, value: program.progressValue)
             VStack {
-                Text(VoiceMentor<Int>.secondsToTime(time: program.progressValue))
+                Text(VoiceMentor.secondsToTime(time: program.progressValue))
                     .font(.largeTitle)
                     .bold()
                     .onReceive(timer) { _ in
