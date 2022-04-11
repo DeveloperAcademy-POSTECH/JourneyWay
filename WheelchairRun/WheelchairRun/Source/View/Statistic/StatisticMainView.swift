@@ -113,10 +113,10 @@ struct StatisticView2: View {
 //                                .padding(.horizontal, 12)
 //                                .padding(.vertical, 4)
 //                        }
-                    }
-                    ForEach(0..<diarys.count, id: \.self) { index in
-                        DiaryList(diary: diarys[index])
-                        Spacer()
+                        ForEach(0..<diarys.count, id: \.self) { index in
+                            DiaryList(diary: diarys[index])
+                            Spacer()
+                        }
                     }
                 }
             }.clipped()
@@ -189,7 +189,7 @@ struct DiaryList: View {
         }
         .frame(maxWidth: .infinity)
         .background(
-            RoundedRectangle(cornerRadius: 20.0).fill(Color.green))
+            RoundedRectangle(cornerRadius: 20.0).fill(Color(red: 0.811764705882353, green: 1, blue: 0.862745098039216)))
         .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
     }
 }
