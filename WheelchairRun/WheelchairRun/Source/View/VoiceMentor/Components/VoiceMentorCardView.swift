@@ -18,6 +18,7 @@ struct VoiceMentorCardView: View {
     
     // TODO: 폰트 정리
     var body: some View {
+        
         backgroundColor.randomElement()
             .overlay {
                 VStack(alignment: .trailing, spacing: 0) {
