@@ -13,7 +13,7 @@ struct WheelchairRunApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VoiceCardPopupView2()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
