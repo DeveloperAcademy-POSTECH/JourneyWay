@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAA27FD332100ADA500 /* TrackingView.swift */; };
+		ABEDFDAD2802BE6400ADA500 /* VoiceMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */; };
+		ABEDFDAF2802BEA500ADA500 /* DummyProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */; };
 		AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77751B27FD3713001BCA2F /* HomeView.swift */; };
 		AFD6199A2803BF2700FC0FC3 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = AFD619992803BF2700FC0FC3 /* Shimmer */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		ABEDFDAA27FD332100ADA500 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
+		ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentor.swift; sourceTree = "<group>"; };
+		ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyProgramViewModel.swift; sourceTree = "<group>"; };
 		AF77751B27FD3713001BCA2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */,
+				ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				EF77119D27FD28EB004414A8 /* ModelTemp.swift */,
+				ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,11 +327,13 @@
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
 				EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */,
 				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
+				ABEDFDAD2802BE6400ADA500 /* VoiceMentor.swift in Sources */,
 				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
 				DDD431932802A64400119835 /* VoiceCardPopupView2.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
 				ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */,
+				ABEDFDAF2802BEA500ADA500 /* DummyProgramViewModel.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
 				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
