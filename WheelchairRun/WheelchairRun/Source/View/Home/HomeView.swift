@@ -74,8 +74,9 @@ struct pushNgo: View {
                     .resizable()
                     .frame(width: 220, height: 220))
         }
-        .fullScreenCover(isPresented: $isPresented,
-                         content: TrackingView.init)
+        .fullScreenCover(isPresented: $isPresented) {
+            TrackingView(isPresented: $isPresented)
+        }
         Spacer()
     }
 }

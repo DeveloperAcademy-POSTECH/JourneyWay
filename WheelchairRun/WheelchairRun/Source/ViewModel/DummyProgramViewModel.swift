@@ -13,6 +13,10 @@ class DummyProgramViewModel: ObservableObject {
     @Published var isComplete: Bool = false
     @Published var isPreparing: Bool = true
     
+    var readyText: [String] = ["How is your condition?",
+                               "Checked road safety?",
+                               "Now, shall we run?"]
+    
     var mentorName: String { model.mentorName }
     var playbackTime: TimeInterval { model.playbackTime }
     var isRunning: Bool { model.isRunning }

@@ -9,10 +9,11 @@ import SwiftUI
 import Combine
 
 struct TrackingView: View {
+    @Binding var isPresented: Bool
     @ObservedObject var program = DummyProgramViewModel()
     let timer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
     let prepareTimer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
-    @State var counter: Int = 3
+    @State var counter: Int = 4
     
     var body: some View {
         ZStack {
@@ -32,21 +33,41 @@ struct TrackingView: View {
                         Spacer(minLength: 50)
                         PlayBackController(program: program)
                     } else {
-                        CompleteView(program: program)
+                        CompleteView(program: program, isPresented: $isPresented)
                     }
                 }
             } else {
                 Pallete.purple
                     .ignoresSafeArea()
                 if counter > 0 {
-                    Text("\(counter)")
-                        .font(.system(size: 100))
-                        .fontWeight(.bold)
-                        .foregroundColor(Pallete.mint)
-                        .onReceive(timer) { _ in
-                            counter -= 1
-                        }
-                        .animation(.linear, value: counter)
+                    VStack {
+                        Text(program.readyText[0])
+                            .font(.system(size: 30))
+                            .fontWeight(.bold)
+                            .foregroundColor(counter <= 3 ? Pallete.mint : Pallete.blue)
+                            .padding()
+                        Text(program.readyText[1])
+                            .font(.system(size: 30))
+                            .fontWeight(.bold)
+                            .foregroundColor(counter <= 2 ? Pallete.mint : Pallete.blue)
+                            .padding()
+                        Text(program.readyText[2])
+                            .font(.system(size: 30))
+                            .fontWeight(.bold)
+                            .foregroundColor(counter <= 1 ? Pallete.mint : Pallete.blue)
+                            .padding()
+                        
+                    }.onReceive(timer) { _ in
+                        counter -= 1
+                    }
+//                    Text("\(counter)")
+//                        .font(.system(size: 100))
+//                        .fontWeight(.bold)
+//                        .foregroundColor(Pallete.mint)
+//                        .onReceive(timer) { _ in
+//                            counter -= 1
+//                        }
+//                        .animation(.linear, value: counter)
                 } else {
                     Text("PUSH")
                         .font(.system(size: 100))
@@ -64,6 +85,7 @@ struct TrackingView: View {
 
 struct CompleteView: View {
     @ObservedObject var program: DummyProgramViewModel
+    @Binding var isPresented: Bool
     
     var body: some View {
         Spacer()
@@ -104,7 +126,7 @@ struct CompleteView: View {
         .padding(50)
         Spacer()
         Button {
-            // Back To Home
+            isPresented = false
         } label: {
             Circle()
                 .foregroundColor(.black)
@@ -244,8 +266,9 @@ struct EmergencyButton: View {
 }
 
 struct TrackingView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        TrackingView()
+        TrackingView(isPresented: .constant(true))
             .previewInterfaceOrientation(.portrait)
     }
 }
