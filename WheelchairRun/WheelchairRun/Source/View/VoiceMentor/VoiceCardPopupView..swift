@@ -47,30 +47,32 @@ struct VoiceCardPopupView: View {
                 
                 Spacer().frame(height: 20)
                 Group {
-                    HStack(spacing: 10) {
+                    HStack {
                         Image(systemName: "person.crop.circle.fill")
                             .foregroundColor(.white)
-                            .font(.system(size: 70, weight: .regular))
-                        
+                            .font(.system(size: 60, weight: .regular))
+
                         VStack(alignment: .leading) {
                             Text("엘린의 기초 5분 러닝")
-                                .font(.system(size: 25, weight: .bold))
+                                .font(.title2)
+                                .fontWeight(.bold)
                                 .foregroundColor(.white)
                             Spacer().frame(height: 5)
                             Text("엘린 가드너")
-                                .font(.system(size: 16, weight: .semibold))
+                                .font(.footnote)
                                 .foregroundColor(.white)
                         }
-                    }
+                    }.frame(width: 290, alignment: .leading)
                 }
                 
-                Group {
-                    Spacer().frame(height: 20)
-                    RoundedRectangle(cornerRadius: 30)
-                        .frame(height: 1)
-                        .foregroundColor(.white)
-                    Spacer()
-                }
+                Spacer()
+//                Group {
+//                    Spacer().frame(height: 20)
+//                    RoundedRectangle(cornerRadius: 30)
+//                        .frame(height: 1)
+//                        .foregroundColor(.white)
+//                    Spacer()
+//                }
                 
                 ProgramContents(contents: detailContents)
                 
@@ -83,7 +85,7 @@ struct VoiceCardPopupView: View {
                         .foregroundColor(Color.mainColorPurple)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
-                        .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 10)
+                        .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
                 }
             }.padding()
         }
@@ -102,17 +104,18 @@ struct ProgramContents: View {
             .lineLimit(6)
             .multilineTextAlignment(.leading)
             .frame(width: 290, height: 130, alignment: .leading)
-            .font(.system(size: 14, weight: .regular, design: .default))
+            .font(.subheadline)
             .lineSpacing(4)
             .foregroundColor(.white)
         Spacer()
         HStack(alignment: .bottom) {
             Text("5")
                 .foregroundColor(.white)
-                .font(.system(size: 50, weight: .thin))
+                .font(.system(size: 60, weight: .regular))
             Text("min")
                 .foregroundColor(.white)
                 .padding(.bottom)
+                .font(.body)
         }
     }
 }
