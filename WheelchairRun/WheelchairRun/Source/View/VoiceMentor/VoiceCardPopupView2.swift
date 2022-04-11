@@ -23,14 +23,7 @@ var detailContents2 = """
 struct VoiceCardPopupView2: View {
     
     var body: some View {
-        ZStack {
-            VoiceMentorView()
-            VStack {
-                Color.black.opacity(0.5)
-            }.ignoresSafeArea()
             ModalView()
-        }
-        
     }
 }
                 
