@@ -215,7 +215,7 @@ struct PlayBackController: View {
         HStack {
             if !program.isRunning {
                 Button {
-                    
+                    program.isComplete = true
                 } label: {
                     Circle()
                         .foregroundColor(.black)
