@@ -8,49 +8,47 @@
 import SwiftUI
 
 struct VoiceMentorView: View {
-    
-    let recentVoiceMentorList = RecentVoiceMentorList()
+    @Binding var isPopupPresented: Bool
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("Voice Mentor")
-                    .fontWeight(.bold)
-                    .font(.system(size: 30))
-                    .frame(maxWidth: .greatestFiniteMagnitude, alignment: .leading)
-                Button(action: {}) {
-                    Image(systemName: "xmark")
-                        .tint(Pallete.black)
-                        .frame(width: 24, height: 24, alignment: .center)
-                }
-            } // header
-            .padding([.top, .leading, .trailing], 24)
-            Text("Select your favorite voice to listen while exercsing")
-                .font(.subheadline)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding([.leading, .trailing], 24)
-            // subheadline
-            
-            ScrollView(.vertical) {
-                RecentVoiceMentorList()
-                    .frame(width: .infinity, height: 200)
-                Text("New")
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .font(.system(size: 25))
-                    .padding([.leading, .trailing], 24)
-                ForEach(0..<10) { _ in
-                    VoiceMentorCardRow()
+        ZStack {
+            VStack {
+                VoiceMentorHeaderView()
+                    .padding([.top,.leading,.trailing, .bottom], 24)
+                ScrollView {
+                    Text("Recent")
+                        .headLineFont()
+                        .padding(.leading, 24)
+                    RecentVoiceMentorList(isPopupPresented: $isPopupPresented)
+                        .frame(width: UIScreen.main.bounds.width,
+                               height: 130)
+                    Text("New")
+                        .headLineFont()
+                        .padding([.leading,], 24)
+                    ForEach(0..<10) { _ in
+                        VoiceMentorCardRow(isPopupPresented: $isPopupPresented)
+                    }
                 }
             }
-            Spacer()
+            
+            if isPopupPresented {
+                Button(action: {
+                    withAnimation {
+                        isPopupPresented.toggle()
+                    }
+                }) {
+                    Color.black.opacity(0.7)
+                }
+                .buttonStyle(PopupBackgroundButtonStyle())
+                .animation(.easeIn(duration: 3), value: isPopupPresented)
+                .ignoresSafeArea()
+            }
         }
-        
     }
 }
 
 struct VoiceMentorView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceMentorView()
+        VoiceMentorView(isPopupPresented: .constant(false))
     }
 }

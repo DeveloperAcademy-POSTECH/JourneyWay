@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct VoiceMentorCardRow: View {
+    @Binding var isPopupPresented: Bool
     var body: some View {
         HStack(alignment: .center, spacing: 12) {
-            VoiceMentorCardView()
-            VoiceMentorCardView()
+            VoiceMentorCardView(isPopupPresented: $isPopupPresented)
+            VoiceMentorCardView(isPopupPresented: $isPopupPresented)
         }
     }
 }
 
 struct VoiceMentorCardRow_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceMentorCardRow()
+        VoiceMentorCardRow(isPopupPresented: .constant(false))
     }
 }
