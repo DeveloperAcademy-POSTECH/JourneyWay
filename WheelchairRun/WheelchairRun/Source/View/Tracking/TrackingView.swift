@@ -6,27 +6,49 @@
 //
 
 import SwiftUI
+import Combine
 
 struct TrackingView: View {
     @ObservedObject var program = DummyProgramViewModel()
+    let timer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
+    let prepareTimer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
+    @State var counter: Int = 3
     
     var body: some View {
-        VStack {
-            if !program.isComplete {
-                EmergencyButton()
-                    .padding()
-                Text(program.mentorName)
-                    .font(.largeTitle)
+        if !program.isPreparing {
+            VStack {
+                if !program.isComplete {
+                    EmergencyButton()
+                        .padding()
+                    Text(program.mentorName)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .lineLimit(1)
+                        .padding()
+                    ProgramProgressBar(program: program, timer: timer)
+                        .padding(30)
+                    StatsInfoModule(program: program)
+                    Spacer(minLength: 50)
+                    PlayBackController(program: program)
+                } else {
+                    CompleteView(program: program)
+                }
+            }
+        } else {
+            if counter > 0 {
+                Text("\(counter)")
                     .fontWeight(.bold)
-                    .lineLimit(1)
-                    .padding()
-                ProgramProgressBar(program: program)
-                    .padding(30)
-                StatsInfoModule(program: program)
-                Spacer(minLength: 50)
-                PlayBackController(program: program)
+                    .onReceive(timer) { _ in
+                        counter -= 1
+                    }
+                    .animation(.linear, value: counter)
             } else {
-                CompleteView(program: program)
+                Text("PUSH")
+                    .fontWeight(.bold)
+                    .onReceive(timer) { _ in
+                        program.isPreparing = false
+                    }
+                    .animation(.linear, value: counter)
             }
         }
     }
@@ -82,7 +104,7 @@ struct CompleteView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 25)
-                    .foregroundColor(.green))
+                    .foregroundColor(Pallete.mint))
                 .frame(width: 100, height: 100)
                 .padding()
         }
@@ -92,7 +114,7 @@ struct CompleteView: View {
 
 struct ProgramProgressBar: View {
     @ObservedObject var program: DummyProgramViewModel
-    let timer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
+    let timer: Publishers.Autoconnect<Timer.TimerPublisher>
     let lineWidth = 15.0
     
     var body: some View {

@@ -11,6 +11,7 @@ class DummyProgramViewModel: ObservableObject {
     @Published private var model = VoiceMentor(mentorName: "Voice Walking Test",
                                                     playbackTime: 10)
     @Published var isComplete: Bool = false
+    @Published var isPreparing: Bool = true
     
     var mentorName: String { model.mentorName }
     var playbackTime: TimeInterval { model.playbackTime }
