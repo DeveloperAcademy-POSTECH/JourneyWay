@@ -34,6 +34,7 @@
 		EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7F2804700600D99B27 /* WCRXButton.swift */; };
 		EFED3A82280472F800D99B27 /* VoiceMentorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */; };
 		EFED3A842804757500D99B27 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A832804757500D99B27 /* Popup.swift */; };
+		EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		EFED3A7F2804700600D99B27 /* WCRXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRXButton.swift; sourceTree = "<group>"; };
 		EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorHeaderView.swift; sourceTree = "<group>"; };
 		EFED3A832804757500D99B27 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
+				EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */,
 				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
 				EF6C515528027548008D83A5 /* Components */,
 				DDD4187D27FD367F00A46DD2 /* VoiceCardPopupView..swift */,
@@ -332,6 +335,7 @@
 				EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */,
 				EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */,
 				EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */,
+				EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */,
 				EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */,
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
 				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,

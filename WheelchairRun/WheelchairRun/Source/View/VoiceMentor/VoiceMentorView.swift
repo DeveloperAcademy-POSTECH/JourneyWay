@@ -7,20 +7,6 @@
 
 import SwiftUI
 
-struct PopupView: View {
-    @State var isPopupPresented: Bool = false
-    
-    var body: some View {
-        ZStack {
-            VoiceMentorView(isPopupPresented: $isPopupPresented)
-                .modifier(Popup(isPopupPresented: $isPopupPresented,
-                                alignment: .center,
-                                direction: .bottom,
-                                content: {VoiceCardPopupView2.init()}))
-        }
-    }
-}
-
 struct VoiceMentorView: View {
     @Binding var isPopupPresented: Bool
     
