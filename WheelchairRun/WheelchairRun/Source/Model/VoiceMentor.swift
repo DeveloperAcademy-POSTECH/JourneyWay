@@ -13,6 +13,7 @@ struct VoiceMentor {
     var isRunning: Bool = true
     var progressValue: Double = 0.0
     var stats: ExerciseStats = ExerciseStats()
+    var voiceString: String
     
     static func secondsToTime(time: TimeInterval) -> String {
         let timeVal = Int(time)

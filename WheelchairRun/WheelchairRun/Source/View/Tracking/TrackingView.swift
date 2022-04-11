@@ -36,42 +36,33 @@ struct TrackingView: View {
                         CompleteView(program: program, isPresented: $isPresented)
                     }
                 }
+                .onAppear {
+                    program.playVoiceMentor()
+                }
             } else {
                 Pallete.purple
                     .ignoresSafeArea()
                 if counter > 0 {
                     VStack {
                         Text(program.readyText[0])
-                            .font(.system(size: 30))
-                            .fontWeight(.bold)
+                            .font(Font.system(size: 30).italic().bold())
                             .foregroundColor(counter <= 3 ? Pallete.mint : Pallete.blue)
                             .padding()
                         Text(program.readyText[1])
-                            .font(.system(size: 30))
-                            .fontWeight(.bold)
+                            .font(Font.system(size: 30).italic().bold())
                             .foregroundColor(counter <= 2 ? Pallete.mint : Pallete.blue)
                             .padding()
                         Text(program.readyText[2])
-                            .font(.system(size: 30))
-                            .fontWeight(.bold)
+                            .font(Font.system(size: 30).italic().bold())
                             .foregroundColor(counter <= 1 ? Pallete.mint : Pallete.blue)
                             .padding()
                         
                     }.onReceive(timer) { _ in
                         counter -= 1
                     }
-//                    Text("\(counter)")
-//                        .font(.system(size: 100))
-//                        .fontWeight(.bold)
-//                        .foregroundColor(Pallete.mint)
-//                        .onReceive(timer) { _ in
-//                            counter -= 1
-//                        }
-//                        .animation(.linear, value: counter)
                 } else {
-                    Text("PUSH")
-                        .font(.system(size: 100))
-                        .fontWeight(.bold)
+                    Text("PUSH!")
+                        .font(Font.system(size: 100).italic().bold())
                         .foregroundColor(Pallete.mint)
                         .onReceive(timer) { _ in
                             program.isPreparing = false
@@ -148,13 +139,14 @@ struct ProgramProgressBar: View {
     let lineWidth = 15.0
     
     var body: some View {
+        let duration = program.player?.duration ?? 0.0
         ZStack {
             Circle()
                 .stroke(lineWidth: lineWidth)
                 .opacity(0.3)
                 .foregroundColor(Pallete.purple)
             Circle()
-                .trim(from: 0.0, to: CGFloat(min(Float(program.progressValue) / Float(program.playbackTime), 1.0)))
+                .trim(from: 0.0, to: CGFloat(min(Float(program.progressValue) / Float(duration), 1.0)))
                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
                 .foregroundColor(Pallete.purple)
                 .rotationEffect(Angle(degrees: 270.0))
@@ -164,7 +156,7 @@ struct ProgramProgressBar: View {
                     .font(.largeTitle)
                     .bold()
                     .onReceive(timer) { _ in
-                        if program.progressValue < program.playbackTime {
+                        if program.progressValue < duration {
                             if program.isRunning {
                                 program.countSecond()
                                 program.updateStats_test()
@@ -172,9 +164,10 @@ struct ProgramProgressBar: View {
                         } else {
                             timer.upstream.connect().cancel()
                             program.markComplete()
+                            program.player?.stop()
                         }
                     }
-                Text("/ \(VoiceMentor.secondsToTime(time: program.playbackTime))")
+                Text("/ \(VoiceMentor.secondsToTime(time: duration))")
                     .fontWeight(.bold)
             }
         }
@@ -216,6 +209,7 @@ struct PlayBackController: View {
             if !program.isRunning {
                 Button {
                     program.isComplete = true
+                    program.player?.stop()
                 } label: {
                     Circle()
                         .foregroundColor(.black)
@@ -230,6 +224,11 @@ struct PlayBackController: View {
             }
             Button {
                 program.toggleRunningStatus()
+                if program.isRunning {
+                    program.player?.play()
+                } else {
+                    program.player?.pause()
+                }
             } label: {
                 Circle()
                     .foregroundColor(.black)

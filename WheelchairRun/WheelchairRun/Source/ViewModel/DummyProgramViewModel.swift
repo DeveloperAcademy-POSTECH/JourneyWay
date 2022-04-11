@@ -6,22 +6,28 @@
 //
 
 import Foundation
+import AVFoundation
 
 class DummyProgramViewModel: ObservableObject {
     @Published private var model = VoiceMentor(mentorName: "Voice Walking Test",
-                                                    playbackTime: 10)
+                                               playbackTime: 10, voiceString: "sample")
     @Published var isComplete: Bool = false
     @Published var isPreparing: Bool = true
+    var player: AVAudioPlayer?
     
     var readyText: [String] = ["How is your condition?",
                                "Checked road safety?",
                                "Now, shall we run?"]
     
     var mentorName: String { model.mentorName }
-    var playbackTime: TimeInterval { model.playbackTime }
     var isRunning: Bool { model.isRunning }
     var stats: VoiceMentor.ExerciseStats { model.stats }
     var progressValue: Double { model.progressValue }
+    
+    
+    init() {
+        player = Sound.preparePlay(soundfile: model.voiceString)
+    }
     
     
     func toggleRunningStatus() {
@@ -38,5 +44,11 @@ class DummyProgramViewModel: ObservableObject {
     
     func markComplete() {
         isComplete = true
+    }
+    
+    func playVoiceMentor() {
+        if let player = player {
+            player.play()
+        }
     }
 }
