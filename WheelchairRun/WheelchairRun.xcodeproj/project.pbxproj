@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDB4C84E27FE786E009FC09C /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4C84D27FE786E009FC09C /* SwiftUIView.swift */; };
+		CE47BBA22803CFCD0007DC07 /* StatisticMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
 		DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186C27FD26E200A46DD2 /* ContentView.swift */; };
 		DDD4186F27FD26E400A46DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD4186E27FD26E400A46DD2 /* Assets.xcassets */; };
@@ -18,13 +18,12 @@
 		EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119D27FD28EB004414A8 /* ModelTemp.swift */; };
 		EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */; };
 		EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */; };
-		EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A327FD2907004414A8 /* StatisticTemp.swift */; };
 		EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A527FD290C004414A8 /* TrackingTemp.swift */; };
 		EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A727FD2910004414A8 /* HomeTemp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CDB4C84D27FE786E009FC09C /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticMainView.swift; path = WheelchairRun/Source/View/Statistic/StatisticMainView.swift; sourceTree = SOURCE_ROOT; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
 		DDD4186C27FD26E200A46DD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,7 +35,6 @@
 		EF77119D27FD28EB004414A8 /* ModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTemp.swift; sourceTree = "<group>"; };
 		EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTemp.swift; sourceTree = "<group>"; };
 		EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorTemp.swift; sourceTree = "<group>"; };
-		EF7711A327FD2907004414A8 /* StatisticTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTemp.swift; sourceTree = "<group>"; };
 		EF7711A527FD290C004414A8 /* TrackingTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTemp.swift; sourceTree = "<group>"; };
 		EF7711A727FD2910004414A8 /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,8 +135,7 @@
 		EF77119527FD28A4004414A8 /* Statistic */ = {
 			isa = PBXGroup;
 			children = (
-				EF7711A327FD2907004414A8 /* StatisticTemp.swift */,
-				CDB4C84D27FE786E009FC09C /* SwiftUIView.swift */,
+				CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */,
 			);
 			path = Statistic;
 			sourceTree = "<group>";
@@ -264,8 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */,
-				EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */,
-				CDB4C84E27FE786E009FC09C /* SwiftUIView.swift in Sources */,
+				CE47BBA22803CFCD0007DC07 /* StatisticMainView.swift in Sources */,
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
 				EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */,
 				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,

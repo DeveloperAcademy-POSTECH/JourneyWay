@@ -9,7 +9,7 @@ import SwiftUI
 
 var contents = ["4월 2일", "4월 1일", "3월 31일", "3월 30일", "3월 29일", "3월 28일", "3월 27일"]
 
-struct ContentView: View {
+struct StatisticMainView: View {
     var body: some View {
             HomeView()
     }
@@ -140,9 +140,9 @@ struct Header: View {
 
 
 
-struct SwiftUIView_Previews: PreviewProvider {
+struct StatisticMainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        StatisticMainView()
     }
 }
 
