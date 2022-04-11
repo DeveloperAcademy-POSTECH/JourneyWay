@@ -27,7 +27,6 @@
 		EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A527FD290C004414A8 /* TrackingTemp.swift */; };
 		EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */; };
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
-		EFA5EA992802C34B00872A42 /* VoiceMentorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA982802C34B00872A42 /* VoiceMentorViewModel.swift */; };
 		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
 		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
 		EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */; };
@@ -56,7 +55,6 @@
 		EF7711A527FD290C004414A8 /* TrackingTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTemp.swift; sourceTree = "<group>"; };
 		EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
-		EFA5EA982802C34B00872A42 /* VoiceMentorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorViewModel.swift; sourceTree = "<group>"; };
 		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
 		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
-				EFA5EA982802C34B00872A42 /* VoiceMentorViewModel.swift */,
 				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
 				EF6C515528027548008D83A5 /* Components */,
 				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
@@ -330,8 +327,6 @@
 				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
 				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
-				EFA5EA992802C34B00872A42 /* VoiceMentorViewModel.swift in Sources */,
-				DDD431932802A64400119835 /* VoiceCardPopupView2.swift in Sources */,
 				EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
 				ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */,
