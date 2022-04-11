@@ -55,9 +55,16 @@ struct Hello_Profile: View {
 
 
 struct pushNgo: View {
+    @State private var isPresented = false
+    
     var body: some View {
         Spacer()
-        Button(action: {print("pushNgo_Button")}){
+        Button(action: {
+            UIView.setAnimationsEnabled(false)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                isPresented.toggle()
+            }
+        }){
             Text("Push & Go")
                 .fontWeight(.bold)
                 .shimmering(active: true, duration: 1, bounce: false)
@@ -67,6 +74,8 @@ struct pushNgo: View {
                     .resizable()
                     .frame(width: 220, height: 220))
         }
+        .fullScreenCover(isPresented: $isPresented,
+                         content: TrackingView.init)
         Spacer()
     }
 }
