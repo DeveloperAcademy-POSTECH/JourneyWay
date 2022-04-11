@@ -33,7 +33,7 @@ struct Hello_Profile: View {
                         Text("요셉")
                             .font(.title)
                             .fontWeight(.semibold)
-                            
+                        
                     }
                     Text("보이스멘토와 함께")
                         .font(.title3)
@@ -65,20 +65,25 @@ struct pushNgo: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 isPresented.toggle()
             }
-        }){
-            Text("Push & Go")
-                .fontWeight(.bold)
-                .shimmering(active: true, duration: 1.7, bounce: false)
-                .foregroundColor(Color(hue: 0.454, saturation: 1.0, brightness: 0.994))
-                .font(.largeTitle)
-                .background(Image("Circle_gradation")
+        }
+        ){
+            ZStack{
+                Image("Circle_gradation")
                     .resizable()
-                    .frame(width: 220, height: 220))
+                    .frame(width: 220, height: 220)
+                Text("Push & Go")
+                    .fontWeight(.bold)
+                    .font(.largeTitle)
+                    .shimmering(active: true, duration: 1.7, bounce: false)
+                    .foregroundColor(Color(hue: 0.454, saturation: 1.0, brightness: 0.994))
+            }
+            
         }
         .fullScreenCover(isPresented: $isPresented) {
             TrackingView(isPresented: $isPresented)
         }
         Spacer()
+        
     }
 }
 
