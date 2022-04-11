@@ -12,6 +12,7 @@
 		ABEDFDAF2802BEA500ADA500 /* DummyProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */; };
 		AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77751B27FD3713001BCA2F /* HomeView.swift */; };
 		AFD6199A2803BF2700FC0FC3 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = AFD619992803BF2700FC0FC3 /* Shimmer */; };
+		DDAF1F752802FC25000974FA /* VoiceCardPopupView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF1F742802FC25000974FA /* VoiceCardPopupView2.swift */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
 		DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186C27FD26E200A46DD2 /* ContentView.swift */; };
 		DDD4186F27FD26E400A46DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD4186E27FD26E400A46DD2 /* Assets.xcassets */; };
@@ -19,20 +20,26 @@
 		DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187327FD26E400A46DD2 /* Persistence.swift */; };
 		DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */; };
 		DDD4187E27FD367F00A46DD2 /* VoiceCardPopupView..swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187D27FD367F00A46DD2 /* VoiceCardPopupView..swift */; };
-		DDD431932802A64400119835 /* VoiceCardPopupView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD431922802A64400119835 /* VoiceCardPopupView2.swift */; };
 		EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */; };
 		EF6C51522802737F008D83A5 /* VoiceMentorCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */; };
 		EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */; };
 		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
 		EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119D27FD28EB004414A8 /* ModelTemp.swift */; };
 		EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */; };
-		EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */; };
 		EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A327FD2907004414A8 /* StatisticTemp.swift */; };
 		EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A527FD290C004414A8 /* TrackingTemp.swift */; };
+		EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */; };
+		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
 		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
 		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
 		EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */; };
 		EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */; };
+		EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */; };
+		EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7F2804700600D99B27 /* WCRXButton.swift */; };
+		EFED3A82280472F800D99B27 /* VoiceMentorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */; };
+		EFED3A842804757500D99B27 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A832804757500D99B27 /* Popup.swift */; };
+		EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */; };
+		EFED3A88280497EA00D99B27 /* ButtonStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A87280497EA00D99B27 /* ButtonStyle+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,7 @@
 		ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentor.swift; sourceTree = "<group>"; };
 		ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyProgramViewModel.swift; sourceTree = "<group>"; };
 		AF77751B27FD3713001BCA2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DDAF1F742802FC25000974FA /* VoiceCardPopupView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupView2.swift; sourceTree = "<group>"; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
 		DDD4186C27FD26E200A46DD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,20 +56,26 @@
 		DDD4187327FD26E400A46DD2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DDD4187627FD26E400A46DD2 /* WheelchairRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WheelchairRun.xcdatamodel; sourceTree = "<group>"; };
 		DDD4187D27FD367F00A46DD2 /* VoiceCardPopupView..swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupView..swift; sourceTree = "<group>"; };
-		DDD431922802A64400119835 /* VoiceCardPopupView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupView2.swift; sourceTree = "<group>"; };
 		EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentVoiceMentorList.swift; sourceTree = "<group>"; };
 		EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardRow.swift; sourceTree = "<group>"; };
 		EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorView.swift; sourceTree = "<group>"; };
 		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
 		EF77119D27FD28EB004414A8 /* ModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTemp.swift; sourceTree = "<group>"; };
 		EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTemp.swift; sourceTree = "<group>"; };
-		EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorTemp.swift; sourceTree = "<group>"; };
 		EF7711A327FD2907004414A8 /* StatisticTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTemp.swift; sourceTree = "<group>"; };
 		EF7711A527FD290C004414A8 /* TrackingTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTemp.swift; sourceTree = "<group>"; };
+		EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
+		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
 		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
 		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
 		EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardView.swift; sourceTree = "<group>"; };
+		EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Woody.swift"; sourceTree = "<group>"; };
+		EFED3A7F2804700600D99B27 /* WCRXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRXButton.swift; sourceTree = "<group>"; };
+		EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorHeaderView.swift; sourceTree = "<group>"; };
+		EFED3A832804757500D99B27 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorContainerView.swift; sourceTree = "<group>"; };
+		EFED3A87280497EA00D99B27 /* ButtonStyle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +138,8 @@
 				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
 				EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */,
 				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
+				EFED3A7F2804700600D99B27 /* WCRXButton.swift */,
+				EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -190,11 +206,12 @@
 			isa = PBXGroup;
 			children = (
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
+				EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */,
 				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
-				EF6C515528027548008D83A5 /* Components */,
-				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
 				DDD4187D27FD367F00A46DD2 /* VoiceCardPopupView..swift */,
-				DDD431922802A64400119835 /* VoiceCardPopupView2.swift */,
+				DDAF1F742802FC25000974FA /* VoiceCardPopupView2.swift */,
+				EFED3A89280499A300D99B27 /* Helper */,
+				EF6C515528027548008D83A5 /* Components */,
 			);
 			path = VoiceMentor;
 			sourceTree = "<group>";
@@ -220,6 +237,8 @@
 		EF77119927FD28CB004414A8 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				EFA5EA912802BCAA00872A42 /* Manager */,
+				EFA5EA8E2802BBF400872A42 /* Protocol */,
 				EF7711A927FD294A004414A8 /* Core Data */,
 				EF77119A27FD28D0004414A8 /* Extension */,
 			);
@@ -231,6 +250,7 @@
 			children = (
 				EF77119B27FD28D8004414A8 /* UIView+Woody.swift */,
 				EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */,
+				EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -242,6 +262,31 @@
 				DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		EFA5EA8E2802BBF400872A42 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		EFA5EA912802BCAA00872A42 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EFED3A89280499A300D99B27 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EFED3A832804757500D99B27 /* Popup.swift */,
+				EFED3A87280497EA00D99B27 /* ButtonStyle+.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,18 +365,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFED3A82280472F800D99B27 /* VoiceMentorHeaderView.swift in Sources */,
 				EF6C51522802737F008D83A5 /* VoiceMentorCardRow.swift in Sources */,
 				EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */,
+				EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */,
+				EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */,
 				EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */,
+				EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */,
 				EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */,
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
-				EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */,
 				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
 				ABEDFDAD2802BE6400ADA500 /* VoiceMentor.swift in Sources */,
 				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
 				DDD431932802A64400119835 /* VoiceCardPopupView2.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
+				EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */,
+				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
+				EFED3A88280497EA00D99B27 /* ButtonStyle+.swift in Sources */,
+				EFED3A842804757500D99B27 /* Popup.swift in Sources */,
 				ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */,
 				ABEDFDAF2802BEA500ADA500 /* DummyProgramViewModel.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
@@ -340,9 +392,11 @@
 				DDD4187E27FD367F00A46DD2 /* VoiceCardPopupView..swift in Sources */,
 				AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
+				EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */,
 				EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */,
 				EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */,
 				EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */,
+				DDAF1F752802FC25000974FA /* VoiceCardPopupView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,11 +525,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WheelchairRun/Preview Content\"";
+				DEVELOPMENT_TEAM = TZVHD77BLL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,11 +555,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WheelchairRun/Preview Content\"";
+				DEVELOPMENT_TEAM = TZVHD77BLL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

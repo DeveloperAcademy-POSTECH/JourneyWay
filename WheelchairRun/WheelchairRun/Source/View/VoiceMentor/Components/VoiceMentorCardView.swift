@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct VoiceMentorCardView: View {
+    @Binding var isPopupPresented: Bool
     
     let backgroundColor: [Color] = [
         Pallete.cardPointColor1,
@@ -18,35 +19,45 @@ struct VoiceMentorCardView: View {
     
     // TODO: 폰트 정리
     var body: some View {
-        backgroundColor.randomElement()
-            .overlay {
-                VStack(alignment: .trailing, spacing: 0) {
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text("엘린의 명상")
-                            .fontWeight(.black)
-                            .font(.system(size: 20))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                        Text("5 min")
-                            .font(.caption)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
-                    .foregroundColor(Pallete.white)
-                    .padding([.leading,.top], 10)
-                    HStack {
-                        Text("🧘🏻‍♀️")
-                            .font(.system(size: 50))
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                    }
+        VStack {
+            Button(action: {
+                // TODO: 눌렀을 때 팝업 나오게 하기
+                withAnimation {
+                    isPopupPresented.toggle()
                 }
+                
+            }) {
+                backgroundColor[0]
+                    .overlay {
+                        VStack(alignment: .trailing, spacing: 0) {
+                            VStack(alignment: .leading, spacing: 0) {
+                                Text("엘린의 명상")
+                                    .fontWeight(.black)
+                                    .font(.system(size: 20))
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                Text("5 min")
+                                    .font(.caption)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                            }
+                            .foregroundColor(Pallete.white)
+                            .padding([.leading,.top], 10)
+                            HStack {
+                                Text("🧘🏻‍♀️")
+                                    .font(.system(size: 50))
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
+                            }
+                        }
+                    }
+                    .cornerRadius(15)
+                    .shadow(radius: 3)
+                    .frame(width: 164, height: 124, alignment: .center)
             }
-            .cornerRadius(15)
-            .shadow(radius: 3)
-            .frame(width: 164, height: 124, alignment: .center)
+        }
     }
 }
 
 struct VoiceMentorCardView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceMentorCardView()
+        VoiceMentorCardView(isPopupPresented: .constant(false))
     }
 }
