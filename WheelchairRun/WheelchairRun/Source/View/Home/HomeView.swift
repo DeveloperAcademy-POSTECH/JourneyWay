@@ -68,7 +68,7 @@ struct pushNgo: View {
         }){
             Text("Push & Go")
                 .fontWeight(.bold)
-                .shimmering(active: true, duration: 1, bounce: false)
+                .shimmering(active: true, duration: 1.7, bounce: false)
                 .foregroundColor(Color(hue: 0.454, saturation: 1.0, brightness: 0.994))
                 .font(.largeTitle)
                 .background(Image("Circle_gradation")
