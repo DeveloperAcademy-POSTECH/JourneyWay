@@ -21,12 +21,37 @@ var detailContents2 = """
             """
 
 struct VoiceCardPopupView2: View {
+    @State private var isShowingModal = true
     
     var body: some View {
             ModalView()
     }
 }
-                
+       
+// background grey view
+//struct BackgroundView: View {
+//    var body: some View {
+//        ZStack {
+//            VoiceMentorView()
+//            VStack {
+//                Color.black.opacity(0.5)
+//            }
+//            .ignoresSafeArea()
+//
+//            ModalView()
+//        }
+//    }
+//}
+
+struct ModalOverlay: View {
+    var color = Color.black.opacity(0.4)
+    var tapAction: (() -> Void)? = nil
+
+    var body: some View {
+        color.onTapGesture { self.tapAction?() }
+            .ignoresSafeArea()
+    }
+}
 
 // 모달 카드 뷰
 struct ModalView : View {
@@ -97,6 +122,7 @@ struct ModalView : View {
         }
         .frame(width: 345, height: 530)
         .cornerRadius(20).shadow(radius: 5)
+        
     }
 }
 
