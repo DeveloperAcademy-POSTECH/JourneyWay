@@ -119,8 +119,6 @@
 		EF6C515528027548008D83A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EFED3A832804757500D99B27 /* Popup.swift */,
-				EFED3A87280497EA00D99B27 /* ButtonStyle+.swift */,
 				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
 				EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */,
 				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
@@ -193,9 +191,10 @@
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
 				EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */,
 				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
-				EF6C515528027548008D83A5 /* Components */,
 				DDD4187D27FD367F00A46DD2 /* VoiceCardPopupView..swift */,
 				DDAF1F742802FC25000974FA /* VoiceCardPopupView2.swift */,
+				EFED3A89280499A300D99B27 /* Helper */,
+				EF6C515528027548008D83A5 /* Components */,
 			);
 			path = VoiceMentor;
 			sourceTree = "<group>";
@@ -260,6 +259,15 @@
 				EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		EFED3A89280499A300D99B27 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				EFED3A832804757500D99B27 /* Popup.swift */,
+				EFED3A87280497EA00D99B27 /* ButtonStyle+.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
