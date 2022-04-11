@@ -39,6 +39,9 @@ struct StatisticTabView: View {
 }
 
 struct StatisticView: View {
+    @State var selected = 2
+    @State var items = ["Daily", "Week", "Month"]
+    
     var body: some View {
         
             VStack(alignment: .leading) {
@@ -52,6 +55,23 @@ struct StatisticView: View {
                     .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0))
                 
                 Divider()
+                Picker("graph", selection: $selected) {
+                    ForEach(0..<items.count, id: \.self) { i in
+                        Text(items[i])
+                    }
+                }.pickerStyle(.segmented)
+                
+                if selected == 0 {
+                    Text("Daily")
+                        .multilineTextAlignment(.center)
+                }else if selected == 1 {
+                    Text("Week")
+                        .multilineTextAlignment(.center)
+                }else if selected == 2 {
+                    Text("Month")
+                        .multilineTextAlignment(.center)
+                }
+                
                 
                 Spacer()
                 Divider()
@@ -64,8 +84,6 @@ struct StatisticView: View {
                     .font(.custom("Apple SD Gothic Neo Light", size: 12))
                     .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 0))
                 
-                Divider()
-                
                 Spacer()
             }.navigationTitle("통계")
             .navigationBarTitleDisplayMode(.inline)
@@ -73,6 +91,9 @@ struct StatisticView: View {
 }
 
 struct StatisticView2: View {
+    let diarys: [DiaryData] = DiaryData.sampleData
+    var currentYear: Int = 2022
+    
     var body: some View {
         
         VStack(alignment: .leading) {
@@ -87,11 +108,15 @@ struct StatisticView2: View {
             ScrollView {
                 LazyVStack(pinnedViews: [.sectionHeaders]) {
                     Section(header: Header()) {
-                        ForEach(contents, id: \.self) { name in
-                            ListItem(title: name)
-                                .padding(.horizontal, 12)
-                                .padding(.vertical, 4)
-                        }
+//                        ForEach(contents, id: \.self) { name in
+////                            ListItem(title: name)
+//                                .padding(.horizontal, 12)
+//                                .padding(.vertical, 4)
+//                        }
+                    }
+                    ForEach(0..<diarys.count, id: \.self) { index in
+                        DiaryList(diary: diarys[index])
+                        Spacer()
                     }
                 }
             }.clipped()
@@ -138,6 +163,36 @@ struct Header: View {
     }
 }
 
+struct DiaryList: View {
+    var diary: DiaryData
+    
+    var body: some View {
+        HStack {
+            Text("\(diary.getMonth())월\n\(diary.getDay())일")
+            HStack {
+                VStack {
+                    Text("Time")
+                    Text("\(diary.getTime())")
+                }.padding()
+                VStack {
+                    Text("Push")
+                    Text("\(diary.getPushCount())")
+                }.padding()
+                VStack {
+                    Text("Calorie")
+                    Text("\(diary.getCalorie())")
+                }.padding()
+            }
+            .background(
+                RoundedRectangle(cornerRadius: 20.0).fill(Color.white))
+            .padding()
+        }
+        .frame(maxWidth: .infinity)
+        .background(
+            RoundedRectangle(cornerRadius: 20.0).fill(Color.green))
+        .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
+    }
+}
 
 
 struct StatisticMainView_Previews: PreviewProvider {
