@@ -27,12 +27,13 @@ struct Hello_Profile: View {
             HStack(alignment: .top, spacing: 10){
                 Spacer()
                 VStack(alignment: .leading, spacing: 5){
-                    HStack{
+                    HStack(alignment: .firstTextBaseline, spacing: 5){
                         Text("안녕하세요,")
                             .font(.title3)
                         Text("요셉")
                             .font(.title)
                             .fontWeight(.semibold)
+                            
                     }
                     Text("보이스멘토와 함께")
                         .font(.title3)
