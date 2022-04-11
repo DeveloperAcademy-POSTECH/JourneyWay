@@ -29,6 +29,9 @@ class DummyProgramViewModel: ObservableObject {
         player = Sound.preparePlay(soundfile: model.voiceString)
     }
     
+    func updateProgressValue(time newVal: TimeInterval) {
+        model.progressValue = newVal
+    }
     
     func toggleRunningStatus() {
         model.toggleRunningStatus()
@@ -39,7 +42,7 @@ class DummyProgramViewModel: ObservableObject {
     }
     
     func updateStats_test() {
-        model.updateStats_test(pushUpdate: 0.6, distanceUpdate: 0.0012)
+        model.updateStats_test(pushUpdate: 0.06, distanceUpdate: 0.00012)
     }
     
     func markComplete() {

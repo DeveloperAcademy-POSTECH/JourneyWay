@@ -11,9 +11,8 @@ import Combine
 struct TrackingView: View {
     @Binding var isPresented: Bool
     @ObservedObject var program = DummyProgramViewModel()
-    let timer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
-    let prepareTimer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
-    @State var counter: Int = 4
+    @State var counter: Double = 4.0
+    let timer = Timer.publish(every: 0.1, tolerance: 0.01, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {
@@ -58,14 +57,16 @@ struct TrackingView: View {
                             .padding()
                         
                     }.onReceive(timer) { _ in
-                        counter -= 1
+                        counter -= 0.1
                     }
                 } else {
                     Text("PUSH!")
                         .font(Font.system(size: 100).italic().bold())
                         .foregroundColor(Pallete.mint)
                         .onReceive(timer) { _ in
-                            program.isPreparing = false
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                program.isPreparing = false
+                            }
                         }
                         .animation(.linear, value: counter)
                 }
@@ -156,12 +157,12 @@ struct ProgramProgressBar: View {
                     .font(.largeTitle)
                     .bold()
                     .onReceive(timer) { _ in
-                        if program.progressValue < duration {
+                        if program.player?.isPlaying != false {
                             if program.isRunning {
-                                program.countSecond()
+                                program.updateProgressValue(time: program.player?.currentTime ?? 0.0)
                                 program.updateStats_test()
                             }
-                        } else {
+                        } else if program.player?.currentTime == 0.0 {
                             timer.upstream.connect().cancel()
                             program.markComplete()
                             program.player?.stop()

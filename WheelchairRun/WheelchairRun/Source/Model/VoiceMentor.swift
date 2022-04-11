@@ -30,7 +30,7 @@ struct VoiceMentor {
     }
     
     mutating func countSeconds() {
-        progressValue += 1
+        progressValue += 0.1
     }
     
     mutating func updateStats_test(pushUpdate: Float, distanceUpdate: Float) {
