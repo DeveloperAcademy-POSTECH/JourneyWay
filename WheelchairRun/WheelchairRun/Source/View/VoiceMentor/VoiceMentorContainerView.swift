@@ -13,10 +13,10 @@ struct VoiceMentorContainerView: View {
     var body: some View {
         ZStack {
             VoiceMentorView(isPopupPresented: $isPopupPresented)
-                .modifier(Popup(isPopupPresented: $isPopupPresented,
-                                alignment: .center,
-                                direction: .bottom,
-                                content: {VoiceCardPopupView2.init()}))
+                .popup(isPopupPresented: $isPopupPresented,
+                       alignment: .center,
+                       direction: .bottom,
+                       content: { VoiceCardPopupView2.init()})
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-/// 팝업
+/// 팝업을 사용할 때는
 /// ViewModifier 프로토콜을 준수하게 된다면,  모든 뷰에 적용할 수 있는 재사용가능한 modifier를 만듭니다.
 /// 아래 예는 여러 수정자를 결합하여 둥근 사각형으로 둘러싸인 파란색 캡션 텍스트를 만드는 데 사용할 수 있는 새 수정자를 만듭니다.
 struct Popup<T: View>: ViewModifier {
@@ -16,7 +16,7 @@ struct Popup<T: View>: ViewModifier {
     let direction: PopupDirection
     @Binding var isPopupPresented: Bool
     
-    init(isPopupPresented: Binding<Bool>,
+    fileprivate init(isPopupPresented: Binding<Bool>,
          alignment: Alignment,
          direction: PopupDirection,
          @ViewBuilder content: () -> T) {
@@ -48,19 +48,12 @@ struct Popup<T: View>: ViewModifier {
     }
 }
 
-struct BackgroundView: View {
-    var body: some View {
-        Color.black.opacity(0.6)
-    }
-}
-
 extension View {
     func popup<T: View>(isPopupPresented: Binding<Bool>,
                         alignment: Alignment,
                         direction: PopupDirection,
                         @ViewBuilder content: () -> T) -> some View {
-        blur(radius: 0)
-            .modifier(Popup(isPopupPresented: isPopupPresented,
+        modifier(Popup(isPopupPresented: isPopupPresented,
                             alignment: alignment,
                             direction: direction,
                             content: content))
@@ -69,13 +62,15 @@ extension View {
 }
 
 enum PopupDirection {
-    case top, bottom
+    case middle
+    case bottom
     
     func offset(popupFrame: CGRect) -> CGFloat {
         switch self {
-        case .top:
-            let aboveScreenEdge = -popupFrame.maxY
-            return aboveScreenEdge
+        case .middle:
+            // TODO: transition offset이 아니라 scale 처리해주어야 함
+            let belowScreenEdge = UIScreen.main.bounds.height - popupFrame.minY
+            return belowScreenEdge
         case .bottom:
             let belowScreenEdge = UIScreen.main.bounds.height - popupFrame.minY
             return belowScreenEdge

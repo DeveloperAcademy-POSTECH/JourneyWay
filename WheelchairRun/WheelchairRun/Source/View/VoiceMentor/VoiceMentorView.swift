@@ -47,13 +47,6 @@ struct VoiceMentorView: View {
     }
 }
 
-struct PopupBackgroundButtonStyle: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-      configuration.label
-        .opacity(1)
-    }
-}
-
 struct VoiceMentorView_Previews: PreviewProvider {
     static var previews: some View {
         VoiceMentorView(isPopupPresented: .constant(false))
