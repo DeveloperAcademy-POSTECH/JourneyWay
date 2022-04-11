@@ -15,40 +15,48 @@ struct TrackingView: View {
     @State var counter: Int = 3
     
     var body: some View {
-        if !program.isPreparing {
-            VStack {
-                if !program.isComplete {
-                    EmergencyButton()
-                        .padding()
-                    Text(program.mentorName)
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .lineLimit(1)
-                        .padding()
-                    ProgramProgressBar(program: program, timer: timer)
-                        .padding(30)
-                    StatsInfoModule(program: program)
-                    Spacer(minLength: 50)
-                    PlayBackController(program: program)
-                } else {
-                    CompleteView(program: program)
+        ZStack {
+            if !program.isPreparing {
+                VStack {
+                    if !program.isComplete {
+                        EmergencyButton()
+                            .padding()
+                        Text(program.mentorName)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .lineLimit(1)
+                            .padding()
+                        ProgramProgressBar(program: program, timer: timer)
+                            .padding(30)
+                        StatsInfoModule(program: program)
+                        Spacer(minLength: 50)
+                        PlayBackController(program: program)
+                    } else {
+                        CompleteView(program: program)
+                    }
                 }
-            }
-        } else {
-            if counter > 0 {
-                Text("\(counter)")
-                    .fontWeight(.bold)
-                    .onReceive(timer) { _ in
-                        counter -= 1
-                    }
-                    .animation(.linear, value: counter)
             } else {
-                Text("PUSH")
-                    .fontWeight(.bold)
-                    .onReceive(timer) { _ in
-                        program.isPreparing = false
-                    }
-                    .animation(.linear, value: counter)
+                Pallete.purple
+                    .ignoresSafeArea()
+                if counter > 0 {
+                    Text("\(counter)")
+                        .font(.system(size: 100))
+                        .fontWeight(.bold)
+                        .foregroundColor(Pallete.mint)
+                        .onReceive(timer) { _ in
+                            counter -= 1
+                        }
+                        .animation(.linear, value: counter)
+                } else {
+                    Text("PUSH")
+                        .font(.system(size: 100))
+                        .fontWeight(.bold)
+                        .foregroundColor(Pallete.mint)
+                        .onReceive(timer) { _ in
+                            program.isPreparing = false
+                        }
+                        .animation(.linear, value: counter)
+                }
             }
         }
     }

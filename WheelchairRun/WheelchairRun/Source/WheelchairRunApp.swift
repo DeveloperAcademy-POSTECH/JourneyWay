@@ -13,7 +13,7 @@ struct WheelchairRunApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TrackingView()
+            ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
