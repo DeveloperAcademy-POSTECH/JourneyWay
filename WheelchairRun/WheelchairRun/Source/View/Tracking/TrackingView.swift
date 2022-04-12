@@ -6,103 +6,64 @@
 //
 
 import SwiftUI
-
-struct VoiceMentor {
-    let mentorName: String
-    let playbackTime: TimeInterval
-    var isRunning: Bool = true
-    var progressValue: Double = 0.0
-    var stats: ExerciseStats = ExerciseStats()
-    var isComplete: Bool = false
-    
-    static func secondsToTime(time: TimeInterval) -> String {
-        let timeVal = Int(time)
-        let (h,m,s) = (timeVal / 3600, (timeVal % 3600) / 60, (timeVal % 3600) % 60)
-        let h_string = h < 10 ? "0\(h)" : "\(h)"
-        let m_string =  m < 10 ? "0\(m)" : "\(m)"
-        let s_string =  s < 10 ? "0\(s)" : "\(s)"
-        
-        return "\(h_string):\(m_string):\(s_string)"
-    }
-    
-    mutating func toggleRunningStatus() {
-        isRunning.toggle()
-    }
-    
-    mutating func countSeconds() {
-        progressValue += 1
-    }
-    
-    mutating func updateStats_test(pushUpdate: Float, distanceUpdate: Float) {
-        stats.pushCount += pushUpdate
-        stats.distance += distanceUpdate
-    }
-    
-    mutating func markComplete() {
-        isComplete = true
-    }
-    
-    struct ExerciseStats {
-        var pushCount: Float = 0.0
-        var distance: Float = 0.0
-    }
-}
-
-class DummyProgram: ObservableObject {
-    @Published private var model = VoiceMentor(mentorName: "Voice Walking Test",
-                                                    playbackTime: 10)
-    var mentorName: String { model.mentorName }
-    var playbackTime: TimeInterval { model.playbackTime }
-    var isRunning: Bool { model.isRunning }
-    var stats: VoiceMentor.ExerciseStats { model.stats }
-    var progressValue: Double { model.progressValue }
-    var isComplete: Bool { model.isComplete }
-    
-    func toggleRunningStatus() {
-        model.toggleRunningStatus()
-    }
-    
-    func countSecond() {
-        model.countSeconds()
-    }
-    
-    func updateStats_test() {
-        model.updateStats_test(pushUpdate: 0.6, distanceUpdate: 0.0012)
-    }
-    
-    func markComplete() {
-        model.markComplete()
-    }
-}
-
+import Combine
 
 struct TrackingView: View {
-    @ObservedObject var program = DummyProgram()
+    @ObservedObject var program = DummyProgramViewModel()
+    let timer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
+    let prepareTimer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
+    @State var counter: Int = 3
     
     var body: some View {
-        VStack {
-            if !program.isComplete {
-                EmergencyButton()
-                    .padding()
-                Text(program.mentorName)
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .lineLimit(1)
-                    .padding()
-                ProgramProgressBar(program: program)
-                    .padding(30)
-                StatsInfoModule(program: program)
-                Spacer(minLength: 50)
-                PlayBackController(program: program)
+        ZStack {
+            if !program.isPreparing {
+                VStack {
+                    if !program.isComplete {
+                        EmergencyButton()
+                            .padding()
+                        Text(program.mentorName)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .lineLimit(1)
+                            .padding()
+                        ProgramProgressBar(program: program, timer: timer)
+                            .padding(30)
+                        StatsInfoModule(program: program)
+                        Spacer(minLength: 50)
+                        PlayBackController(program: program)
+                    } else {
+                        CompleteView(program: program)
+                    }
+                }
             } else {
-                CompleteView(program: program)
+                Pallete.purple
+                    .ignoresSafeArea()
+                if counter > 0 {
+                    Text("\(counter)")
+                        .font(.system(size: 100))
+                        .fontWeight(.bold)
+                        .foregroundColor(Pallete.mint)
+                        .onReceive(timer) { _ in
+                            counter -= 1
+                        }
+                        .animation(.linear, value: counter)
+                } else {
+                    Text("PUSH")
+                        .font(.system(size: 100))
+                        .fontWeight(.bold)
+                        .foregroundColor(Pallete.mint)
+                        .onReceive(timer) { _ in
+                            program.isPreparing = false
+                        }
+                        .animation(.linear, value: counter)
+                }
             }
         }
     }
 }
 
 struct CompleteView: View {
-    @ObservedObject var program: DummyProgram
+    @ObservedObject var program: DummyProgramViewModel
     
     var body: some View {
         Spacer()
@@ -151,7 +112,7 @@ struct CompleteView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 25)
-                    .foregroundColor(.green))
+                    .foregroundColor(Pallete.mint))
                 .frame(width: 100, height: 100)
                 .padding()
         }
@@ -160,8 +121,8 @@ struct CompleteView: View {
 }
 
 struct ProgramProgressBar: View {
-    @ObservedObject var program: DummyProgram
-    let timer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
+    @ObservedObject var program: DummyProgramViewModel
+    let timer: Publishers.Autoconnect<Timer.TimerPublisher>
     let lineWidth = 15.0
     
     var body: some View {
@@ -169,11 +130,11 @@ struct ProgramProgressBar: View {
             Circle()
                 .stroke(lineWidth: lineWidth)
                 .opacity(0.3)
-                .foregroundColor(Color.purple)
+                .foregroundColor(Pallete.purple)
             Circle()
                 .trim(from: 0.0, to: CGFloat(min(Float(program.progressValue) / Float(program.playbackTime), 1.0)))
                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
-                .foregroundColor(Color.purple)
+                .foregroundColor(Pallete.purple)
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.linear, value: program.progressValue)
             VStack {
@@ -200,7 +161,7 @@ struct ProgramProgressBar: View {
 }
 
 struct StatsInfoModule: View {
-    @ObservedObject var program: DummyProgram
+    @ObservedObject var program: DummyProgramViewModel
     
     var body: some View {
         HStack {
@@ -226,7 +187,7 @@ struct StatsInfoModule: View {
 }
 
 struct PlayBackController: View {
-    @ObservedObject var program: DummyProgram
+    @ObservedObject var program: DummyProgramViewModel
     
     var body: some View {
         HStack {
@@ -240,7 +201,7 @@ struct PlayBackController: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25)
-                            .foregroundColor(.green))
+                            .foregroundColor(Pallete.mint))
                         .frame(width: 100, height: 100)
                         .padding()
                 }
@@ -254,7 +215,7 @@ struct PlayBackController: View {
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 25)
-                        .foregroundColor(.green))
+                        .foregroundColor(Pallete.mint))
                     .frame(width: 100, height: 100)
                     .padding()
                     .animation(.linear, value: program.isRunning)
