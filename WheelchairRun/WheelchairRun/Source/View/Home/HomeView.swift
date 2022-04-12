@@ -79,6 +79,7 @@ struct pushNgo: View {
             }
             
         }
+        .buttonStyle(PopupBackgroundButtonStyle())
         .fullScreenCover(isPresented: $isPresented) {
             TrackingView(isPresented: $isPresented)
         }
