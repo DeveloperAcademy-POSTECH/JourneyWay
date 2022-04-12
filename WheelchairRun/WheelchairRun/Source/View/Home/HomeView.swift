@@ -24,8 +24,6 @@ struct HomeView: View {
 
 struct Hello_Profile: View {
     var body: some View {
-        
-        Spacer()
         VStack(alignment: .center, spacing: 10) {
             HStack(alignment: .top, spacing: 10){
                 Spacer()
