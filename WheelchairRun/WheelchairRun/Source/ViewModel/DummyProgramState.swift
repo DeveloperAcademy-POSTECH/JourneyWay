@@ -7,38 +7,35 @@
 
 import Foundation
 import AVFoundation
+import SwiftUI
 
-class DummyProgramViewModel: ObservableObject {
-    @Published private var model = VoiceMentor(mentorName: "Voice Walking Test",
-                                               playbackTime: 10, voiceString: "sample")
+
+class DummyProgramState: ObservableObject {
+    @Published private var model: Program
     @Published var isComplete: Bool = false
     @Published var isPreparing: Bool = true
-    var player: AVAudioPlayer?
+    @Published var isRunning: Bool = true
     
+    var player: AVAudioPlayer?
     var readyText: [String] = ["How is your condition?",
                                "Checked road safety?",
                                "Now, shall we run?"]
+    var mentorName: String? { model.programName }
+    var stats: ExerciseStats { model.stats }
+    var progressValue: Double = 0.0
     
-    var mentorName: String { model.mentorName }
-    var isRunning: Bool { model.isRunning }
-    var stats: VoiceMentor.ExerciseStats { model.stats }
-    var progressValue: Double { model.progressValue }
-    
-    
-    init() {
-        player = Sound.preparePlay(soundfile: model.voiceString)
+    init(programName: String?, duration: String, mentor: Program.Mentor?, description: String, color: LinearGradient, soundTrack: String?) {
+        
+        model = Program(programName: programName, duration: duration, mentor: mentor, description: description, color: color, soundTrack: soundTrack)
+        player = Sound.preparePlay(soundfile: model.soundTrack)
     }
     
     func updateProgressValue(time newVal: TimeInterval) {
-        model.progressValue = newVal
+        self.progressValue = newVal
     }
     
     func toggleRunningStatus() {
-        model.toggleRunningStatus()
-    }
-    
-    func countSecond() {
-        model.countSeconds()
+        isRunning.toggle()
     }
     
     func updateStats_test() {

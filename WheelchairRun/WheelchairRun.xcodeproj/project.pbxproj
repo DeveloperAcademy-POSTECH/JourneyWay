@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAA27FD332100ADA500 /* TrackingView.swift */; };
-		ABEDFDAD2802BE6400ADA500 /* VoiceMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */; };
-		ABEDFDAF2802BEA500ADA500 /* DummyProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */; };
+		ABEDFDAD2802BE6400ADA500 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAC2802BE6400ADA500 /* Program.swift */; };
+		ABEDFDAF2802BEA500ADA500 /* DummyProgramState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAE2802BEA500ADA500 /* DummyProgramState.swift */; };
 		ABEDFDCB2804722F00ADA500 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDCA2804722F00ADA500 /* Sound.swift */; };
 		AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77751B27FD3713001BCA2F /* HomeView.swift */; };
 		AFD6199A2803BF2700FC0FC3 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = AFD619992803BF2700FC0FC3 /* Shimmer */; };
@@ -28,7 +28,6 @@
 		DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */; };
 		EF35056128058961007E1315 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35056028058961007E1315 /* User.swift */; };
 		EF35056328058970007E1315 /* BadgeStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35056228058970007E1315 /* BadgeStage.swift */; };
-		EF35056528058976007E1315 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35056428058976007E1315 /* Program.swift */; };
 		EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3505662805898B007E1315 /* TrackingRecord.swift */; };
 		EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */; };
 		EF6C51522802737F008D83A5 /* VoiceMentorCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */; };
@@ -51,8 +50,8 @@
 
 /* Begin PBXFileReference section */
 		ABEDFDAA27FD332100ADA500 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
-		ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentor.swift; sourceTree = "<group>"; };
-		ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyProgramViewModel.swift; sourceTree = "<group>"; };
+		ABEDFDAC2802BE6400ADA500 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		ABEDFDAE2802BEA500ADA500 /* DummyProgramState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyProgramState.swift; sourceTree = "<group>"; };
 		ABEDFDCA2804722F00ADA500 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		AF77751B27FD3713001BCA2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CD0D7BD72805090300C7B876 /* DiaryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryData.swift; sourceTree = "<group>"; };
@@ -71,7 +70,6 @@
 		DDD4187627FD26E400A46DD2 /* WheelchairRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WheelchairRun.xcdatamodel; sourceTree = "<group>"; };
 		EF35056028058961007E1315 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EF35056228058970007E1315 /* BadgeStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeStage.swift; sourceTree = "<group>"; };
-		EF35056428058976007E1315 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
 		EF3505662805898B007E1315 /* TrackingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingRecord.swift; sourceTree = "<group>"; };
 		EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentVoiceMentorList.swift; sourceTree = "<group>"; };
 		EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardRow.swift; sourceTree = "<group>"; };
@@ -236,7 +234,7 @@
 		EF77119727FD28BA004414A8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */,
+				ABEDFDAE2802BEA500ADA500 /* DummyProgramState.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -245,9 +243,8 @@
 			isa = PBXGroup;
 			children = (
 				CD0D7BD72805090300C7B876 /* DiaryData.swift */,
-				ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */,
+				ABEDFDAC2802BE6400ADA500 /* Program.swift */,
 				EF3505662805898B007E1315 /* TrackingRecord.swift */,
-				EF35056428058976007E1315 /* Program.swift */,
 				EF35056228058970007E1315 /* BadgeStage.swift */,
 				EF35056028058961007E1315 /* User.swift */,
 			);
@@ -402,7 +399,7 @@
 				CE47BBA22803CFCD0007DC07 /* StatisticMainView.swift in Sources */,
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
 				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
-				ABEDFDAD2802BE6400ADA500 /* VoiceMentor.swift in Sources */,
+				ABEDFDAD2802BE6400ADA500 /* Program.swift in Sources */,
 				CD0D7BFC2805546300C7B876 /* PushDiaryView.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
@@ -413,9 +410,8 @@
 				EFED3A88280497EA00D99B27 /* ButtonStyle+.swift in Sources */,
 				EFED3A842804757500D99B27 /* Popup.swift in Sources */,
 				ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */,
-				ABEDFDAF2802BEA500ADA500 /* DummyProgramViewModel.swift in Sources */,
+				ABEDFDAF2802BEA500ADA500 /* DummyProgramState.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
-				EF35056528058976007E1315 /* Program.swift in Sources */,
 				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
 				AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */,

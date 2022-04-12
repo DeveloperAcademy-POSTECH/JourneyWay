@@ -82,7 +82,7 @@ struct pushNgo: View {
         }
         .buttonStyle(PopupBackgroundButtonStyle())
         .fullScreenCover(isPresented: $isPresented) {
-            TrackingView(isPresented: $isPresented)
+            TrackingView(isPresented: $isPresented, programName: nil, duration: "0", mentor: nil, description: "", color: Pallete.Gradient.purple, soundTrack: nil)
         }
         Spacer()
     }

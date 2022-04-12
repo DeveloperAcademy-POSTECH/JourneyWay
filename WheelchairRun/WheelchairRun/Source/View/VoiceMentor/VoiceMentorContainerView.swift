@@ -9,6 +9,7 @@ import SwiftUI
 
 struct VoiceMentorContainerView: View {
     @State var isPopupPresented: Bool = false
+    var program: Program?
     
     var body: some View {
         ZStack {
@@ -29,6 +30,6 @@ struct VoiceMentorContainerView_Previews: PreviewProvider {
             .popup(isPopupPresented: .constant(false),
                    alignment: .center,
                    direction: .bottom,
-                   content: { VoiceCardPopupView.init()})
+                   content: { VoiceCardPopupView.init(program: Program.dummy[0])})
     }
 }

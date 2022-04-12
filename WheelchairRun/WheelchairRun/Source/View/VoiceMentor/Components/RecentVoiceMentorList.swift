@@ -15,7 +15,7 @@ struct RecentVoiceMentorList: View {
             LazyHStack(spacing: 12) {
                 Color.clear.padding(0)
                 ForEach(1..<10) { _ in
-                    VoiceMentorCardView(isPopupPresented: $isPopupPresented)
+                    VoiceMentorCardView(isPopupPresented: $isPopupPresented, program: Program.dummy[0])
                 }
             }
         }

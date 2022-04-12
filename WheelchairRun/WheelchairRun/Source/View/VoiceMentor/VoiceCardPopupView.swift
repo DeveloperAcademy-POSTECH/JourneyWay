@@ -10,9 +10,10 @@ import SwiftUI
 struct VoiceCardPopupView: View {
     @State private var isShowingModal = true
     @State private var modalOpacity: Double = 1.0
+    var program: Program
     
     var body: some View {
-        ModalView(isShowingModal: $isShowingModal, modalOpacity: $modalOpacity)
+        ModalView(isShowingModal: $isShowingModal, modalOpacity: $modalOpacity, program: program)
     }
 }
 
@@ -22,6 +23,7 @@ struct ModalView : View {
     @Binding var isShowingModal: Bool
     @Binding var modalOpacity: Double
     @State private var isPresented = false
+    var program: Program
     
     var body: some View {
         ZStack {
@@ -41,12 +43,12 @@ struct ModalView : View {
                     // 프로그램, 강사, 시간
                     HStack(alignment: .lastTextBaseline) {
                         VStack(alignment: .leading) {
-                            Text(Program.dummy[0].programName)
+                            Text(program.programName ?? "")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             Spacer().frame(height: 5)
-                            Text(Program.dummy[0].mentor.name)
+                            Text(program.mentor?.name ?? "")
                                 .font(.subheadline)
                                 .foregroundColor(.white)
                         }
@@ -55,7 +57,7 @@ struct ModalView : View {
                             Text("⏰")
                                 .font(.title3)
                                 .offset(y: -3)
-                            Text("\(Program.dummy[0].time)")
+                            Text("\(program.duration)")
                                 .foregroundColor(.white)
                                 .font(.system(size: 35, weight: .bold))
                                 .fontWeight(.heavy)
@@ -67,7 +69,7 @@ struct ModalView : View {
                     Spacer()
                     // 프로그램 설명
                     HStack {
-                        Text(Program.dummy[0].content)
+                        Text(program.description)
                             .lineLimit(4)
                             .multilineTextAlignment(.leading)
                             .font(.callout)
@@ -96,7 +98,7 @@ struct ModalView : View {
                 }.fullScreenCover(isPresented: $isPresented, onDismiss: {
                     presentationMode.wrappedValue.dismiss()
                 }, content: {
-                    TrackingView(isPresented: $isPresented)
+//                    TrackingView(isPresented: $isPresented)
                 })
 
                 
@@ -118,6 +120,6 @@ struct ModalView : View {
 
 struct VoiceCardPopupView__Previews: PreviewProvider {
     static var previews: some View {
-        VoiceCardPopupView()
+        VoiceCardPopupView(program: Program.dummy[0])
     }
 }
