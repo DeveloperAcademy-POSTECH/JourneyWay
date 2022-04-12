@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD0D7BD82805090300C7B876 /* DiaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BD72805090300C7B876 /* DiaryData.swift */; };
 		CE47BBA22803CFCD0007DC07 /* StatisticMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
 		DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186C27FD26E200A46DD2 /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD0D7BD72805090300C7B876 /* DiaryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryData.swift; sourceTree = "<group>"; };
 		CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticMainView.swift; path = WheelchairRun/Source/View/Statistic/StatisticMainView.swift; sourceTree = SOURCE_ROOT; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		EF77119827FD28C1004414A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CD0D7BD72805090300C7B876 /* DiaryData.swift */,
 				EF77119D27FD28EB004414A8 /* ModelTemp.swift */,
 			);
 			path = Model;
@@ -269,6 +272,7 @@
 				EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
+				CD0D7BD82805090300C7B876 /* DiaryData.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
 				EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */,
 			);

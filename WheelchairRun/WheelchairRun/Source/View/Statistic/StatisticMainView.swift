@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// var contents = ["4월 2일", "4월 1일", "3월 31일", "3월 30일", "3월 29일", "3월 28일", "3월 27일"]
+var contents = ["4월 2일", "4월 1일", "3월 31일", "3월 30일", "3월 29일", "3월 28일", "3월 27일"]
 
 struct StatisticMainView: View {
     var body: some View {
