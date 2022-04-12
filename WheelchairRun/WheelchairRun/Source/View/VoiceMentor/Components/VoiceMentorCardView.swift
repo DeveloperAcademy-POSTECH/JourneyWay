@@ -10,51 +10,63 @@ import SwiftUI
 struct VoiceMentorCardView: View {
     @Binding var isPopupPresented: Bool
     
-    let backgroundColor: [Color] = [
-        Pallete.red,
-        Pallete.yellow,
-        Pallete.cardPointColor3,
-        Pallete.cardPointColor4
+    let backgroundColor: [LinearGradient] = [
+        Pallete.Gradient.red,
+        Pallete.Gradient.blue,
+        Pallete.Gradient.purple,
+        Pallete.Gradient.green
     ]
     
     // TODO: 폰트 정리
     var body: some View {
-        VStack {
-            Button(action: {
-                // TODO: 눌렀을 때 팝업 나오게 하기
-                withAnimation {
-                    isPopupPresented.toggle()
-                }
-                
-            }) {
-                backgroundColor[0]
-                    .overlay {
-                        VStack(alignment: .trailing, spacing: 0) {
-                            VStack(alignment: .leading, spacing: 0) {
-                                Text("엘린의 명상")
-                                    .fontWeight(.black)
-                                    .font(.system(size: 20))
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                                Text("5 min")
-                                    .font(.caption)
-                                    .frame(maxWidth: .infinity, alignment: .leading)
-                            }
-                            .foregroundColor(Pallete.white)
-                            .padding([.leading,.top], 10)
-                            HStack {
-                                Text("🧘🏻‍♀️")
-                                    .font(.system(size: 50))
-                                    .frame(maxWidth: .infinity, alignment: .trailing)
-                            }
+        Button(action: {
+            withAnimation {
+                isPopupPresented.toggle()
+            }
+        }) {
+            backgroundColor.randomElement()
+                .overlay {
+                    VStack(alignment: .trailing, spacing: 0) {
+                        VStack(alignment: .leading, spacing: 0) {
+                            Text("엘린의 명상")
+                                .cardTitle()
+                            Text("5 min")
+                                .cardSubTitle()
+                        }
+                        .padding([.leading,.top], 10)
+                        HStack {
+                            Text("🧘🏻‍♀️")
+                                .font(.system(size: 50))
+                                .frame(maxWidth: .infinity, alignment: .trailing)
                         }
                     }
-                    .cornerRadius(15)
-                    .shadow(radius: 3)
-                    .frame(width: 164, height: 124, alignment: .center)
-            }
+                }
+                .cornerRadius(15)
+                .shadow(radius: 3)
+                .frame(width: 164, height: 124, alignment: .center)
         }
+        .buttonStyle(CardButtonStyle())
     }
 }
+
+
+extension Text {
+    func cardTitle() -> some View {
+        self.fontWeight(.black)
+            .font(.title3)
+            .frame(maxWidth: .infinity,
+                   alignment: .leading)
+            .foregroundColor(Pallete.white)
+    }
+    
+    func cardSubTitle() -> some View {
+        self.font(.caption)
+            .frame(maxWidth: .infinity,
+                   alignment: .leading)
+            .foregroundColor(Pallete.white)
+    }
+}
+
 
 struct VoiceMentorCardView_Previews: PreviewProvider {
     static var previews: some View {
