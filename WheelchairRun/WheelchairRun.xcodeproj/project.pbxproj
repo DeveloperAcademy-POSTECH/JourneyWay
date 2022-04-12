@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		CD0D7BD82805090300C7B876 /* DiaryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BD72805090300C7B876 /* DiaryData.swift */; };
+		CD0D7BFB2805546300C7B876 /* DiaryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BF72805546300C7B876 /* DiaryList.swift */; };
+		CD0D7BFC2805546300C7B876 /* PushDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BF82805546300C7B876 /* PushDiaryView.swift */; };
+		CD0D7BFD2805546300C7B876 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BF92805546300C7B876 /* BarGraph.swift */; };
+		CD0D7BFE2805546300C7B876 /* HealthGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BFA2805546300C7B876 /* HealthGraphView.swift */; };
 		CE47BBA22803CFCD0007DC07 /* StatisticMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
 		DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186C27FD26E200A46DD2 /* ContentView.swift */; };
@@ -25,6 +29,10 @@
 
 /* Begin PBXFileReference section */
 		CD0D7BD72805090300C7B876 /* DiaryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryData.swift; sourceTree = "<group>"; };
+		CD0D7BF72805546300C7B876 /* DiaryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiaryList.swift; sourceTree = "<group>"; };
+		CD0D7BF82805546300C7B876 /* PushDiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushDiaryView.swift; sourceTree = "<group>"; };
+		CD0D7BF92805546300C7B876 /* BarGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
+		CD0D7BFA2805546300C7B876 /* HealthGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthGraphView.swift; sourceTree = "<group>"; };
 		CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticMainView.swift; path = WheelchairRun/Source/View/Statistic/StatisticMainView.swift; sourceTree = SOURCE_ROOT; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
@@ -138,6 +146,10 @@
 			isa = PBXGroup;
 			children = (
 				CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */,
+				CD0D7BF92805546300C7B876 /* BarGraph.swift */,
+				CD0D7BF72805546300C7B876 /* DiaryList.swift */,
+				CD0D7BFA2805546300C7B876 /* HealthGraphView.swift */,
+				CD0D7BF82805546300C7B876 /* PushDiaryView.swift */,
 			);
 			path = Statistic;
 			sourceTree = "<group>";
@@ -263,11 +275,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0D7BFD2805546300C7B876 /* BarGraph.swift in Sources */,
+				CD0D7BFB2805546300C7B876 /* DiaryList.swift in Sources */,
 				EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */,
+				CD0D7BFE2805546300C7B876 /* HealthGraphView.swift in Sources */,
 				CE47BBA22803CFCD0007DC07 /* StatisticMainView.swift in Sources */,
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
 				EF7711A227FD2901004414A8 /* VoiceMentorTemp.swift in Sources */,
 				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,
+				CD0D7BFC2805546300C7B876 /* PushDiaryView.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
 				EF7711A827FD2910004414A8 /* HomeTemp.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,

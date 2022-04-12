@@ -49,8 +49,8 @@ struct Header: View {
             Divider()
         }
         .frame(minWidth: 0, maxWidth: .infinity)
-        .frame(height: 56)
-        .background(Rectangle().foregroundColor(.white))
+        .frame(height: 40)
+        .background(Rectangle().foregroundColor(.white).opacity(0.7))
     }
 }
 
