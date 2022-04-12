@@ -27,12 +27,13 @@ struct Hello_Profile: View {
             HStack(alignment: .top, spacing: 10){
                 Spacer()
                 VStack(alignment: .leading, spacing: 5){
-                    HStack{
+                    HStack(alignment: .firstTextBaseline, spacing: 5){
                         Text("안녕하세요,")
                             .font(.title3)
                         Text("요셉")
                             .font(.title)
                             .fontWeight(.semibold)
+                        
                     }
                     Text("보이스멘토와 함께")
                         .font(.title3)
@@ -55,19 +56,34 @@ struct Hello_Profile: View {
 
 
 struct pushNgo: View {
+    @State private var isPresented = false
+    
     var body: some View {
         Spacer()
-        Button(action: {print("pushNgo_Button")}){
-            Text("Push & Go")
-                .fontWeight(.bold)
-                .shimmering(active: true, duration: 1, bounce: false)
-                .foregroundColor(Color(hue: 0.454, saturation: 1.0, brightness: 0.994))
-                .font(.largeTitle)
-                .background(Image("Circle_gradation")
+        Button(action: {
+            UIView.setAnimationsEnabled(false)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                isPresented.toggle()
+            }
+        }
+        ){
+            ZStack{
+                Image("Circle_gradation")
                     .resizable()
-                    .frame(width: 220, height: 220))
+                    .frame(width: 220, height: 220)
+                Text("Push & Go")
+                    .fontWeight(.bold)
+                    .font(.largeTitle)
+                    .shimmering(active: true, duration: 1.7, bounce: false)
+                    .foregroundColor(Color(hue: 0.454, saturation: 1.0, brightness: 0.994))
+            }
+            
+        }
+        .fullScreenCover(isPresented: $isPresented) {
+            TrackingView(isPresented: $isPresented)
         }
         Spacer()
+        
     }
 }
 

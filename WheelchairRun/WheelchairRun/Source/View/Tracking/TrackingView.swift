@@ -9,10 +9,10 @@ import SwiftUI
 import Combine
 
 struct TrackingView: View {
+    @Binding var isPresented: Bool
     @ObservedObject var program = DummyProgramViewModel()
-    let timer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
-    let prepareTimer = Timer.publish(every: 1, tolerance: 0.05, on: .main, in: .common).autoconnect()
-    @State var counter: Int = 3
+    @State var counter: Double = 4.0
+    let timer = Timer.publish(every: 0.1, tolerance: 0.01, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {
@@ -32,28 +32,41 @@ struct TrackingView: View {
                         Spacer(minLength: 50)
                         PlayBackController(program: program)
                     } else {
-                        CompleteView(program: program)
+                        CompleteView(program: program, isPresented: $isPresented)
                     }
+                }
+                .onAppear {
+                    program.playVoiceMentor()
                 }
             } else {
                 Pallete.purple
                     .ignoresSafeArea()
                 if counter > 0 {
-                    Text("\(counter)")
-                        .font(.system(size: 100))
-                        .fontWeight(.bold)
-                        .foregroundColor(Pallete.mint)
-                        .onReceive(timer) { _ in
-                            counter -= 1
-                        }
-                        .animation(.linear, value: counter)
+                    VStack {
+                        Text(program.readyText[0])
+                            .font(Font.system(size: 30).italic().bold())
+                            .foregroundColor(counter <= 3 ? Pallete.mint : Pallete.blue)
+                            .padding()
+                        Text(program.readyText[1])
+                            .font(Font.system(size: 30).italic().bold())
+                            .foregroundColor(counter <= 2 ? Pallete.mint : Pallete.blue)
+                            .padding()
+                        Text(program.readyText[2])
+                            .font(Font.system(size: 30).italic().bold())
+                            .foregroundColor(counter <= 1 ? Pallete.mint : Pallete.blue)
+                            .padding()
+                        
+                    }.onReceive(timer) { _ in
+                        counter -= 0.1
+                    }
                 } else {
-                    Text("PUSH")
-                        .font(.system(size: 100))
-                        .fontWeight(.bold)
+                    Text("PUSH!")
+                        .font(Font.system(size: 100).italic().bold())
                         .foregroundColor(Pallete.mint)
                         .onReceive(timer) { _ in
-                            program.isPreparing = false
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                program.isPreparing = false
+                            }
                         }
                         .animation(.linear, value: counter)
                 }
@@ -64,6 +77,7 @@ struct TrackingView: View {
 
 struct CompleteView: View {
     @ObservedObject var program: DummyProgramViewModel
+    @Binding var isPresented: Bool
     
     var body: some View {
         Spacer()
@@ -104,7 +118,7 @@ struct CompleteView: View {
         .padding(50)
         Spacer()
         Button {
-            // Back To Home
+            isPresented = false
         } label: {
             Circle()
                 .foregroundColor(.black)
@@ -126,13 +140,14 @@ struct ProgramProgressBar: View {
     let lineWidth = 15.0
     
     var body: some View {
+        let duration = program.player?.duration ?? 0.0
         ZStack {
             Circle()
                 .stroke(lineWidth: lineWidth)
                 .opacity(0.3)
                 .foregroundColor(Pallete.purple)
             Circle()
-                .trim(from: 0.0, to: CGFloat(min(Float(program.progressValue) / Float(program.playbackTime), 1.0)))
+                .trim(from: 0.0, to: CGFloat(min(Float(program.progressValue) / Float(duration), 1.0)))
                 .stroke(style: StrokeStyle(lineWidth: lineWidth, lineCap: .round, lineJoin: .round))
                 .foregroundColor(Pallete.purple)
                 .rotationEffect(Angle(degrees: 270.0))
@@ -142,17 +157,18 @@ struct ProgramProgressBar: View {
                     .font(.largeTitle)
                     .bold()
                     .onReceive(timer) { _ in
-                        if program.progressValue < program.playbackTime {
+                        if program.player?.isPlaying != false {
                             if program.isRunning {
-                                program.countSecond()
+                                program.updateProgressValue(time: program.player?.currentTime ?? 0.0)
                                 program.updateStats_test()
                             }
-                        } else {
+                        } else if program.player?.currentTime == 0.0 {
                             timer.upstream.connect().cancel()
                             program.markComplete()
+                            program.player?.stop()
                         }
                     }
-                Text("/ \(VoiceMentor.secondsToTime(time: program.playbackTime))")
+                Text("/ \(VoiceMentor.secondsToTime(time: duration))")
                     .fontWeight(.bold)
             }
         }
@@ -193,7 +209,8 @@ struct PlayBackController: View {
         HStack {
             if !program.isRunning {
                 Button {
-                    
+                    program.isComplete = true
+                    program.player?.stop()
                 } label: {
                     Circle()
                         .foregroundColor(.black)
@@ -208,6 +225,11 @@ struct PlayBackController: View {
             }
             Button {
                 program.toggleRunningStatus()
+                if program.isRunning {
+                    program.player?.play()
+                } else {
+                    program.player?.pause()
+                }
             } label: {
                 Circle()
                     .foregroundColor(.black)
@@ -244,8 +266,9 @@ struct EmergencyButton: View {
 }
 
 struct TrackingView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        TrackingView()
+        TrackingView(isPresented: .constant(true))
             .previewInterfaceOrientation(.portrait)
     }
 }

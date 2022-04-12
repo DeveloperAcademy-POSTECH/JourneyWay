@@ -10,6 +10,7 @@
 		ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAA27FD332100ADA500 /* TrackingView.swift */; };
 		ABEDFDAD2802BE6400ADA500 /* VoiceMentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */; };
 		ABEDFDAF2802BEA500ADA500 /* DummyProgramViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */; };
+		ABEDFDCB2804722F00ADA500 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEDFDCA2804722F00ADA500 /* Sound.swift */; };
 		AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF77751B27FD3713001BCA2F /* HomeView.swift */; };
 		AFD6199A2803BF2700FC0FC3 /* Shimmer in Frameworks */ = {isa = PBXBuildFile; productRef = AFD619992803BF2700FC0FC3 /* Shimmer */; };
 		DDAF1F752802FC25000974FA /* VoiceCardPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */; };
@@ -46,6 +47,7 @@
 		ABEDFDAA27FD332100ADA500 /* TrackingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingView.swift; sourceTree = "<group>"; };
 		ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentor.swift; sourceTree = "<group>"; };
 		ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyProgramViewModel.swift; sourceTree = "<group>"; };
+		ABEDFDCA2804722F00ADA500 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		AF77751B27FD3713001BCA2F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupView.swift; sourceTree = "<group>"; };
 		DDAF1F78280482DB000974FA /* VoiceCardPopupContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupContents.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		EF77119427FD289E004414A8 /* Tracking */ = {
 			isa = PBXGroup;
 			children = (
+				ABEDFDCA2804722F00ADA500 /* Sound.swift */,
 				EF7711A527FD290C004414A8 /* TrackingTemp.swift */,
 				ABEDFDAA27FD332100ADA500 /* TrackingView.swift */,
 			);
@@ -376,6 +379,7 @@
 				EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */,
 				EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */,
 				EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */,
+				ABEDFDCB2804722F00ADA500 /* Sound.swift in Sources */,
 				EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */,
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
 				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
@@ -531,7 +535,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WheelchairRun/Preview Content\"";
-				DEVELOPMENT_TEAM = TZVHD77BLL;
+				DEVELOPMENT_TEAM = 8QSTXVD8H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -561,7 +565,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WheelchairRun/Preview Content\"";
-				DEVELOPMENT_TEAM = TZVHD77BLL;
+				DEVELOPMENT_TEAM = 8QSTXVD8H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
