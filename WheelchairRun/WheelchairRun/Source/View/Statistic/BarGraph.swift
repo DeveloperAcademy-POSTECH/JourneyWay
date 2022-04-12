@@ -28,6 +28,8 @@ struct HBarGraph: View {
         }
         .frame(height: 200)
         .padding()
+//        .background(RoundedRectangle(cornerRadius: 20.0).fill(Color("DarkGray")))
+//        .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
     }
 }
 
@@ -49,6 +51,7 @@ struct VBarGraph: View {
             }
         }
         .padding()
+        .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
     }
 }
 
