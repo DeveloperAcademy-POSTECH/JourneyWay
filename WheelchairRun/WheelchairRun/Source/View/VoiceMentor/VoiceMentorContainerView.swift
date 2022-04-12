@@ -18,5 +18,7 @@ struct VoiceMentorContainerView: View {
                        direction: .bottom,
                        content: { VoiceCardPopupView2.init()})
         }
+        
     }
 }
+
