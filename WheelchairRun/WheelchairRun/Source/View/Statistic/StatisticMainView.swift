@@ -62,27 +62,15 @@ struct StatisticView: View {
             }.pickerStyle(.segmented)
             
             if selected == 0 {
-                Image("WeeklyImage")
-                    .resizable()
-                    .frame(width: 400, height: 250)
-//                Text("Day")
-//                    .multilineTextAlignment(.center)
+                HBarGraph()
             }else if selected == 1 {
-                Image("MonthlyImage")
-                    .resizable()
-                    .frame(width: 400, height: 250)
-//                Text("Week")
-//                    .multilineTextAlignment(.center)
+                HBarGraph()
             }else if selected == 2 {
-                Image("YearlyImage")
-                    .resizable()
-                    .frame(width: 400, height: 250)
-//                Text("Month")
-//                    .multilineTextAlignment(.center)
+                HBarGraph()
             }
             
             
-            //Spacer()
+            Spacer()
             //Divider()
             
             Text("어제의 나와 대결하기")
@@ -92,11 +80,9 @@ struct StatisticView: View {
             Text("더 건강해지기 위한 대결! 어제의 나에게 승리해보세요!")
                 .font(.custom("Apple SD Gothic Neo Light", size: 15))
                 .padding(EdgeInsets(top: 0, leading: 12, bottom: 0, trailing: 0))
-            Image("YesterdayVSToday")
-                .resizable()
-                .frame(width: 400, height: 300)
+            VBarGraph()
             
-            //Spacer()
+            Spacer()
         }.navigationTitle("통계")
             .navigationBarTitleDisplayMode(.inline)
     }
