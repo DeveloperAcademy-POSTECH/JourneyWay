@@ -49,7 +49,7 @@ struct Program: Identifiable {
                 time: "15",
                 color: Pallete.Gradient.green,
                 soundTrack: nil),
-        Program(programName: "레오와 마음챙김 산책닝",
+        Program(programName: "레오와 마음챙김 산책",
                 mentor: Mentor(name: "레오 정",
                                photo: ""),
                 content: """
