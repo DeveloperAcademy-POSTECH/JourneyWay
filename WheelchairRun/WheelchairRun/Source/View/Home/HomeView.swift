@@ -14,10 +14,7 @@ struct HomeView: View {
             VStack {
                 Hello_Profile()
                 pushNgo()
-                NavigationLink(destination: StatisticTabView()) {
-                    Today_Record()
-                }.navigationBarBackButtonHidden(true)
-                
+                Today_Record()
                 with_voice_mentor()
                 
             }
@@ -71,8 +68,7 @@ struct pushNgo: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 isPresented.toggle()
             }
-        }
-        ){
+        }) {
             ZStack{
                 Image("Circle_gradation")
                     .resizable()
@@ -83,14 +79,12 @@ struct pushNgo: View {
                     .shimmering(active: true, duration: 1.7, bounce: false)
                     .foregroundColor(Color(hue: 0.454, saturation: 1.0, brightness: 0.994))
             }
-            
         }
         .buttonStyle(PopupBackgroundButtonStyle())
         .fullScreenCover(isPresented: $isPresented) {
             TrackingView(isPresented: $isPresented)
         }
         Spacer()
-        
     }
 }
 
@@ -99,83 +93,77 @@ struct Today_Record: View {
     var body: some View {
         Spacer()
         VStack(alignment: .center, spacing: 10) {
-            
-            Button {
-                print("Today_Record_Button")
-            } label: {
-                VStack(alignment: .leading, spacing: 25){
+            VStack(alignment: .leading, spacing: 25) {
+                NavigationLink(destination: StatisticTabView()) {
                     HStack(spacing: 0.0){
-                        
                         Image("Today_Record_img")
                             .resizable()
                             .frame(width: 120, height: 40)
-                        
                             .padding(.horizontal, 30)
-                        
                     }
                     .padding(.vertical, 10)
-                    HStack{
-                        Spacer()
-                        Image("Clock_img")
-                            .resizable()
-                            .frame(width: 32.0, height: 32.0)
-                        Spacer()
-                        Image("Kcal_img")
-                            .resizable()
-                            .frame(width: 38.0, height: 38.0)
-                        Spacer()
-                        Image("Push_img")
-                            .resizable()
-                            .frame(width: 32.0, height: 32.0)
-                        Spacer()
+                }.navigationBarBackButtonHidden(true)
+                HStack{
+                    Spacer()
+                    Image("Clock_img")
+                        .resizable()
+                        .frame(width: 32.0, height: 32.0)
+                    Spacer()
+                    Image("Kcal_img")
+                        .resizable()
+                        .frame(width: 38.0, height: 38.0)
+                    Spacer()
+                    Image("Push_img")
+                        .resizable()
+                        .frame(width: 32.0, height: 32.0)
+                    Spacer()
+                }
+                .padding(.horizontal, 3)
+                .padding(.vertical, -20)
+                
+                HStack {
+                    Spacer()
+                    VStack(alignment: .center, spacing: 5){
+                        Text("00:00")
+                            .foregroundColor(Color.black)
+                            .font(.title3)
+                        Text("Time")
+                            .font(.footnote)
+                            .foregroundColor(Color.blue)
+                        
                     }
-                    .padding(.horizontal, 3)
-                    .padding(.vertical, -20)
-                    
-                    HStack {
-                        Spacer()
-                        VStack(alignment: .center, spacing: 5){
-                            Text("00:00")
-                                .foregroundColor(Color.black)
-                                .font(.title3)
-                            Text("Time")
-                                .font(.footnote)
-                                .foregroundColor(Color.blue)
-                            
-                        }
-                        Spacer()
-                        VStack(alignment: .center, spacing: 5){
-                            Text("132")
-                                .foregroundColor(Color.black)
-                                .font(.title3)
-                            Text("Kcal")
-                                .font(.footnote)
-                                .foregroundColor(Color.blue)
-                            
-                        }
-                        Spacer()
-                        VStack(alignment: .center, spacing: 5){
-                            Text("1422")
-                                .foregroundColor(Color.black)
-                                .font(.title3)
-                            Text("Push")
-                                .font(.footnote)
-                                .foregroundColor(Color.blue)
-                        }
-                        .padding(.horizontal, 4)
-                        Spacer()
+                    Spacer()
+                    VStack(alignment: .center, spacing: 5){
+                        Text("132")
+                            .foregroundColor(Color.black)
+                            .font(.title3)
+                        Text("Kcal")
+                            .font(.footnote)
+                            .foregroundColor(Color.blue)
+                        
                     }
-                    
+                    Spacer()
+                    VStack(alignment: .center, spacing: 5){
+                        Text("1422")
+                            .foregroundColor(Color.black)
+                            .font(.title3)
+                        Text("Push")
+                            .font(.footnote)
+                            .foregroundColor(Color.blue)
+                    }
+                    .padding(.horizontal, 4)
+                    Spacer()
                 }
             }
-            .buttonStyle(NoPressAnimationButtonStyle())
+            
         }
     }
 }
 
+
 struct with_voice_mentor: View {
     @State private var isPresented = false
-
+    
     var body: some View {
         Button(action: {
             print("with_voice_mentor_Button")
