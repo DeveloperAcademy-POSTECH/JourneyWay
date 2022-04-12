@@ -81,9 +81,11 @@ struct pushNgo: View {
             }
         }
         .buttonStyle(PopupBackgroundButtonStyle())
-        .fullScreenCover(isPresented: $isPresented) {
+        .fullScreenCover(isPresented: $isPresented, onDismiss: {
+            UIView.setAnimationsEnabled(true)
+        }, content: {
             TrackingView(isPresented: $isPresented)
-        }
+        })
         Spacer()
     }
 }
@@ -166,7 +168,6 @@ struct with_voice_mentor: View {
     
     var body: some View {
         Button(action: {
-            print("with_voice_mentor_Button")
             isPresented.toggle()
         }) {
             Text("with Voice Mentor")
@@ -178,7 +179,9 @@ struct with_voice_mentor: View {
                     .frame(width: 230, height: 50))
         }
         .padding(.vertical, 50)
-        .fullScreenCover(isPresented: $isPresented, content: {
+        .fullScreenCover(isPresented: $isPresented, onDismiss: {
+            UIView.setAnimationsEnabled(true)
+        }, content: {
             VoiceMentorContainerView()
         })
         

@@ -98,12 +98,6 @@ struct ModalView : View {
                 }, content: {
                     TrackingView(isPresented: $isPresented)
                 })
-
-                
-//                .fullScreenCover(item: isPresented, onDismiss: {
-//                    print("HELLO")
-//                }, content: { TrackingView(isPresented: $isPresented) })
-                
             }
             .padding(.bottom, 25)
         }
