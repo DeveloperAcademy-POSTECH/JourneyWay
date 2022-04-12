@@ -18,6 +18,7 @@ struct VoiceCardPopupView: View {
 
 // 모달 카드 뷰
 struct ModalView : View {
+    @Environment(\.presentationMode) private var presentationMode
     @Binding var isShowingModal: Bool
     @Binding var modalOpacity: Double
     @State private var isPresented = false
@@ -80,7 +81,9 @@ struct ModalView : View {
     
                 // start 버튼
                 Button(action: {
+                    UIView.setAnimationsEnabled(false)
                     isPresented.toggle()
+                    
                 }) {
                     Text("START!")
                         .font(.title)
@@ -90,9 +93,17 @@ struct ModalView : View {
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
                         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
-                }.fullScreenCover(isPresented: $isPresented) {
+                }.fullScreenCover(isPresented: $isPresented, onDismiss: {
+                    presentationMode.wrappedValue.dismiss()
+                }, content: {
                     TrackingView(isPresented: $isPresented)
-                }
+                })
+
+                
+//                .fullScreenCover(item: isPresented, onDismiss: {
+//                    print("HELLO")
+//                }, content: { TrackingView(isPresented: $isPresented) })
+                
             }
             .padding(.bottom, 25)
         }
