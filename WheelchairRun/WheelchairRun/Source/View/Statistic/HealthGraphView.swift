@@ -36,7 +36,7 @@ struct HealthGraphView: View {
                     HBarGraph().tag(1)
                     HBarGraph().tag(2)
                 }
-                .animation(.easeInOut)
+                .animation(.easeInOut, value: selected)
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .frame(height: 250)
                 .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))

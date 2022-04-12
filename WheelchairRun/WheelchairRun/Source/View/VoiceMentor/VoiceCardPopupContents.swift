@@ -22,7 +22,11 @@ import SwiftUI
 //        var contents: String
 //    }
 //}
-
+struct Record {
+    var pushCount: Int
+    var distance: Float
+    var time: TimeInterval
+}
 
 struct ProgramName {
     static let ellin: String = "엘린과 아침 산책"
