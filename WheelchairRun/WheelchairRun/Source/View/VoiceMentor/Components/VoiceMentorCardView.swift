@@ -11,8 +11,8 @@ struct VoiceMentorCardView: View {
     @Binding var isPopupPresented: Bool
     
     let backgroundColor: [Color] = [
-        Pallete.cardPointColor1,
-        Pallete.cardPointColor2,
+        Pallete.red,
+        Pallete.yellow,
         Pallete.cardPointColor3,
         Pallete.cardPointColor4
     ]
