@@ -9,7 +9,7 @@ import SwiftUI
 
 struct VoiceMentorView: View {
     @Binding var isPopupPresented: Bool
-    
+
     var body: some View {
         ZStack {
             VStack {
@@ -33,7 +33,7 @@ struct VoiceMentorView: View {
             
             if isPopupPresented {
                 Button(action: {
-                    withAnimation {
+                    withAnimation(.easeOut(duration: 0.4)) {
                         isPopupPresented.toggle()
                     }
                 }) {

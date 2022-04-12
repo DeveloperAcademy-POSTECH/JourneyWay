@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct VoiceMentorHeaderView: View {
+    @Environment(\.presentationMode) private var presentationMode
+
     var body: some View {
         VStack {
             HStack {
                 Text("Voice Mentor")
                     .titleFont()
                 Button(action: {
-                    // TODO: dismiss 로직 구현
+                    presentationMode.wrappedValue.dismiss()
                 }) {
                     WCRXButton()
                 }

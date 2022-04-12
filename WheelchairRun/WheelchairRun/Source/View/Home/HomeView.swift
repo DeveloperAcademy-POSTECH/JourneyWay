@@ -150,8 +150,13 @@ struct Today_Record: View {
 }
 
 struct with_voice_mentor: View {
+    @State private var isPresented = false
+
     var body: some View {
-        Button(action: {print("with_voice_mentor_Button")}){
+        Button(action: {
+            print("with_voice_mentor_Button")
+            isPresented.toggle()
+        }) {
             Text("with Voice Mentor")
                 .font(.body)
                 .fontWeight(.bold)
@@ -161,6 +166,9 @@ struct with_voice_mentor: View {
                     .frame(width: 230, height: 50))
         }
         .padding(.vertical, 50)
+        .fullScreenCover(isPresented: $isPresented, content: {
+            VoiceMentorContainerView()
+        })
         
     }
 }

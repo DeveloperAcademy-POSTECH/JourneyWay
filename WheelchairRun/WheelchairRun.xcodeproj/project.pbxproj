@@ -395,6 +395,7 @@
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
 				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
+				DDD4187E27FD367F00A46DD2 /* VoiceCardPopupView..swift in Sources */,
 				AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
 				EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */,
