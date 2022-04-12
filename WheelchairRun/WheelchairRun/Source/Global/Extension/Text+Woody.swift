@@ -26,5 +26,4 @@ extension Text {
             .frame(maxWidth: .greatestFiniteMagnitude,
                    alignment: .leading)
     }
-    
 }
