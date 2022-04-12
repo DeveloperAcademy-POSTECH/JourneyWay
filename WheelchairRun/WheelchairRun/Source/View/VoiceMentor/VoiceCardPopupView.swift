@@ -12,16 +12,7 @@ struct VoiceCardPopupView: View {
     @State private var modalOpacity: Double = 1.0
     
     var body: some View {
-        ZStack {
-            if self.isShowingModal {
-                // taop action
-                ModalOverlay(tapAction: { withAnimation {
-                    self.isShowingModal = false
-                    self.modalOpacity = 0.0
-                } })
-                ModalView(isShowingModal: $isShowingModal, modalOpacity: $modalOpacity).transition(.move(edge: .bottom))
-            }
-        }
+            ModalView()
     }
 }
        
