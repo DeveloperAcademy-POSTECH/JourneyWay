@@ -32,6 +32,7 @@ struct ModalOverlay: View {
 struct ModalView : View {
     @Binding var isShowingModal: Bool
     @Binding var modalOpacity: Double
+    @State private var isPresented = false
     
     var body: some View {
         ZStack {
@@ -47,8 +48,8 @@ struct ModalView : View {
                 
                 Spacer().frame(height: 30)
                 
-                //
                 VStack {
+                    // 프로그램, 강사, 시간
                     HStack(alignment: .lastTextBaseline) {
                         VStack(alignment: .leading) {
                             Text(ProgramName.ellin)
@@ -75,6 +76,7 @@ struct ModalView : View {
                         }
                     }
                     Spacer()
+                    // 프로그램 설명
                     HStack {
                         Text(VoiceMentorContents.ellin)
                             .lineLimit(4)
@@ -88,8 +90,11 @@ struct ModalView : View {
                     Spacer()
                 }.padding([.leading, .trailing], 18)
     
+                // start 버튼
                 Button(action: {
                     // action
+                    isPresented.toggle()
+                    
                 }) {
                     Text("START!")
                         .font(.title)
@@ -99,6 +104,8 @@ struct ModalView : View {
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
                         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
+                }.fullScreenCover(isPresented: $isPresented) {
+                    TrackingView(isPresented: $isPresented)
                 }
             }
             .padding(.bottom, 25)
