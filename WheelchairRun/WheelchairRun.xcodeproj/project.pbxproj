@@ -21,11 +21,14 @@
 		DDD4187227FD26E400A46DD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD4187127FD26E400A46DD2 /* Preview Assets.xcassets */; };
 		DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187327FD26E400A46DD2 /* Persistence.swift */; };
 		DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDD4187527FD26E400A46DD2 /* WheelchairRun.xcdatamodeld */; };
+		EF35056128058961007E1315 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35056028058961007E1315 /* User.swift */; };
+		EF35056328058970007E1315 /* BadgeStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35056228058970007E1315 /* BadgeStage.swift */; };
+		EF35056528058976007E1315 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35056428058976007E1315 /* Program.swift */; };
+		EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3505662805898B007E1315 /* TrackingRecord.swift */; };
 		EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */; };
 		EF6C51522802737F008D83A5 /* VoiceMentorCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */; };
 		EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */; };
 		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
-		EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119D27FD28EB004414A8 /* ModelTemp.swift */; };
 		EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */; };
 		EF7711A427FD2907004414A8 /* StatisticTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A327FD2907004414A8 /* StatisticTemp.swift */; };
 		EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A527FD290C004414A8 /* TrackingTemp.swift */; };
@@ -58,11 +61,14 @@
 		DDD4187127FD26E400A46DD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DDD4187327FD26E400A46DD2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		DDD4187627FD26E400A46DD2 /* WheelchairRun.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WheelchairRun.xcdatamodel; sourceTree = "<group>"; };
+		EF35056028058961007E1315 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EF35056228058970007E1315 /* BadgeStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeStage.swift; sourceTree = "<group>"; };
+		EF35056428058976007E1315 /* Program.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Program.swift; sourceTree = "<group>"; };
+		EF3505662805898B007E1315 /* TrackingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingRecord.swift; sourceTree = "<group>"; };
 		EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentVoiceMentorList.swift; sourceTree = "<group>"; };
 		EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardRow.swift; sourceTree = "<group>"; };
 		EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorView.swift; sourceTree = "<group>"; };
 		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
-		EF77119D27FD28EB004414A8 /* ModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTemp.swift; sourceTree = "<group>"; };
 		EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTemp.swift; sourceTree = "<group>"; };
 		EF7711A327FD2907004414A8 /* StatisticTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTemp.swift; sourceTree = "<group>"; };
 		EF7711A527FD290C004414A8 /* TrackingTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTemp.swift; sourceTree = "<group>"; };
@@ -209,10 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
-				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
-				EFA5EA982802C34B00872A42 /* VoiceMentorViewModel.swift */,
-				EF6C515528027548008D83A5 /* Components */,
-				EF7711A127FD2901004414A8 /* VoiceMentorTemp.swift */,
 				DDAF1F78280482DB000974FA /* VoiceCardPopupContents.swift */,
 				DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */,
 				EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */,
@@ -235,8 +237,11 @@
 		EF77119827FD28C1004414A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EF77119D27FD28EB004414A8 /* ModelTemp.swift */,
 				ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */,
+				EF3505662805898B007E1315 /* TrackingRecord.swift */,
+				EF35056428058976007E1315 /* Program.swift */,
+				EF35056228058970007E1315 /* BadgeStage.swift */,
+				EF35056028058961007E1315 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFED3A82280472F800D99B27 /* VoiceMentorHeaderView.swift in Sources */,
+				EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */,
 				EF6C51522802737F008D83A5 /* VoiceMentorCardRow.swift in Sources */,
 				EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */,
 				EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */,
@@ -388,25 +394,25 @@
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
 				EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */,
-				EFA5EA992802C34B00872A42 /* VoiceMentorViewModel.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
 				DDAF1F79280482DB000974FA /* VoiceCardPopupContents.swift in Sources */,
+				EF35056328058970007E1315 /* BadgeStage.swift in Sources */,
 				EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */,
 				EFED3A88280497EA00D99B27 /* ButtonStyle+.swift in Sources */,
 				EFED3A842804757500D99B27 /* Popup.swift in Sources */,
 				ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */,
 				ABEDFDAF2802BEA500ADA500 /* DummyProgramViewModel.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
+				EF35056528058976007E1315 /* Program.swift in Sources */,
 				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
-				DDD4187E27FD367F00A46DD2 /* VoiceCardPopupView..swift in Sources */,
 				AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
 				EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */,
 				EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */,
 				EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */,
-				EF77119E27FD28EB004414A8 /* ModelTemp.swift in Sources */,
 				DDAF1F752802FC25000974FA /* VoiceCardPopupView.swift in Sources */,
+				EF35056128058961007E1315 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
