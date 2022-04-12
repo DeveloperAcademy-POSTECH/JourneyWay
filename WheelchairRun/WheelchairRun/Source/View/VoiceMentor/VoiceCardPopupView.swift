@@ -92,9 +92,7 @@ struct ModalView : View {
     
                 // start 버튼
                 Button(action: {
-                    // action
                     isPresented.toggle()
-                    
                 }) {
                     Text("START!")
                         .font(.title)
