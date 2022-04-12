@@ -10,8 +10,8 @@ import SwiftUI
 struct VoiceMentorCardView: View {
     @ObservedObject var viewModel: VoiceMentorViewModel = VoiceMentorViewModel()
     let backgroundColor: [Color] = [
-        Pallete.cardPointColor1,
-        Pallete.cardPointColor2,
+        Pallete.red,
+        Pallete.yellow,
         Pallete.cardPointColor3,
         Pallete.cardPointColor4
     ]
