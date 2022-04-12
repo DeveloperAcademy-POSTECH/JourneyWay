@@ -22,3 +22,13 @@ struct VoiceMentorContainerView: View {
     }
 }
 
+struct VoiceMentorContainerView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        VoiceMentorContainerView()
+            .popup(isPopupPresented: .constant(false),
+                   alignment: .center,
+                   direction: .bottom,
+                   content: { VoiceCardPopupView.init()})
+    }
+}
