@@ -12,7 +12,7 @@ struct VoiceCardPopupView: View {
     @State private var modalOpacity: Double = 1.0
     
     var body: some View {
-            ModalView()
+        ModalView(isShowingModal: $isShowingModal, modalOpacity: $modalOpacity)
     }
 }
        

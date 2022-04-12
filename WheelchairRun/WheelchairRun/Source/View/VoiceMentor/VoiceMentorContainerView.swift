@@ -16,7 +16,7 @@ struct VoiceMentorContainerView: View {
                 .popup(isPopupPresented: $isPopupPresented,
                        alignment: .center,
                        direction: .bottom,
-                       content: { VoiceCardPopupView2.init()})
+                       content: { VoiceCardPopupView.init()})
         }
     }
 }
