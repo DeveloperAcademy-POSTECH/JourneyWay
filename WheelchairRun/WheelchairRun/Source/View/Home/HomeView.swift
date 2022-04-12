@@ -10,11 +10,17 @@ import Shimmer
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Hello_Profile()
-            pushNgo()
-            Today_Record()
-            with_voice_mentor()
+        NavigationView {
+            VStack {
+                Hello_Profile()
+                pushNgo()
+                NavigationLink(destination: StatisticTabView()) {
+                    Today_Record()
+                }.navigationBarBackButtonHidden(true)
+                
+                with_voice_mentor()
+                
+            }
         }
     }
 }
@@ -162,6 +168,7 @@ struct Today_Record: View {
                     
                 }
             }
+            .buttonStyle(NoPressAnimationButtonStyle())
         }
     }
 }

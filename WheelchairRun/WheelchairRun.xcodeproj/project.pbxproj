@@ -20,7 +20,6 @@
 		CD0D7BFE2805546300C7B876 /* HealthGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BFA2805546300C7B876 /* HealthGraphView.swift */; };
 		CE47BBA22803CFCD0007DC07 /* StatisticMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */; };
 		DDAF1F752802FC25000974FA /* VoiceCardPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */; };
-		DDAF1F79280482DB000974FA /* VoiceCardPopupContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF1F78280482DB000974FA /* VoiceCardPopupContents.swift */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
 		DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186C27FD26E200A46DD2 /* ContentView.swift */; };
 		DDD4186F27FD26E400A46DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDD4186E27FD26E400A46DD2 /* Assets.xcassets */; };
@@ -35,7 +34,6 @@
 		EF6C51522802737F008D83A5 /* VoiceMentorCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */; };
 		EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */; };
 		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
-		EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */; };
 		EF7711A627FD290C004414A8 /* TrackingTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7711A527FD290C004414A8 /* TrackingTemp.swift */; };
 		EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */; };
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
@@ -64,7 +62,6 @@
 		CD0D7BFA2805546300C7B876 /* HealthGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthGraphView.swift; sourceTree = "<group>"; };
 		CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticMainView.swift; path = WheelchairRun/Source/View/Statistic/StatisticMainView.swift; sourceTree = SOURCE_ROOT; };
 		DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupView.swift; sourceTree = "<group>"; };
-		DDAF1F78280482DB000974FA /* VoiceCardPopupContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupContents.swift; sourceTree = "<group>"; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
 		DDD4186C27FD26E200A46DD2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,7 +77,6 @@
 		EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardRow.swift; sourceTree = "<group>"; };
 		EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorView.swift; sourceTree = "<group>"; };
 		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
-		EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTemp.swift; sourceTree = "<group>"; };
 		EF7711A527FD290C004414A8 /* TrackingTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingTemp.swift; sourceTree = "<group>"; };
 		EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
@@ -113,14 +109,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DDAF1F7A28058909000974FA /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				EF7711A327FD2907004414A8 /* StatisticTemp.swift */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		DDD4185E27FD26E200A46DD2 = {
@@ -185,6 +173,7 @@
 		EF77119127FD2891004414A8 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
 				DDD4186E27FD26E400A46DD2 /* Assets.xcassets */,
 			);
 			path = Resource;
@@ -236,12 +225,9 @@
 		EF77119627FD28AC004414A8 /* VoiceMentor */ = {
 			isa = PBXGroup;
 			children = (
-				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
-				DDAF1F78280482DB000974FA /* VoiceCardPopupContents.swift */,
-				DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */,
 				EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */,
 				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
-				EFED3A89280499A300D99B27 /* Helper */,
+				DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */,
 				EF6C515528027548008D83A5 /* Components */,
 			);
 			path = VoiceMentor;
@@ -250,7 +236,6 @@
 		EF77119727FD28BA004414A8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EF77119F27FD28F5004414A8 /* ViewModelTemp.swift */,
 				ABEDFDAE2802BEA500ADA500 /* DummyProgramViewModel.swift */,
 			);
 			path = ViewModel;
@@ -260,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				CD0D7BD72805090300C7B876 /* DiaryData.swift */,
-				EF77119D27FD28EB004414A8 /* ModelTemp.swift */,
 				ABEDFDAC2802BE6400ADA500 /* VoiceMentor.swift */,
 				EF3505662805898B007E1315 /* TrackingRecord.swift */,
 				EF35056428058976007E1315 /* Program.swift */,
@@ -273,6 +257,7 @@
 		EF77119927FD28CB004414A8 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				EFED3A89280499A300D99B27 /* Helper */,
 				EFA5EA912802BCAA00872A42 /* Manager */,
 				EFA5EA8E2802BBF400872A42 /* Protocol */,
 				EF7711A927FD294A004414A8 /* Core Data */,
@@ -418,13 +403,11 @@
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
 				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
 				ABEDFDAD2802BE6400ADA500 /* VoiceMentor.swift in Sources */,
-				EF7711A027FD28F5004414A8 /* ViewModelTemp.swift in Sources */,
 				CD0D7BFC2805546300C7B876 /* PushDiaryView.swift in Sources */,
 				DDD4187427FD26E400A46DD2 /* Persistence.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
 				EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
-				DDAF1F79280482DB000974FA /* VoiceCardPopupContents.swift in Sources */,
 				EF35056328058970007E1315 /* BadgeStage.swift in Sources */,
 				EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */,
 				EFED3A88280497EA00D99B27 /* ButtonStyle+.swift in Sources */,

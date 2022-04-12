@@ -21,3 +21,10 @@ struct CardButtonStyle: ButtonStyle {
             .scaleEffect(configuration.isPressed ? 0.98 : 1.0)
     }
 }
+
+struct NoPressAnimationButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+      configuration.label
+        .opacity(1)
+    }
+}

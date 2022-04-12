@@ -15,18 +15,6 @@ struct VoiceCardPopupView: View {
         ModalView(isShowingModal: $isShowingModal, modalOpacity: $modalOpacity)
     }
 }
-       
-
-
-struct ModalOverlay: View {
-    var color = Color.black.opacity(0.4)
-    var tapAction: (() -> Void)? = nil
-
-    var body: some View {
-        color.onTapGesture { self.tapAction?() }
-            .ignoresSafeArea()
-    }
-}
 
 // 모달 카드 뷰
 struct ModalView : View {
@@ -52,12 +40,12 @@ struct ModalView : View {
                     // 프로그램, 강사, 시간
                     HStack(alignment: .lastTextBaseline) {
                         VStack(alignment: .leading) {
-                            Text(ProgramName.ellin)
+                            Text(Program.dummy[0].programName)
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             Spacer().frame(height: 5)
-                            Text(VoiceMentorName.ellin)
+                            Text(Program.dummy[0].mentor.name)
                                 .font(.subheadline)
                                 .foregroundColor(.white)
                         }
@@ -66,7 +54,7 @@ struct ModalView : View {
                             Text("⏰")
                                 .font(.title3)
                                 .offset(y: -3)
-                            Text("\(VoiceMentorTime.ellin)")
+                            Text("\(Program.dummy[0].time)")
                                 .foregroundColor(.white)
                                 .font(.system(size: 35, weight: .bold))
                                 .fontWeight(.heavy)
@@ -78,7 +66,7 @@ struct ModalView : View {
                     Spacer()
                     // 프로그램 설명
                     HStack {
-                        Text(VoiceMentorContents.ellin)
+                        Text(Program.dummy[0].content)
                             .lineLimit(4)
                             .multilineTextAlignment(.leading)
                             .font(.callout)

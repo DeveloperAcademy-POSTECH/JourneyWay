@@ -34,7 +34,7 @@ struct Program: Identifiable {
                 아침만이 주는 '시작의 기운'을 느껴볼까요?
                 오늘 아침부터요! Ready, Set, Push!
                 """,
-                time: "10 min",
+                time: "10",
                 color: Pallete.Gradient.purple,
                 soundTrack: nil),
         Program(programName: "켈리와 긍정 러닝",
@@ -46,7 +46,7 @@ struct Program: Identifiable {
                 근육과 심장이 움직일 때, 긍정도 같이 자라납니다.
                 우리 같이 해봐요! Ready, Set, Push!
                 """,
-                time: "15 min",
+                time: "15",
                 color: Pallete.Gradient.green,
                 soundTrack: nil),
         Program(programName: "레오와 마음챙김 산책닝",
@@ -58,7 +58,7 @@ struct Program: Identifiable {
                 산책하면서 나와 주변을 있는 그대로 알아차려볼까요?
                 아주 놀라울 거에요! Ready, Set, Push!
                 """,
-                time: "5 min",
+                time: "5",
                 color: Pallete.Gradient.red,
                 soundTrack: ""),
         Program(programName: "딜런과 기초 러닝",
@@ -70,7 +70,7 @@ struct Program: Identifiable {
                 러닝을 좀 더 쉽게, 재밌게 하도록 도와드릴게요.
                 준비됐나요? Ready, Set, Push!
                 """,
-                time: "5 min",
+                time: "5",
                 color: Pallete.Gradient.blue,
                 soundTrack: ""),
         
