@@ -24,9 +24,9 @@ class TrackingViewState: ObservableObject {
     
     var player: AVAudioPlayer?
     
-    
     init(program: Program) {
         self.program = program
+        player = Sound.preparePlay(soundfile: program.soundTrack)
     }
     
     func updateProgressValue(time newVal: TimeInterval) {
