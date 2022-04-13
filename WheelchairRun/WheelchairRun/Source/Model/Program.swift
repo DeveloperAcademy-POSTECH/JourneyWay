@@ -8,9 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-
-
 struct ExerciseStats {
     var pushCount: Float = 0.0
     var distance: Float = 0.0
@@ -19,7 +16,7 @@ struct ExerciseStats {
 struct Program {
     let programName: String?
     let duration: String
-    var mentor: Program.Mentor?
+    var mentor: Mentor?
     var description: String
     var stats: ExerciseStats = ExerciseStats()
     var color: LinearGradient

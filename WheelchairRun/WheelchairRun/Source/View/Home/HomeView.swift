@@ -82,7 +82,7 @@ struct pushNgo: View {
         .fullScreenCover(isPresented: $isPresented, onDismiss: {
             UIView.setAnimationsEnabled(true)
         }, content: {
-            TrackingView(isPresented: $isPresented)
+//            TrackingView(isPresented: $isPresented)
         })
         Spacer()
     }

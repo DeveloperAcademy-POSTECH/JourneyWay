@@ -10,10 +10,13 @@ import SwiftUI
 struct VoiceCardPopupView: View {
     @State private var isShowingModal = true
     @State private var modalOpacity: Double = 1.0
-    var program: Program
+    
+    @Binding var selectedProgram: Program
     
     var body: some View {
-        ModalView(isShowingModal: $isShowingModal, modalOpacity: $modalOpacity, program: program)
+        ModalView(isShowingModal: $isShowingModal,
+                  modalOpacity: $modalOpacity,
+                  selectedProgram: $selectedProgram)
     }
 }
 
@@ -23,11 +26,11 @@ struct ModalView : View {
     @Binding var isShowingModal: Bool
     @Binding var modalOpacity: Double
     @State private var isPresented = false
-    var program: Program
+    @Binding var selectedProgram: Program
     
     var body: some View {
         ZStack {
-            Pallete.purple
+            selectedProgram.color
             
             // 카드
             VStack {
@@ -43,12 +46,12 @@ struct ModalView : View {
                     // 프로그램, 강사, 시간
                     HStack(alignment: .lastTextBaseline) {
                         VStack(alignment: .leading) {
-                            Text(program.programName ?? "")
+                            Text(selectedProgram.programName ?? "")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             Spacer().frame(height: 5)
-                            Text(program.mentor?.name ?? "")
+                            Text(selectedProgram.mentor?.name ?? "")
                                 .font(.subheadline)
                                 .foregroundColor(.white)
                         }
@@ -57,7 +60,7 @@ struct ModalView : View {
                             Text("⏰")
                                 .font(.title3)
                                 .offset(y: -3)
-                            Text("\(program.duration)")
+                            Text("\(selectedProgram.duration)")
                                 .foregroundColor(.white)
                                 .font(.system(size: 35, weight: .bold))
                                 .fontWeight(.heavy)
@@ -69,7 +72,7 @@ struct ModalView : View {
                     Spacer()
                     // 프로그램 설명
                     HStack {
-                        Text(program.description)
+                        Text(selectedProgram.description)
                             .lineLimit(4)
                             .multilineTextAlignment(.leading)
                             .font(.callout)
@@ -90,15 +93,15 @@ struct ModalView : View {
                     Text("START!")
                         .font(.title)
                         .fontWeight(.bold)
+                        .foregroundLinearGradient(gradient: selectedProgram.color)
                         .frame(width: 290, height: 60)
-                        .foregroundColor(Pallete.purple)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
                         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
                 }.fullScreenCover(isPresented: $isPresented, onDismiss: {
                     presentationMode.wrappedValue.dismiss()
                 }, content: {
-//                    TrackingView(isPresented: $isPresented)
+                    TrackingView(program: selectedProgram, isPresented: $isPresented)
                 })
             }
             .padding(.bottom, 25)
@@ -114,6 +117,6 @@ struct ModalView : View {
 
 struct VoiceCardPopupView__Previews: PreviewProvider {
     static var previews: some View {
-        VoiceCardPopupView(program: Program.dummy[0])
+        VoiceCardPopupView(selectedProgram: .constant(Program.dummy[0]))
     }
 }
