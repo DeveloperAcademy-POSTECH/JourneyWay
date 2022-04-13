@@ -14,7 +14,7 @@ struct ExerciseStats {
     var distance: Float = 0.0
 }
 
-class ProgramState: ObservableObject {
+class TrackingViewState: ObservableObject {
     @Published var program: Program
     @Published var isComplete: Bool = false
     @Published var isPreparing: Bool = true
