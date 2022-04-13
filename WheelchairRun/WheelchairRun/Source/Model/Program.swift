@@ -8,17 +8,11 @@
 import Foundation
 import SwiftUI
 
-struct ExerciseStats {
-    var pushCount: Float = 0.0
-    var distance: Float = 0.0
-}
-
 struct Program {
     let programName: String?
     let duration: String
     var mentor: Mentor?
     var description: String
-    var stats: ExerciseStats = ExerciseStats()
     var color: LinearGradient
     var soundTrack: String?
     
@@ -30,11 +24,6 @@ struct Program {
         let s_string =  s < 10 ? "0\(s)" : "\(s)"
         
         return "\(h_string):\(m_string):\(s_string)"
-    }
-    
-    mutating func updateStats_test(pushUpdate: Float, distanceUpdate: Float) {
-        stats.pushCount += pushUpdate
-        stats.distance += distanceUpdate
     }
     
     struct Mentor {
@@ -54,7 +43,7 @@ struct Program {
                 오늘 아침부터요! Ready, Set, Push!
                 """,
                 color: Pallete.Gradient.purple,
-                soundTrack: nil),
+                soundTrack: "sample"),
         Program(programName: "켈리와 긍정 러닝",
                 duration: "15", mentor: Mentor(name: "켈리 한",
                                                photo: ""),
