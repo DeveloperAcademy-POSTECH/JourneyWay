@@ -175,7 +175,6 @@
 				DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */,
 				EF77119927FD28CB004414A8 /* Global */,
 				EF77119827FD28C1004414A8 /* Model */,
-				EF77119727FD28BA004414A8 /* ViewModel */,
 				EF77119227FD2896004414A8 /* View */,
 			);
 			path = Source;
@@ -248,13 +247,6 @@
 				EF6C515528027548008D83A5 /* Components */,
 			);
 			path = VoiceMentor;
-			sourceTree = "<group>";
-		};
-		EF77119727FD28BA004414A8 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		EF77119827FD28C1004414A8 /* Model */ = {
