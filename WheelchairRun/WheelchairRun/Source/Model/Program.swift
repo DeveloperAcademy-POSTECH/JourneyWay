@@ -66,7 +66,7 @@ struct Program {
                 """,
                 color: Pallete.Gradient.green,
                 soundTrack: nil),
-        Program(programName: "레오와 마음챙김 산책닝",
+        Program(programName: "레오와 마음챙김 산책",
                 duration: "5", mentor: Mentor(name: "레오 정",
                                               photo: ""),
                 description: """
