@@ -34,10 +34,10 @@ struct ModalView : View {
             
             // 카드
             VStack {
-                Image("ellinImage")
+                Image(selectedProgram.mentor?.photo ?? "ellinImage")
                     .resizable()
+                    .frame(width: 345, height: 200)
                     .aspectRatio(contentMode: .fill)
-                    .frame(height: 200)
                     .clipped()
                 
                 Spacer().frame(height: 30)
