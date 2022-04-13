@@ -9,15 +9,20 @@ import SwiftUI
 import Combine
 
 struct TrackingView: View {
+    @ObservedObject var program: ProgramState
     @Binding var isPresented: Bool
-    @ObservedObject var program: DummyProgramState
     @State var counter: Double = 4.0
-    let timer = Timer.publish(every: 0.1, tolerance: 0.01, on: .main, in: .common).autoconnect()
     
-    init(isPresented: Binding<Bool>, programName: String?, duration: String, mentor: Program.Mentor?, description: String, color: LinearGradient, soundTrack: String?) {
-        
+    private let timer = Timer.publish(every: 0.1, tolerance: 0.01, on: .main, in: .common).autoconnect()
+    private let readyText: [String] = ["How is your condition?",
+                               "Checked road safety?",
+                               "Now, shall we run?"]
+    
+    
+    
+    init(program: Program, isPresented: Binding<Bool>) {
         self._isPresented = isPresented
-        _program = ObservedObject(wrappedValue: DummyProgramState(programName: programName, duration: duration, mentor: mentor, description: description, color: color, soundTrack: soundTrack))
+        _program = ObservedObject(wrappedValue: ProgramState(program: program))
     }
     
     var body: some View {
@@ -27,7 +32,7 @@ struct TrackingView: View {
                     if !program.isComplete {
                         EmergencyButton()
                             .padding()
-                        Text(program.mentorName ?? "Free Running")
+                        Text(program.program.mentor?.name ?? "Free Running")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .lineLimit(1)
@@ -49,15 +54,15 @@ struct TrackingView: View {
                     .ignoresSafeArea()
                 if counter > 0 {
                     VStack {
-                        Text(program.readyText[0])
+                        Text(readyText[0])
                             .font(Font.system(size: 30).italic().bold())
                             .foregroundColor(counter <= 3 ? Pallete.mint : Pallete.blue)
                             .padding()
-                        Text(program.readyText[1])
+                        Text(readyText[1])
                             .font(Font.system(size: 30).italic().bold())
                             .foregroundColor(counter <= 2 ? Pallete.mint : Pallete.blue)
                             .padding()
-                        Text(program.readyText[2])
+                        Text(readyText[2])
                             .font(Font.system(size: 30).italic().bold())
                             .foregroundColor(counter <= 1 ? Pallete.mint : Pallete.blue)
                             .padding()
@@ -82,7 +87,7 @@ struct TrackingView: View {
 }
 
 struct CompleteView: View {
-    @ObservedObject var program: DummyProgramState
+    @ObservedObject var program: ProgramState
     @Binding var isPresented: Bool
     
     var body: some View {
@@ -105,7 +110,7 @@ struct CompleteView: View {
             VStack {
                 Text("Distance")
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text(String(format: "%.2f", program.stats.distance))
+                Text(String(format: "%.2f", program.program.stats.distance))
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -114,7 +119,7 @@ struct CompleteView: View {
             VStack {
                 Text("Push")
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text(String(format: "%d", Int(program.stats.pushCount)))
+                Text(String(format: "%d", Int(program.program.stats.pushCount)))
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -141,7 +146,7 @@ struct CompleteView: View {
 }
 
 struct ProgramProgressBar: View {
-    @ObservedObject var program: DummyProgramState
+    @ObservedObject var program: ProgramState
     let timer: Publishers.Autoconnect<Timer.TimerPublisher>
     let lineWidth = 15.0
     
@@ -183,13 +188,13 @@ struct ProgramProgressBar: View {
 }
 
 struct StatsInfoModule: View {
-    @ObservedObject var program: DummyProgramState
+    @ObservedObject var program: ProgramState
     
     var body: some View {
         HStack {
             Spacer()
             VStack {
-                Text(String(format: "%.2f", program.stats.distance))
+                Text(String(format: "%.2f", program.program.stats.distance))
                     .font(.title)
                     .fontWeight(.bold)
                 Text("KM")
@@ -197,7 +202,7 @@ struct StatsInfoModule: View {
             }.frame(width: 100)
             Spacer()
             VStack {
-                Text(String(format: "%d", Int(program.stats.pushCount)))
+                Text(String(format: "%d", Int(program.program.stats.pushCount)))
                     .font(.title)
                     .fontWeight(.bold)
                 Text("Push")
@@ -209,7 +214,7 @@ struct StatsInfoModule: View {
 }
 
 struct PlayBackController: View {
-    @ObservedObject var program: DummyProgramState
+    @ObservedObject var program: ProgramState
     
     var body: some View {
         HStack {
@@ -274,7 +279,7 @@ struct EmergencyButton: View {
 struct TrackingView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TrackingView(isPresented: .constant(true), programName: "test", duration: "", mentor: nil, description: "test message", color: Pallete.Gradient.purple, soundTrack: nil)
+        TrackingView(program: Program.dummy[0], isPresented: .constant(false))
             .previewInterfaceOrientation(.portrait)
     }
 }

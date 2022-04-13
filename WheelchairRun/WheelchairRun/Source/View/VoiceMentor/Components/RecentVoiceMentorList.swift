@@ -9,13 +9,15 @@ import SwiftUI
 
 struct RecentVoiceMentorList: View {
     @Binding var isPopupPresented: Bool
-
+    @Binding var selectedProgram: Program
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 12) {
                 Color.clear.padding(0)
                 ForEach(1..<10) { _ in
-                    VoiceMentorCardView(isPopupPresented: $isPopupPresented, program: Program.dummy[0])
+                    VoiceMentorCardView(isPopupPresented: $isPopupPresented,
+                                        selectedProgram: $selectedProgram,
+                                        program: Program.dummy[0])
                 }
             }
         }
@@ -24,6 +26,7 @@ struct RecentVoiceMentorList: View {
 
 struct RecentVoiceMentorList_Previews: PreviewProvider {
     static var previews: some View {
-        RecentVoiceMentorList(isPopupPresented: .constant(false))
+        RecentVoiceMentorList(isPopupPresented: .constant(false),
+                              selectedProgram: .constant(Program.dummy[0]))
     }
 }

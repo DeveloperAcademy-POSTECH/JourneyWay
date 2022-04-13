@@ -9,8 +9,10 @@ import SwiftUI
 
 struct VoiceMentorView: View {
     @Binding var isPopupPresented: Bool
-    private let columns: [GridItem] = [GridItem(.flexible(), spacing: 10, alignment: .center),
-                                       GridItem(.flexible(), spacing: 10, alignment: .center)]
+    @Binding var selectedProgram: Program
+    private let columns: [GridItem] = [GridItem(.flexible(), spacing: 12, alignment: .trailing),
+                                       GridItem(.flexible(), spacing: 12, alignment: .leading)]
+    var isEmpty: Bool = true
     
     var body: some View {
         ZStack {
@@ -21,15 +23,24 @@ struct VoiceMentorView: View {
                     Text("Recent")
                         .headLineFont()
                         .padding(.leading, 24)
-                    RecentVoiceMentorList(isPopupPresented: $isPopupPresented)
-                        .frame(width: UIScreen.main.bounds.width,
-                               height: 130)
+                    if isEmpty {
+                        EmptyRecentView()
+                            .padding([.leading, .trailing], 24)
+                            .frame(width: UIScreen.main.bounds.width,height: 130)
+                    } else {
+                        RecentVoiceMentorList(isPopupPresented: $isPopupPresented,
+                                              selectedProgram: $selectedProgram)
+                        .frame(width: UIScreen.main.bounds.width,height: 130)
+                    }
+                    
                     Text("New")
                         .headLineFont()
                         .padding([.leading,], 24)
-                    LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
-                        ForEach(Program.dummy.indices, id: \.self) { idx in
-                            VoiceMentorCardView(isPopupPresented: $isPopupPresented, program: Program.dummy[idx])
+                    LazyVGrid(columns: columns, alignment: .leading, spacing: 12) {
+                        ForEach(Program.dummy.indices, id: \.self) { id in
+                            VoiceMentorCardView(isPopupPresented: $isPopupPresented,
+                                                selectedProgram: $selectedProgram,
+                                                program: Program.dummy[id])
                         }
                     }
                 }
@@ -53,6 +64,8 @@ struct VoiceMentorView: View {
 
 struct VoiceMentorView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceMentorView(isPopupPresented: .constant(false))
+        VoiceMentorView(isPopupPresented: .constant(false),
+                        selectedProgram: .constant(Program.dummy[0]),
+                        isEmpty: true)
     }
 }

@@ -12,6 +12,7 @@ struct Pallete {
     static let background: Color            = .white
     static let white: Color                 = .white
     static let black: Color                 = .black
+    static let gray: Color                  = .gray
     static let red: Color                   = .init(hex: "#E02828")
     static let yellow: Color                = .init(hex: "#FBF98F")
     static let cardPointColor3: Color       = .init(hex: "#E45151")
