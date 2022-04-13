@@ -10,9 +10,15 @@ import Combine
 
 struct TrackingView: View {
     @Binding var isPresented: Bool
-    @ObservedObject var program = DummyProgramViewModel()
+    @ObservedObject var program: DummyProgramState
     @State var counter: Double = 4.0
     let timer = Timer.publish(every: 0.1, tolerance: 0.01, on: .main, in: .common).autoconnect()
+    
+    init(isPresented: Binding<Bool>, programName: String?, duration: String, mentor: Program.Mentor?, description: String, color: LinearGradient, soundTrack: String?) {
+        
+        self._isPresented = isPresented
+        _program = ObservedObject(wrappedValue: DummyProgramState(programName: programName, duration: duration, mentor: mentor, description: description, color: color, soundTrack: soundTrack))
+    }
     
     var body: some View {
         ZStack {
@@ -21,7 +27,7 @@ struct TrackingView: View {
                     if !program.isComplete {
                         EmergencyButton()
                             .padding()
-                        Text(program.mentorName)
+                        Text(program.mentorName ?? "Free Running")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .lineLimit(1)
@@ -76,7 +82,7 @@ struct TrackingView: View {
 }
 
 struct CompleteView: View {
-    @ObservedObject var program: DummyProgramViewModel
+    @ObservedObject var program: DummyProgramState
     @Binding var isPresented: Bool
     
     var body: some View {
@@ -90,7 +96,7 @@ struct CompleteView: View {
             VStack {
                 Text("Time")
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text(VoiceMentor.secondsToTime(time: program.progressValue))
+                Text(Program.secondsToTime(time: program.progressValue))
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -135,7 +141,7 @@ struct CompleteView: View {
 }
 
 struct ProgramProgressBar: View {
-    @ObservedObject var program: DummyProgramViewModel
+    @ObservedObject var program: DummyProgramState
     let timer: Publishers.Autoconnect<Timer.TimerPublisher>
     let lineWidth = 15.0
     
@@ -153,7 +159,7 @@ struct ProgramProgressBar: View {
                 .rotationEffect(Angle(degrees: 270.0))
                 .animation(.linear, value: program.progressValue)
             VStack {
-                Text(VoiceMentor.secondsToTime(time: program.progressValue))
+                Text(Program.secondsToTime(time: program.progressValue))
                     .font(.largeTitle)
                     .bold()
                     .onReceive(timer) { _ in
@@ -168,7 +174,7 @@ struct ProgramProgressBar: View {
                             program.player?.stop()
                         }
                     }
-                Text("/ \(VoiceMentor.secondsToTime(time: duration))")
+                Text("/ \(Program.secondsToTime(time: duration))")
                     .fontWeight(.bold)
             }
         }
@@ -177,7 +183,7 @@ struct ProgramProgressBar: View {
 }
 
 struct StatsInfoModule: View {
-    @ObservedObject var program: DummyProgramViewModel
+    @ObservedObject var program: DummyProgramState
     
     var body: some View {
         HStack {
@@ -203,7 +209,7 @@ struct StatsInfoModule: View {
 }
 
 struct PlayBackController: View {
-    @ObservedObject var program: DummyProgramViewModel
+    @ObservedObject var program: DummyProgramState
     
     var body: some View {
         HStack {
@@ -268,7 +274,7 @@ struct EmergencyButton: View {
 struct TrackingView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TrackingView(isPresented: .constant(true))
+        TrackingView(isPresented: .constant(true), programName: "test", duration: "", mentor: nil, description: "test message", color: Pallete.Gradient.purple, soundTrack: nil)
             .previewInterfaceOrientation(.portrait)
     }
 }

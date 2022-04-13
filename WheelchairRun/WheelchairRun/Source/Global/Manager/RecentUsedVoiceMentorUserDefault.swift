@@ -8,7 +8,7 @@
 import Foundation
 
 struct RecentUsedVoiceMentorUserDefault: UserDefaultProtocol {
-    typealias T = [VoiceMentor]
+    typealias T = [Program]
     private let key: String = UserDefaultsKeyName.recentUsed.rawValue
     
     var value: T? {

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct VoiceMentorCardView: View {
     @Binding var isPopupPresented: Bool
+    var program: Program
     
     let backgroundColor: [LinearGradient] = [
         Pallete.Gradient.red,
@@ -28,9 +29,9 @@ struct VoiceMentorCardView: View {
                 .overlay {
                     VStack(alignment: .trailing, spacing: 0) {
                         VStack(alignment: .leading, spacing: 0) {
-                            Text("엘린의 명상")
+                            Text(program.programName ?? "Undefined")
                                 .cardTitle()
-                            Text("5 min")
+                            Text(program.duration + "min")
                                 .cardSubTitle()
                         }
                         .padding([.leading,.top], 10)
@@ -70,6 +71,6 @@ extension Text {
 
 struct VoiceMentorCardView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceMentorCardView(isPopupPresented: .constant(false))
+        VoiceMentorCardView(isPopupPresented: .constant(false), program: Program.dummy[0])
     }
 }

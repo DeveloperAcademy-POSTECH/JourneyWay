@@ -9,7 +9,9 @@ import SwiftUI
 
 struct VoiceMentorView: View {
     @Binding var isPopupPresented: Bool
-
+    private let columns: [GridItem] = [GridItem(.flexible(), spacing: 10, alignment: .center),
+                                       GridItem(.flexible(), spacing: 10, alignment: .center)]
+    
     var body: some View {
         ZStack {
             VStack {
@@ -25,8 +27,10 @@ struct VoiceMentorView: View {
                     Text("New")
                         .headLineFont()
                         .padding([.leading,], 24)
-                    ForEach(0..<10) { _ in
-                        VoiceMentorCardRow(isPopupPresented: $isPopupPresented)
+                    LazyVGrid(columns: columns, alignment: .center, spacing: 20) {
+                        ForEach(Program.dummy.indices, id: \.self) { idx in
+                            VoiceMentorCardView(isPopupPresented: $isPopupPresented, program: Program.dummy[idx])
+                        }
                     }
                 }
             }
