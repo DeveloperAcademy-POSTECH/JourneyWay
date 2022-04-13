@@ -12,6 +12,7 @@ struct VoiceMentorView: View {
     @Binding var selectedProgram: Program
     private let columns: [GridItem] = [GridItem(.flexible(), spacing: 12, alignment: .trailing),
                                        GridItem(.flexible(), spacing: 12, alignment: .leading)]
+    var isEmpty: Bool = true
     
     var body: some View {
         ZStack {
@@ -22,10 +23,16 @@ struct VoiceMentorView: View {
                     Text("Recent")
                         .headLineFont()
                         .padding(.leading, 24)
-                    RecentVoiceMentorList(isPopupPresented: $isPopupPresented,
-                                          selectedProgram: $selectedProgram)
-                        .frame(width: UIScreen.main.bounds.width,
-                               height: 130)
+                    if isEmpty {
+                        EmptyRecentView()
+                            .padding([.leading, .trailing], 24)
+                            .frame(width: UIScreen.main.bounds.width,height: 130)
+                    } else {
+                        RecentVoiceMentorList(isPopupPresented: $isPopupPresented,
+                                              selectedProgram: $selectedProgram)
+                        .frame(width: UIScreen.main.bounds.width,height: 130)
+                    }
+                    
                     Text("New")
                         .headLineFont()
                         .padding([.leading,], 24)
@@ -58,6 +65,7 @@ struct VoiceMentorView: View {
 struct VoiceMentorView_Previews: PreviewProvider {
     static var previews: some View {
         VoiceMentorView(isPopupPresented: .constant(false),
-                        selectedProgram: .constant(Program.dummy[0]))
+                        selectedProgram: .constant(Program.dummy[0]),
+                        isEmpty: true)
     }
 }
