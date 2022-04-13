@@ -39,6 +39,7 @@
 		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
 		EF8703E62806642B00835EA7 /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703E52806642B00835EA7 /* ProgramModel.swift */; };
 		EF8703E828066ED400835EA7 /* TrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703E728066ED400835EA7 /* TrackingState.swift */; };
+		EF8703EC28067EF100835EA7 /* EmptyRecentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */; };
 		EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */; };
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
 		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
@@ -86,6 +87,7 @@
 		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
 		EF8703E52806642B00835EA7 /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
 		EF8703E728066ED400835EA7 /* TrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingState.swift; sourceTree = "<group>"; };
+		EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecentView.swift; sourceTree = "<group>"; };
 		EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
 		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
 				EFED3A7F2804700600D99B27 /* WCRXButton.swift */,
 				EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */,
+				EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				CD0D7BD82805090300C7B876 /* DiaryData.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
 				EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */,
+				EF8703EC28067EF100835EA7 /* EmptyRecentView.swift in Sources */,
 				EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */,
 				EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */,
 				DDAF1F752802FC25000974FA /* VoiceCardPopupView.swift in Sources */,
