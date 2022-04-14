@@ -16,7 +16,7 @@ struct StatsInfoModule: View {
             VStack {
                 Text(String(format: "%.2f", program.stats.distance))
                     .font(.title.bold().italic())
-                Text("KM")
+                Text("Km")
                     .font(.caption)
             }.frame(width: 100)
             Spacer()
