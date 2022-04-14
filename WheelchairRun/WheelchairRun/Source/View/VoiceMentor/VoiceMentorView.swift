@@ -21,7 +21,7 @@ struct VoiceMentorView: View {
                 VoiceMentorHeaderView()
                     .padding([.top,.leading,.trailing, .bottom], 24)
                 ScrollView {
-                    Text("Recent")
+                    Text("최근 ")
                         .headLineFont()
                         .padding(.leading, 24)
                     if isEmpty {
@@ -35,7 +35,7 @@ struct VoiceMentorView: View {
                         .frame(width: UIScreen.main.bounds.width,height: 130)
                     }
                     
-                    Text("New")
+                    Text("새로운")
                         .headLineFont()
                         .padding([.leading,], 24)
                     LazyVGrid(columns: columns, alignment: .leading, spacing: 18) {
