@@ -44,7 +44,6 @@
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
 		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
 		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
-		EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */; };
 		EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */; };
 		EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */; };
 		EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7F2804700600D99B27 /* WCRXButton.swift */; };
@@ -92,7 +91,6 @@
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
 		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
 		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
-		EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
 		EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardView.swift; sourceTree = "<group>"; };
 		EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Woody.swift"; sourceTree = "<group>"; };
 		EFED3A7F2804700600D99B27 /* WCRXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRXButton.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
-				EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */,
 				AF77751B27FD3713001BCA2F /* HomeView.swift */,
 			);
 			path = Home;
@@ -434,7 +431,6 @@
 				ABC24AAF2806C3ED0073E3B6 /* CompleteView.swift in Sources */,
 				ABEDFDAF2802BEA500ADA500 /* TrackingViewState.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
-				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
 				AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */,
 				CD0D7BD82805090300C7B876 /* DiaryData.swift in Sources */,
