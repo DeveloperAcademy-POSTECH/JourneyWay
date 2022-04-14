@@ -68,10 +68,10 @@ struct Program {
                 오늘 아침부터요! Ready, Set, Push!
                 """,
                 color: Pallete.Gradient.purple,
-                soundTrack: "sample",
+                soundTrack: "Ayden",
                 emoji: "☀️"),
         Program(programName: "켈리와 긍정 러닝",
-                duration: "15", mentor: Mentor(name: "켈리 한",
+                duration: "10", mentor: Mentor(name: "켈리 한",
                                                photo: "kellyImage"),
                 description: """
                 안녕하세요!
@@ -80,7 +80,7 @@ struct Program {
                 우리 같이 해봐요! Ready, Set, Push!
                 """,
                 color: Pallete.Gradient.green,
-                soundTrack: "sample",
+                soundTrack: "Ayden",
                emoji: "🔥"),
         Program(programName: "잭과 명상 산책",
                 duration: "5", mentor: Mentor(name: "잭 전",
@@ -104,7 +104,7 @@ struct Program {
                 준비됐나요? Ready, Set, Push!
                 """,
                 color: Pallete.Gradient.blue,
-                soundTrack: "sample",
+                soundTrack: "Yosep",
                emoji: "💪"),
         ]
     
