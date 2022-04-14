@@ -9,7 +9,9 @@ import SwiftUI
 
 struct HealthGraphView: View {
     @State var selected = 2
+    @State var selected2 = 0
     @State var items = ["Day", "Week", "Month"]
+    @State var items2 = ["Medal", "Level"]
     
     var body: some View {
         
@@ -54,8 +56,48 @@ struct HealthGraphView: View {
             Text("더 건강해지기 위한 대결! 어제의 나에게 승리해보세요!")
                 .font(.custom("Apple SD Gothic Neo Light", size: 15))
                 .padding(EdgeInsets(top: 0, leading: 11, bottom: 0, trailing: 0))
-            VBarGraph().padding(10)
             
+            Spacer()
+            
+            VStack {
+                
+            Picker("graph", selection: $selected2) {
+                ForEach(0..<items2.count, id: \.self) { i in
+                    Text(items2[i])
+                }
+            }.pickerStyle(.segmented)
+            
+                TabView(selection: $selected2) {
+                Medal().tag(0)
+                MedalLevel().tag(1)
+            }
+            .padding(10)
+            .animation(.easeInOut, value: selected2)
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .frame(height: 250)
+            .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
+            }
+            /*
+            var level: Int = 10
+            
+            VStack(alignment: .center) {
+                if level < 10 {
+            Image("BronzeMedal")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                } else if level < 100 {
+                    Image("SilverMedal")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                } else {
+                    Image("GoldMedal")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                }
+            }
+            .frame(width: UIScreen.main.bounds.width, height: 120)
+            //VBarGraph().padding(10)
+            */
             Spacer()
         }
         .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
