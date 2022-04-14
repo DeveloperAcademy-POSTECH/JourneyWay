@@ -26,6 +26,30 @@ struct Program {
         return "\(h_string):\(m_string):\(s_string)"
     }
     
+    static func secondsToHour(time: TimeInterval) -> String {
+        let timeVal = Int(time)
+        let h = timeVal / 3600
+        let h_string = h < 10 ? "0\(h)" : "\(h)"
+        
+        return "\(h_string)"
+    }
+    
+    static func secondsToMinute(time: TimeInterval) -> String {
+        let timeVal = Int(time)
+        let m = (timeVal % 3600) / 60
+        let m_string =  m < 10 ? "0\(m)" : "\(m)"
+        
+        return "\(m_string)"
+    }
+    
+    static func secondsToSecond(time: TimeInterval) -> String {
+        let timeVal = Int(time)
+        let s = (timeVal % 3600) % 60
+        let s_string =  s < 10 ? "0\(s)" : "\(s)"
+        
+        return "\(s_string)"
+    }
+    
     struct Mentor {
         var name: String
         var photo: String
@@ -54,7 +78,7 @@ struct Program {
                 우리 같이 해봐요! Ready, Set, Push!
                 """,
                 color: Pallete.Gradient.green,
-                soundTrack: nil),
+                soundTrack: "sample"),
         Program(programName: "레오와 명상 산책",
                 duration: "5", mentor: Mentor(name: "레오 정",
                                               photo: "leoImage"),
@@ -65,7 +89,7 @@ struct Program {
                 아주 놀라울 거에요! Ready, Set, Push!
                 """,
                 color: Pallete.Gradient.red,
-                soundTrack: ""),
+                soundTrack: "sample"),
         Program(programName: "딜런과 기초 러닝",
                 duration: "5", mentor: Mentor(name: "딜런 오브라이언",
                                               photo: "dylanImage"),
@@ -76,7 +100,7 @@ struct Program {
                 준비됐나요? Ready, Set, Push!
                 """,
                 color: Pallete.Gradient.blue,
-                soundTrack: ""),
+                soundTrack: "sample"),
         ]
     
 }

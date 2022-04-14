@@ -28,8 +28,7 @@ struct ProgramProgressBar: View {
                 .animation(.linear, value: program.progressValue)
             VStack {
                 Text(Program.secondsToTime(time: program.progressValue))
-                    .font(.largeTitle)
-                    .bold()
+                    .font(.system(size: 42).italic().bold())
                     .onReceive(timer) { _ in
                         if program.player?.isPlaying != false {
                             if program.isRunning {
@@ -48,7 +47,7 @@ struct ProgramProgressBar: View {
                     }
                 if program.program.programName != nil {
                     Text("/ \(Program.secondsToTime(time: duration))")
-                        .fontWeight(.bold)
+                        .font(.system(size: 15).italic().bold())
                 }
             }
         }
