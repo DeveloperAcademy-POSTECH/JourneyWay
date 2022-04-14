@@ -23,6 +23,7 @@ struct HomeView: View {
 }
 
 struct Hello_Profile: View {
+    @State private var isPresented = false
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
             HStack(alignment: .top, spacing: 10){
@@ -34,7 +35,7 @@ struct Hello_Profile: View {
                         Text("요셉")
                             .font(.title)
                             .fontWeight(.semibold)
-                        
+                            
                     }
                     Text("보이스멘토와 함께")
                         .font(.title3)
@@ -43,10 +44,17 @@ struct Hello_Profile: View {
                     
                 }
                 Spacer()
-                Button(action: {print("Profile_Button")}){
+                Button(action: {
+                    UIView.setAnimationsEnabled(false)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        isPresented.toggle()
+                    }
+                }){
                     Image("Profile_img")
                         .resizable()
                         .frame(width: 50, height: 50)
+                }   .fullScreenCover(isPresented: $isPresented) {
+                    ProfileView(isPresented: $isPresented)
                 }
                 Spacer()
             }
@@ -58,9 +66,8 @@ struct Hello_Profile: View {
 
 struct pushNgo: View {
     @State private var isPresented = false
-    
     var body: some View {
-        Spacer()
+        Spacer(minLength: 25)
         Button(action: {
             UIView.setAnimationsEnabled(false)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
