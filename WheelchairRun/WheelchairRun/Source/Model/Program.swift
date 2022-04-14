@@ -82,7 +82,7 @@ struct Program {
                 color: Pallete.Gradient.green,
                 soundTrack: "sample",
                emoji: "🔥"),
-        Program(programName: "잭과 기초 산책",
+        Program(programName: "잭과 명상 산책",
                 duration: "5", mentor: Mentor(name: "잭 전",
                                               photo: "leoImage"),
                 description: """
