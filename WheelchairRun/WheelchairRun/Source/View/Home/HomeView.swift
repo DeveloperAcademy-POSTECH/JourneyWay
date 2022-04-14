@@ -40,7 +40,7 @@ struct Hello_Profile: View {
                             .fontWeight(.semibold)
                             
                     }
-                    Text("보이스멘토와 함께")
+                    Text("보이스 파트너와 함께")
                         .font(.title3)
                     Text("휠체어를 밀어보세요!")
                         .font(.title3)

@@ -82,8 +82,8 @@ struct Program {
                 color: Pallete.Gradient.green,
                 soundTrack: "Ayden",
                emoji: "🔥"),
-        Program(programName: "잭과 명상 산책",
-                duration: "5", mentor: Mentor(name: "잭 전",
+        Program(programName: "잭과 기초 산책",
+                duration: "15", mentor: Mentor(name: "잭 전",
                                               photo: "leoImage"),
                 description: """
                 안녕하세요!
