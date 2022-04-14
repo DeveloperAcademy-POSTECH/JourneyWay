@@ -13,7 +13,7 @@ struct VoiceMentorHeaderView: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Voice Mentor")
+                Text("보이스 파트너")
                     .titleFont()
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
@@ -21,7 +21,7 @@ struct VoiceMentorHeaderView: View {
                     WCRXButton()
                 }
             }
-            Text("Select your favorite voice to listen while exercsing")
+            Text("운동을 함께할 보이스를 선택해주세요.")
                 .subTitleFont()
         }
     }
