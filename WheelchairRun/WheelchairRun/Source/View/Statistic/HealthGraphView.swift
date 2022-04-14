@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HealthGraphView: View {
+    @State var day = 0
+    @State var week = 1
+    @State var month = 2
+    
     @State var selected = 2
     @State var selected2 = 0
     @State var items = ["Day", "Week", "Month"]
@@ -33,15 +37,30 @@ struct HealthGraphView: View {
                     }
                 }.pickerStyle(.segmented)
                 
-                TabView(selection: $selected) {
-                    HBarGraph().tag(0)
-                    HBarGraph().tag(1)
-                    HBarGraph().tag(2)
+                if selected == 0 {
+                    HBarGraph(selectedTab: day)
+                        .frame(height: 250)
+                        .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
+                } else if selected == 1 {
+                    HBarGraph(selectedTab: week)
+                        .frame(height: 250)
+                        .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
+                    
+                } else if selected == 2 {
+                    HBarGraph(selectedTab: month)
+                        .frame(height: 250)
+                        .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
                 }
-                .animation(.easeInOut, value: selected)
-                .tabViewStyle(.page(indexDisplayMode: .never))
-                .frame(height: 250)
-                .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
+                
+                //                TabView(selection: $selected) {
+                //                    HBarGraph().tag(0)
+                //                    HBarGraph().tag(1)
+                //                    HBarGraph().tag(2)
+                //                }
+                //                .animation(.easeInOut, value: selected)
+                //                .tabViewStyle(.page(indexDisplayMode: .never))
+                //                .frame(height: 250)
+                //                .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
             }
             .padding(10)
             
@@ -57,47 +76,39 @@ struct HealthGraphView: View {
                 .font(.custom("Apple SD Gothic Neo Light", size: 15))
                 .padding(EdgeInsets(top: 0, leading: 11, bottom: 0, trailing: 0))
             
-            Spacer()
-            
             VStack {
-                
-            Picker("graph", selection: $selected2) {
-                ForEach(0..<items2.count, id: \.self) { i in
-                    Text(items2[i])
+                TabView {
+                    Medal()
+//                    MedalLevel() // 뺄듯?ㄴ
                 }
-            }.pickerStyle(.segmented)
-            
-                TabView(selection: $selected2) {
-                Medal().tag(0)
-                MedalLevel().tag(1)
-            }
-            .padding(10)
-            .animation(.easeInOut, value: selected2)
-            .tabViewStyle(.page(indexDisplayMode: .never))
-            .frame(height: 250)
-            .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
+                .padding(10)
+                .animation(.easeInOut, value: selected2)
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .frame(height: 200)
+                .overlay(RoundedRectangle(cornerRadius: 20.0).stroke(Color("DarkGray")))
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             }
             /*
-            var level: Int = 10
-            
-            VStack(alignment: .center) {
-                if level < 10 {
-            Image("BronzeMedal")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                } else if level < 100 {
-                    Image("SilverMedal")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                } else {
-                    Image("GoldMedal")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                }
-            }
-            .frame(width: UIScreen.main.bounds.width, height: 120)
-            //VBarGraph().padding(10)
-            */
+             var level: Int = 10
+             
+             VStack(alignment: .center) {
+             if level < 10 {
+             Image("BronzeMedal")
+             .resizable()
+             .aspectRatio(contentMode: .fit)
+             } else if level < 100 {
+             Image("SilverMedal")
+             .resizable()
+             .aspectRatio(contentMode: .fit)
+             } else {
+             Image("GoldMedal")
+             .resizable()
+             .aspectRatio(contentMode: .fit)
+             }
+             }
+             .frame(width: UIScreen.main.bounds.width, height: 120)
+             //VBarGraph().padding(10)
+             */
             Spacer()
         }
         .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
