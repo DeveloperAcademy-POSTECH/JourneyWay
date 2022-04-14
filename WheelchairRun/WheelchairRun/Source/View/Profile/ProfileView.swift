@@ -9,31 +9,18 @@ import SwiftUI
 
 struct ProfileView : View {
     
-    @Binding var isPresented: Bool
-    @Environment(\.presentationMode) private var presentationMode
-    
     var body: some View {
         ZStack{
             Color.white.edgesIgnoringSafeArea(.all)
             VStack{
-                VStack{
-                    HStack{
-                        Spacer()
-                        Button(action: {
-                            presentationMode.wrappedValue.dismiss()
-                        }) {
-                            WCRXButton()
-                        }
-                        .padding(.horizontal, 20)
-                    }
+                List {
                     Image("Profile_img")
                         .resizable()
                         .frame(width: 80, height: 80)
-                }
-                List {
+
                     Section(header:
                                 HStack{
-                        Image("person.2.fill-1")
+                        Image("person222")
                             .resizable()
                             .frame(width: 22, height: 18)
                             .foregroundColor(Color.black)

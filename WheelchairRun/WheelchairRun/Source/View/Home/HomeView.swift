@@ -48,19 +48,13 @@ struct Hello_Profile: View {
                 .padding(.leading, 30)
                 .padding(.top, -30)
                 Spacer()
-                Button(action: {
-                    UIView.setAnimationsEnabled(false)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                        isPresented.toggle()
-                    }
-                }){
-                    Image("Profile_img")
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                }   .fullScreenCover(isPresented: $isPresented) {
-                    ProfileView(isPresented: $isPresented)
+                NavigationLink(destination: ProfileView()) {
+                        Image("Profile_img")
+                            .resizable()
+                            .frame(width: 50, height: 50)
                 }
-                .padding(.trailing, 30)
+                .navigationBarBackButtonHidden(true)
+                Spacer()
             }
         }
         
