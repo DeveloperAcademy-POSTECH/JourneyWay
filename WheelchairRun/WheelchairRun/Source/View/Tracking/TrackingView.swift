@@ -32,7 +32,7 @@ struct TrackingView: View {
                     if !program.isComplete {
                         EmergencyButton()
                             .padding()
-                        Text(program.program.mentor?.name ?? "Free Running")
+                        Text(program.program.programName ?? "Free Running")
                             .font(.largeTitle)
                             .fontWeight(.bold)
                             .lineLimit(1)
