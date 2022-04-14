@@ -17,7 +17,6 @@ struct DiaryList: View {
                 Text("\(diary.getDay())일")
             }
             .font(.system(size: 15, weight: .bold, design: .default))
-            .padding(.leading)
             HStack {
                 VStack {
                     Text("Time")
@@ -34,10 +33,10 @@ struct DiaryList: View {
                         .font(.system(size: 12))
                 }.padding(21)
                 VStack {
-                    Text("Calorie")
+                    Text("KM")
                         .font(.system(size: 13))
                         .bold()
-                    Text("\(diary.getDistance())")
+                    Text(String(format: "%.2f", diary.getDistance()))
                         .font(.system(size: 12))
                 }.padding(21)
             }

@@ -92,7 +92,7 @@ struct Program {
                 아주 놀라울 거에요! Ready, Set, Push!
                 """,
                 color: Pallete.Gradient.red,
-                soundTrack: "sample",
+                soundTrack: "Jack",
                emoji: "🧘"),
         Program(programName: "요셉과 기초 러닝",
                 duration: "5", mentor: Mentor(name: "요셉 오브라이언",
