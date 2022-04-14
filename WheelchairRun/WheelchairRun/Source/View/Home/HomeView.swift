@@ -89,7 +89,7 @@ struct pushNgo: View {
         .fullScreenCover(isPresented: $isPresented, onDismiss: {
             UIView.setAnimationsEnabled(true)
         }, content: {
-            TrackingView(program: Program.dummy[0], isPresented: $isPresented)
+            TrackingView(program: Program(programName: nil, duration: "", description: "", color: Pallete.Gradient.purple), isPresented:  $isPresented)
         })
         Spacer()
     }
