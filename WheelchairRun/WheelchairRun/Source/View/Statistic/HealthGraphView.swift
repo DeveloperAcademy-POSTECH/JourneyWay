@@ -12,7 +12,7 @@ struct HealthGraphView: View {
     @State var week = 1
     @State var month = 2
     
-    @State var selected = 2
+    @State var selected = 0
     @State var selected2 = 0
     @State var items = ["Day", "Week", "Month"]
     @State var items2 = ["Medal", "Level"]
