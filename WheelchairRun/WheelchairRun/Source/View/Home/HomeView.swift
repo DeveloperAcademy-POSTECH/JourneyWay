@@ -13,10 +13,13 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 Hello_Profile()
+                Spacer()
                 pushNgo()
+                Spacer()
                 Today_Record()
+                Spacer()
                 with_voice_mentor()
-                
+                Spacer()
             }
         }
     }
@@ -26,9 +29,8 @@ struct Hello_Profile: View {
     @State private var isPresented = false
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
-            HStack(alignment: .top, spacing: 10){
-                Spacer()
-                VStack(alignment: .leading, spacing: 5){
+            HStack(alignment: .top, spacing: 10) {
+                VStack(alignment: .leading, spacing: 5) {
                     HStack(alignment: .firstTextBaseline, spacing: 5){
                         Text("안녕하세요,")
                             .font(.title3)
@@ -43,6 +45,8 @@ struct Hello_Profile: View {
                         .font(.title3)
                     
                 }
+                .padding(.leading, 30)
+                .padding(.top, -30)
                 Spacer()
                 Button(action: {
                     UIView.setAnimationsEnabled(false)
@@ -56,10 +60,10 @@ struct Hello_Profile: View {
                 }   .fullScreenCover(isPresented: $isPresented) {
                     ProfileView(isPresented: $isPresented)
                 }
-                Spacer()
+                .padding(.trailing, 30)
             }
         }
-        Spacer()
+        
     }
 }
 
