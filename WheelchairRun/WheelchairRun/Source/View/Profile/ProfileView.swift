@@ -14,10 +14,14 @@ struct ProfileView : View {
             Color.white.edgesIgnoringSafeArea(.all)
             VStack{
                 List {
+                    HStack{
+                        Spacer()
                     Image("Profile_img")
                         .resizable()
                         .frame(width: 80, height: 80)
-
+                        Spacer()
+                    }
+                    
                     Section(header:
                                 HStack{
                         Image("person222")
@@ -35,7 +39,7 @@ struct ProfileView : View {
                     }
                     
                     Section(header:                HStack{
-                        Image("scroll.fill-1")
+                        Image("scroll.fill")
                             .resizable()
                             .frame(width: 20, height: 18)
                             .foregroundColor(Color.black)
