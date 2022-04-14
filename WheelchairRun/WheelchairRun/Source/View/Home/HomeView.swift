@@ -23,6 +23,7 @@ struct HomeView: View {
 }
 
 struct Hello_Profile: View {
+    @State private var isPresented = false
     var body: some View {
         VStack(alignment: .center, spacing: 10) {
             HStack(alignment: .top, spacing: 10){
@@ -43,10 +44,17 @@ struct Hello_Profile: View {
                     
                 }
                 Spacer()
-                Button(action: {print("Profile_Button")}){
+                Button(action: {
+                    UIView.setAnimationsEnabled(false)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                        isPresented.toggle()
+                    }
+                }){
                     Image("Profile_img")
                         .resizable()
                         .frame(width: 50, height: 50)
+                }   .fullScreenCover(isPresented: $isPresented) {
+                    ProfileView(isPresented: $isPresented)
                 }
                 Spacer()
             }
@@ -81,7 +89,7 @@ struct pushNgo: View {
         .fullScreenCover(isPresented: $isPresented, onDismiss: {
             UIView.setAnimationsEnabled(true)
         }, content: {
-            TrackingView(program: Program.dummy[0], isPresented: $isPresented)
+            TrackingView(program: Program(programName: nil, duration: "", description: "", color: Pallete.Gradient.purple, emoji: ""), isPresented:  $isPresented)
         })
         Spacer()
     }

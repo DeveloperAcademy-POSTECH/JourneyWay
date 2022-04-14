@@ -28,12 +28,15 @@ struct ProgramProgressBar: View {
                 .animation(.linear, value: program.progressValue)
             VStack {
                 Text(Program.secondsToTime(time: program.progressValue))
-                    .font(.largeTitle)
-                    .bold()
+                    .font(.system(size: 42).italic().bold())
                     .onReceive(timer) { _ in
                         if program.player?.isPlaying != false {
                             if program.isRunning {
-                                program.updateProgressValue(time: program.player?.currentTime ?? 0.0)
+                                if program.program.programName != nil {
+                                    program.updateProgressValue(time: program.player?.currentTime ?? 0.0)
+                                } else {
+                                    program.progressValue += 0.1
+                                }
                                 program.updateStats_test()
                             }
                         } else if program.player?.currentTime == 0.0 {
@@ -42,8 +45,10 @@ struct ProgramProgressBar: View {
                             program.player?.stop()
                         }
                     }
-                Text("/ \(Program.secondsToTime(time: duration))")
-                    .fontWeight(.bold)
+                if program.program.programName != nil {
+                    Text("/ \(Program.secondsToTime(time: duration))")
+                        .font(.system(size: 15).italic().bold())
+                }
             }
         }
         .frame(maxWidth: 300, maxHeight: 300)

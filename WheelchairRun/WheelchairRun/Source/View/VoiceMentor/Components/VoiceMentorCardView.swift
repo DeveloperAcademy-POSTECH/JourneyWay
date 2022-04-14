@@ -16,6 +16,7 @@ struct VoiceMentorCardView: View {
     var body: some View {
         Button(action: {
             withAnimation {
+                print("press")
                 isPopupPresented.toggle()
                 selectedProgram = program
             }
@@ -31,7 +32,7 @@ struct VoiceMentorCardView: View {
                         }
                         .padding([.leading,.top], 10)
                         HStack {
-                            Text("🧘🏻‍♀️")
+                            Text(program.emoji)
                                 .font(.system(size: 50))
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                         }

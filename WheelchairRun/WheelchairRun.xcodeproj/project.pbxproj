@@ -36,7 +36,6 @@
 		EF35056328058970007E1315 /* BadgeStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF35056228058970007E1315 /* BadgeStage.swift */; };
 		EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3505662805898B007E1315 /* TrackingRecord.swift */; };
 		EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */; };
-		EF6C51522802737F008D83A5 /* VoiceMentorCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */; };
 		EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */; };
 		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
 		EF8703E62806642B00835EA7 /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703E52806642B00835EA7 /* ProgramModel.swift */; };
@@ -46,7 +45,6 @@
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
 		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
 		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
-		EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */; };
 		EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */; };
 		EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */; };
 		EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7F2804700600D99B27 /* WCRXButton.swift */; };
@@ -86,7 +84,6 @@
 		EF35056228058970007E1315 /* BadgeStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeStage.swift; sourceTree = "<group>"; };
 		EF3505662805898B007E1315 /* TrackingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingRecord.swift; sourceTree = "<group>"; };
 		EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentVoiceMentorList.swift; sourceTree = "<group>"; };
-		EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardRow.swift; sourceTree = "<group>"; };
 		EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorView.swift; sourceTree = "<group>"; };
 		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
 		EF8703E52806642B00835EA7 /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
@@ -96,7 +93,6 @@
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
 		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
 		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
-		EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTemp.swift; sourceTree = "<group>"; };
 		EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardView.swift; sourceTree = "<group>"; };
 		EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Woody.swift"; sourceTree = "<group>"; };
 		EFED3A7F2804700600D99B27 /* WCRXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRXButton.swift; sourceTree = "<group>"; };
@@ -173,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
-				EF6C51512802737F008D83A5 /* VoiceMentorCardRow.swift */,
 				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
 				EFED3A7F2804700600D99B27 /* WCRXButton.swift */,
 				EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */,
@@ -218,7 +213,6 @@
 			isa = PBXGroup;
 			children = (
 				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
-				EFDF4AFE27FFDDAA000C175B /* HomeTemp.swift */,
 				AF77751B27FD3713001BCA2F /* HomeView.swift */,
 			);
 			path = Home;
@@ -410,7 +404,6 @@
 				EFED3A82280472F800D99B27 /* VoiceMentorHeaderView.swift in Sources */,
 				ABC24AB32806C6C30073E3B6 /* StatsInfoModule.swift in Sources */,
 				EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */,
-				EF6C51522802737F008D83A5 /* VoiceMentorCardRow.swift in Sources */,
 				EF8703E828066ED400835EA7 /* TrackingState.swift in Sources */,
 				EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */,
 				EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */,
@@ -440,7 +433,6 @@
 				ABC24AAF2806C3ED0073E3B6 /* CompleteView.swift in Sources */,
 				ABEDFDAF2802BEA500ADA500 /* TrackingViewState.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
-				EFDF4AFF27FFDDAA000C175B /* HomeTemp.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
 				AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */,
 				CD0D7BD82805090300C7B876 /* DiaryData.swift in Sources */,

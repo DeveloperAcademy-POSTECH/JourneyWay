@@ -18,43 +18,92 @@ struct CompleteView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-            Text("Congratulation!")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding()
-            Spacer()
-            VStack {
+            Spacer(minLength: 50)
+            ZStack {
+                RoundedRectangle(cornerRadius: 20)
+                    .fill(Pallete.Gradient.purple)
+                    .padding(20)
+                    .frame(height: 580)
+                    .shadow(radius: 10)
                 VStack {
-                    Text("Time")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(Program.secondsToTime(time: program.progressValue))
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Text("🎉")
+                        .font(.system(size: 70).bold())
+                    Text("Congratulation!")
+                        .font(.system(size: 42).bold())
+                        .foregroundColor(Pallete.mint)
+                    VStack {
+                        VStack {
+                            Text("Time")
+                                .fontWeight(.bold)
+                                .underline()
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            HStack(alignment: .firstTextBaseline) {
+                                Text(Program.secondsToHour(time: program.progressValue))
+                                    .font(.system(size: 50).bold())
+                                Text("h")
+                                    .padding(.leading, -5)
+                                    .font(.caption.bold())
+                                    .foregroundColor(.white)
+                                Text(Program.secondsToMinute(time: program.progressValue))
+                                    .font(.system(size: 50).bold())
+                                Text("m")
+                                    .padding(.leading, -5)
+                                    .font(.caption.bold())
+                                    .foregroundColor(.white)
+                                Text(Program.secondsToSecond(time: program.progressValue))
+                                    .font(.system(size: 50).bold())
+                                Text("s")
+                                    .padding(.leading, -5)
+                                    .font(.caption.bold())
+                                    .foregroundColor(.white)
+                            }
+                            .padding(.bottom, 7)
+                            .foregroundColor(Pallete.mint)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        VStack {
+                            Text("Push")
+                                .fontWeight(.bold)
+                                .underline()
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            HStack(alignment: .firstTextBaseline) {
+                                Text(String(format: "%d", Int(program.stats.pushCount)))
+                                    .font(.system(size: 50).bold())
+                                
+                                    .foregroundColor(Pallete.mint)
+                                Text("Count")
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, 7)
+                        }
+                        VStack {
+                            Text("Distance")
+                                .fontWeight(.bold)
+                                .underline()
+                                .foregroundColor(.white)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                            HStack(alignment: .firstTextBaseline) {
+                                Text(String(format: "%.2f", program.stats.distance))
+                                    .font(.system(size: 50).bold())
+                                    .foregroundColor(Pallete.mint)
+                                Text("km")
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.bottom, 7)
+                        }
+                    }
+                    .padding(30)
+                    .padding(.horizontal, 17)
                 }
-                .padding(.vertical, 5)
-                VStack {
-                    Text("Distance")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(String(format: "%.2f", program.stats.distance))
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(.vertical, 5)
-                VStack {
-                    Text("Push")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(String(format: "%d", Int(program.stats.pushCount)))
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .padding(.vertical, 5)
             }
-            .padding(50)
-            Spacer()
             Button {
                 isPresented = false
                 addRecord()
@@ -90,5 +139,13 @@ struct CompleteView: View {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+    }
+}
+
+
+struct CompleteView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        CompleteView(program: TrackingViewState(program: Program.dummy[0]), isPresented: .constant(true))            .previewInterfaceOrientation(.portrait)
     }
 }
