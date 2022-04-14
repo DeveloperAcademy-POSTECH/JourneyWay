@@ -36,7 +36,7 @@ struct ModalView : View {
             VStack {
                 Image(selectedProgram.mentor?.photo ?? "ellinImage")
                     .resizable()
-                    .frame(width: 345, height: 200)
+                    .frame(height: 200)
                     .aspectRatio(contentMode: .fill)
                     .clipped()
                 
