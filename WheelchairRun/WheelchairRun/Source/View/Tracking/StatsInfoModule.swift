@@ -15,16 +15,14 @@ struct StatsInfoModule: View {
             Spacer()
             VStack {
                 Text(String(format: "%.2f", program.stats.distance))
-                    .font(.title)
-                    .fontWeight(.bold)
+                    .font(.title.bold().italic())
                 Text("KM")
                     .font(.caption)
             }.frame(width: 100)
             Spacer()
             VStack {
                 Text(String(format: "%d", Int(program.stats.pushCount)))
-                    .font(.title)
-                    .fontWeight(.bold)
+                    .font(.title.bold().italic())
                 Text("Push")
                     .font(.caption)
             }.frame(width: 100)
