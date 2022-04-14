@@ -16,6 +16,7 @@ struct VoiceMentorCardView: View {
     var body: some View {
         Button(action: {
             withAnimation {
+                print("press")
                 isPopupPresented.toggle()
                 selectedProgram = program
             }
