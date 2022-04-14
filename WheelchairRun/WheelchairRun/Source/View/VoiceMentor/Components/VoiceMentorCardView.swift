@@ -9,28 +9,24 @@ import SwiftUI
 
 struct VoiceMentorCardView: View {
     @Binding var isPopupPresented: Bool
-    
-    let backgroundColor: [LinearGradient] = [
-        Pallete.Gradient.red,
-        Pallete.Gradient.blue,
-        Pallete.Gradient.purple,
-        Pallete.Gradient.green
-    ]
+    @Binding var selectedProgram: Program
+    var program: Program
     
     // TODO: 폰트 정리
     var body: some View {
         Button(action: {
             withAnimation {
                 isPopupPresented.toggle()
+                selectedProgram = program
             }
         }) {
-            backgroundColor.randomElement()
+            program.color
                 .overlay {
                     VStack(alignment: .trailing, spacing: 0) {
                         VStack(alignment: .leading, spacing: 0) {
-                            Text("엘린의 명상")
+                            Text(program.programName ?? "Undefined")
                                 .cardTitle()
-                            Text("5 min")
+                            Text(program.duration + "min")
                                 .cardSubTitle()
                         }
                         .padding([.leading,.top], 10)
@@ -70,6 +66,8 @@ extension Text {
 
 struct VoiceMentorCardView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceMentorCardView(isPopupPresented: .constant(false))
+        VoiceMentorCardView(isPopupPresented: .constant(false),
+                            selectedProgram: .constant(Program.dummy[0]),
+                            program: Program.dummy[0])
     }
 }

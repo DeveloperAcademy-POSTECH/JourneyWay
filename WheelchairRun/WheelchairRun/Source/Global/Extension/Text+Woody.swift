@@ -27,3 +27,16 @@ extension Text {
                    alignment: .leading)
     }
 }
+
+extension Text {
+    func foregroundLinearGradient(gradient: LinearGradient) -> some View
+    {
+        self.overlay {
+            gradient
+                .mask(
+                    self
+                    
+                )
+        }
+    }
+}

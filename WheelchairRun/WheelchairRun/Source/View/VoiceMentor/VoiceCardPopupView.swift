@@ -11,39 +11,33 @@ struct VoiceCardPopupView: View {
     @State private var isShowingModal = true
     @State private var modalOpacity: Double = 1.0
     
+    @Binding var selectedProgram: Program
+    
     var body: some View {
-        ModalView(isShowingModal: $isShowingModal, modalOpacity: $modalOpacity)
-    }
-}
-       
-
-
-struct ModalOverlay: View {
-    var color = Color.black.opacity(0.4)
-    var tapAction: (() -> Void)? = nil
-
-    var body: some View {
-        color.onTapGesture { self.tapAction?() }
-            .ignoresSafeArea()
+        ModalView(isShowingModal: $isShowingModal,
+                  modalOpacity: $modalOpacity,
+                  selectedProgram: $selectedProgram)
     }
 }
 
 // 모달 카드 뷰
 struct ModalView : View {
+    @Environment(\.presentationMode) private var presentationMode
     @Binding var isShowingModal: Bool
     @Binding var modalOpacity: Double
     @State private var isPresented = false
+    @Binding var selectedProgram: Program
     
     var body: some View {
         ZStack {
-            Pallete.purple
+            selectedProgram.color
             
             // 카드
             VStack {
-                Image("ellinImage")
+                Image(selectedProgram.mentor?.photo ?? "ellinImage")
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
+                    .aspectRatio(contentMode: .fill)
                     .clipped()
                 
                 Spacer().frame(height: 30)
@@ -52,12 +46,12 @@ struct ModalView : View {
                     // 프로그램, 강사, 시간
                     HStack(alignment: .lastTextBaseline) {
                         VStack(alignment: .leading) {
-                            Text(ProgramName.ellin)
+                            Text(selectedProgram.programName ?? "")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             Spacer().frame(height: 5)
-                            Text(VoiceMentorName.ellin)
+                            Text(selectedProgram.mentor?.name ?? "")
                                 .font(.subheadline)
                                 .foregroundColor(.white)
                         }
@@ -66,7 +60,7 @@ struct ModalView : View {
                             Text("⏰")
                                 .font(.title3)
                                 .offset(y: -3)
-                            Text("\(VoiceMentorTime.ellin)")
+                            Text("\(selectedProgram.duration)")
                                 .foregroundColor(.white)
                                 .font(.system(size: 35, weight: .bold))
                                 .fontWeight(.heavy)
@@ -78,7 +72,7 @@ struct ModalView : View {
                     Spacer()
                     // 프로그램 설명
                     HStack {
-                        Text(VoiceMentorContents.ellin)
+                        Text(selectedProgram.description)
                             .lineLimit(4)
                             .multilineTextAlignment(.leading)
                             .font(.callout)
@@ -92,19 +86,23 @@ struct ModalView : View {
     
                 // start 버튼
                 Button(action: {
+                    UIView.setAnimationsEnabled(false)
                     isPresented.toggle()
+                    
                 }) {
                     Text("START!")
                         .font(.title)
                         .fontWeight(.bold)
+                        .foregroundLinearGradient(gradient: selectedProgram.color)
                         .frame(width: 290, height: 60)
-                        .foregroundColor(Pallete.purple)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
                         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
-                }.fullScreenCover(isPresented: $isPresented) {
-                    TrackingView(isPresented: $isPresented)
-                }
+                }.fullScreenCover(isPresented: $isPresented, onDismiss: {
+                    presentationMode.wrappedValue.dismiss()
+                }, content: {
+                    TrackingView(program: selectedProgram, isPresented: $isPresented)
+                })
             }
             .padding(.bottom, 25)
         }
@@ -119,6 +117,6 @@ struct ModalView : View {
 
 struct VoiceCardPopupView__Previews: PreviewProvider {
     static var previews: some View {
-        VoiceCardPopupView()
+        VoiceCardPopupView(selectedProgram: .constant(Program.dummy[0]))
     }
 }

@@ -9,7 +9,12 @@ import SwiftUI
 
 struct VoiceMentorView: View {
     @Binding var isPopupPresented: Bool
-
+    @Binding var selectedProgram: Program
+    @Binding var recentProgram: [Program]
+    private let columns: [GridItem] = [GridItem(.fixed(164), spacing: 12, alignment: .center),
+                                       GridItem(.fixed(164), spacing: (UIScreen.main.bounds.width - 376) / 2, alignment: .center)]
+    var isEmpty: Bool = false
+    
     var body: some View {
         ZStack {
             VStack {
@@ -19,15 +24,28 @@ struct VoiceMentorView: View {
                     Text("Recent")
                         .headLineFont()
                         .padding(.leading, 24)
-                    RecentVoiceMentorList(isPopupPresented: $isPopupPresented)
-                        .frame(width: UIScreen.main.bounds.width,
-                               height: 130)
+                    if isEmpty {
+                        EmptyRecentView()
+                            .padding([.leading, .trailing], 24)
+                            .frame(width: UIScreen.main.bounds.width,height: 130)
+                    } else {
+                        RecentVoiceMentorList(isPopupPresented: $isPopupPresented,
+                                              selectedProgram: $selectedProgram,
+                                              recentPrograms: $recentProgram)
+                        .frame(width: UIScreen.main.bounds.width,height: 130)
+                    }
+                    
                     Text("New")
                         .headLineFont()
                         .padding([.leading,], 24)
-                    ForEach(0..<10) { _ in
-                        VoiceMentorCardRow(isPopupPresented: $isPopupPresented)
+                    LazyVGrid(columns: columns, alignment: .leading, spacing: 18) {
+                        ForEach(Program.dummy.indices, id: \.self) { id in
+                            VoiceMentorCardView(isPopupPresented: $isPopupPresented,
+                                                selectedProgram: $selectedProgram,
+                                                program: Program.dummy[id])
+                        }
                     }
+                    .padding(.leading, 24)
                 }
             }
             
@@ -49,6 +67,9 @@ struct VoiceMentorView: View {
 
 struct VoiceMentorView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceMentorView(isPopupPresented: .constant(false))
+        VoiceMentorView(isPopupPresented: .constant(false),
+                        selectedProgram: .constant(Program.dummy[0]),
+                        recentProgram: .constant(Program.dummy),
+                        isEmpty: false)
     }
 }
