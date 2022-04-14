@@ -18,10 +18,13 @@ struct CompleteView: View {
     
     var body: some View {
         VStack {
+            Spacer(minLength: 50)
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
                     .fill(Pallete.Gradient.purple)
-                    .padding()
+                    .padding(20)
+                    .frame(height: 580)
+                    .shadow(radius: 10)
                 VStack {
                     Text("🎉")
                         .font(.system(size: 70).bold())
@@ -98,10 +101,9 @@ struct CompleteView: View {
                         }
                     }
                     .padding(30)
+                    .padding(.horizontal, 17)
                 }
             }
-            
-            Spacer()
             Button {
                 isPresented = false
                 addRecord()
