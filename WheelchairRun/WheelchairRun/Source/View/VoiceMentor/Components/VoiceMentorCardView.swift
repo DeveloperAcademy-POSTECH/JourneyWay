@@ -32,7 +32,7 @@ struct VoiceMentorCardView: View {
                         }
                         .padding([.leading,.top], 10)
                         HStack {
-                            Text("🧘🏻‍♀️")
+                            Text(program.emoji)
                                 .font(.system(size: 50))
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                         }
