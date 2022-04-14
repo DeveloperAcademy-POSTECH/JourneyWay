@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DiaryList: View {
-    var diary: DiaryData
+    var diary: DiaryRowData
     
     var body: some View {
         HStack {
@@ -37,7 +37,7 @@ struct DiaryList: View {
                     Text("Calorie")
                         .font(.system(size: 13))
                         .bold()
-                    Text("\(diary.getCalorie())")
+                    Text("\(diary.getDistance())")
                         .font(.system(size: 12))
                 }.padding(21)
             }
