@@ -37,7 +37,6 @@ struct ModalView : View {
                 Image(selectedProgram.mentor?.photo ?? "ellinImage")
                     .resizable()
                     .frame(height: 200)
-                    .aspectRatio(contentMode: .fill)
                     .clipped()
                 
                 Spacer().frame(height: 30)
