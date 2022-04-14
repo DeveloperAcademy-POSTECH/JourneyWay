@@ -15,9 +15,9 @@ struct TrackingView: View {
     @State var counter: Double = 4.0
     
     private let timer = Timer.publish(every: 0.1, tolerance: 0.01, on: .main, in: .common).autoconnect()
-    private let readyText: [String] = ["How is your condition?",
-                                       "Checked road safety?",
-                                       "Now, shall we run?"]
+    private let readyText: [String] = ["오늘 컨디션을 어떠세요?",
+                                       "길 안전은 확인하셨나요?",
+                                       "이제 휠체어를 밀어볼까요?"]
     
     
     init(program: Program, isPresented: Binding<Bool>) {
