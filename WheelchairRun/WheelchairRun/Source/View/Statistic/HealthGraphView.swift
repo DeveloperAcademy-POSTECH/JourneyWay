@@ -23,7 +23,7 @@ struct HealthGraphView: View {
             
             Text("건강기록")
                 .font(.custom("Apple SD Gothic Neo Light", size: 22)).bold()
-                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 1, trailing: 0))
             
             Text("일, 주, 월 단위의 건강데이터 평균을 비교해 볼 수 있습니다.")
                 .font(.custom("Apple SD Gothic Neo Light", size: 15))
@@ -70,7 +70,7 @@ struct HealthGraphView: View {
             
             Text("어제의 나와 대결하기")
                 .font(.custom("Apple SD Gothic Neo Light", size: 22)).bold()
-                .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 0, leading: 10, bottom: 1, trailing: 0))
             
             Text("더 건강해지기 위한 대결! 어제의 나에게 승리해보세요!")
                 .font(.custom("Apple SD Gothic Neo Light", size: 15))

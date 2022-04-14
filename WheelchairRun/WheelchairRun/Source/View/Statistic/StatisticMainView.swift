@@ -30,6 +30,7 @@ struct StatisticTabView: View {
             .indexViewStyle(.page(backgroundDisplayMode: .always))
             .navigationTitle("통계")
             .navigationBarTitleDisplayMode(.inline)
+            .padding([.leading, .trailing], 12)
     }
 }
 
