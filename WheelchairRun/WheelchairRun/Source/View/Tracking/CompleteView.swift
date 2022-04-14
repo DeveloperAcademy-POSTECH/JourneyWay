@@ -28,7 +28,7 @@ struct CompleteView: View {
                 VStack {
                     Text("🎉")
                         .font(.system(size: 70).bold())
-                    Text("Congratulation!")
+                    Text("축하합니다!")
                         .font(.system(size: 42).bold())
                         .foregroundColor(Pallete.mint)
                     VStack {

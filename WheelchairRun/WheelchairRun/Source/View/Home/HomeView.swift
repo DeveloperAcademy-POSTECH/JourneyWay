@@ -175,7 +175,7 @@ struct with_voice_mentor: View {
         Button(action: {
             isPresented.toggle()
         }) {
-            Text("with Voice Mentor")
+            Text("보이스 파트너와 함께하기")
                 .font(.body)
                 .fontWeight(.bold)
                 .foregroundColor(Color(red: 0.431, green: 0.995, blue: 0.838))
