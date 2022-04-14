@@ -135,7 +135,7 @@ struct Today_Record: View {
                 HStack {
                     Spacer()
                     VStack(alignment: .center, spacing: 5){
-                        Text("00:00")
+                        Text("25:22")
                             .foregroundColor(Color.black)
                             .font(.title3)
                         Text("Time")
