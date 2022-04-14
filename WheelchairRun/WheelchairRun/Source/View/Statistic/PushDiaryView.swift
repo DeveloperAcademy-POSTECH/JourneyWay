@@ -87,7 +87,7 @@ struct PushDiaryView: View {
             ScrollView {
                 LazyVStack(pinnedViews: [.sectionHeaders]) {
                     ForEach(0..<diarys.count, id: \.self) { index in
-                        Section(header: Header(currentYear: diarys[index].getYear())) {
+                        Section(header: Header(currentYear: String(diarys[index].getYear()))) {
                             ForEach(0..<diarys[index].getValues().count, id: \.self) { i in
                                 DiaryList(diary: diarys[index].getValues()[i])
                             }
@@ -103,7 +103,7 @@ struct PushDiaryView: View {
 }
 
 struct Header: View {
-    var currentYear: Int
+    var currentYear: String
     var body: some View {
         VStack {
             Text("\(currentYear)년")
