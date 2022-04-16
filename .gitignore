@@ -2,6 +2,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/xcode,swift,firebase
 # Edit at https://www.toptal.com/developers/gitignore?templates=xcode,swift,firebase
 
+**/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
 ### Firebase ###
 .idea
 **/node_modules/*
@@ -112,3 +114,4 @@ iOSInjectionProject/
 
 # User Settings
 .DS_Store
+WheelchairRun/WheelchairRun.xcodeproj/project.pbxproj
