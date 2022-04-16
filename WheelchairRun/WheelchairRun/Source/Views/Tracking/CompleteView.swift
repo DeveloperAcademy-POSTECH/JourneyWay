@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct CompleteView: View {
+    @EnvironmentObject var store: MilgoStore
     @State var date: Date = Date()
     @ObservedObject var program: TrackingViewState
-    @Binding var isPresented: Bool
     @Environment(\.managedObjectContext) private var viewContext
-    
     @FetchRequest(entity: ProgramRecord.entity(), sortDescriptors: [])
     var request: FetchedResults<ProgramRecord>
     
@@ -105,9 +104,8 @@ struct CompleteView: View {
                 }
             }
             Button {
-                isPresented = false
                 addRecord()
-                
+                store.dispatch(.endTracking)
             } label: {
                 Circle()
                     .foregroundColor(.black)
@@ -146,6 +144,6 @@ struct CompleteView: View {
 struct CompleteView_Previews: PreviewProvider {
     
     static var previews: some View {
-        CompleteView(program: TrackingViewState(program: Program.dummy[0]), isPresented: .constant(true))            .previewInterfaceOrientation(.portrait)
+        CompleteView(program: TrackingViewState(program: Program.dummy[0]))            .previewInterfaceOrientation(.portrait)
     }
 }

@@ -101,7 +101,7 @@ struct ModalView : View {
                 }.fullScreenCover(isPresented: $isPresented, onDismiss: {
                     presentationMode.wrappedValue.dismiss()
                 }, content: {
-                    TrackingView(program: selectedProgram, isPresented: $isPresented)
+                    TrackingView(program: .init(program: selectedProgram))
                 })
             }
             .padding(.bottom, 25)

@@ -31,6 +31,7 @@ struct Pallete {
     static let greenPoint: Color            = .init(hex: "#4FD8AF")
     static let greenPoint_black: Color      = .init(hex: "#388A6C")
     
+    static let noProgramColor               = Gradient.purple
     struct Gradient {
         static let red: LinearGradient      = LinearGradient(colors: [Pallete.redPoint, Pallete.redPoint_black],
                                                              startPoint: .top,

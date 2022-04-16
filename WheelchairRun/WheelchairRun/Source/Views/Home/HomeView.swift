@@ -64,13 +64,13 @@ struct Hello_Profile: View {
 
 
 struct pushNgo: View {
+    @EnvironmentObject var store: MilgoStore
     @State private var isPresented = false
     var body: some View {
         Spacer(minLength: 25)
         Button(action: {
-            UIView.setAnimationsEnabled(false)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                isPresented.toggle()
+            withAnimation {
+                store.dispatch(.startTracking)
             }
         }) {
             ZStack{
@@ -85,11 +85,6 @@ struct pushNgo: View {
             }
         }
         .buttonStyle(PopupBackgroundButtonStyle())
-        .fullScreenCover(isPresented: $isPresented, onDismiss: {
-            UIView.setAnimationsEnabled(true)
-        }, content: {
-            TrackingView(program: Program(programName: nil, duration: "", description: "", color: Pallete.Gradient.purple, emoji: ""), isPresented:  $isPresented)
-        })
         Spacer()
     }
 }

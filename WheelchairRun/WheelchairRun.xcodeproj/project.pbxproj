@@ -42,6 +42,11 @@
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
 		EFBB75A2280AE3A200DA777D /* StatisticMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A1280AE3A200DA777D /* StatisticMainView.swift */; };
 		EFBB75A4280AE69900DA777D /* Sound.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFBB75A3280AE69900DA777D /* Sound.xcassets */; };
+		EFBB75A6280AE83800DA777D /* TrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A5280AE83800DA777D /* TrackingState.swift */; };
+		EFBB75A8280AE9E500DA777D /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A7280AE9E500DA777D /* State.swift */; };
+		EFBB75AA280AF04500DA777D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A9280AF04500DA777D /* Store.swift */; };
+		EFBB75AC280AF0C800DA777D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75AB280AF0C800DA777D /* Action.swift */; };
+		EFBB75AE280AF12600DA777D /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75AD280AF12600DA777D /* Reducer.swift */; };
 		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
 		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
 		EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */; };
@@ -90,6 +95,11 @@
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
 		EFBB75A1280AE3A200DA777D /* StatisticMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticMainView.swift; sourceTree = "<group>"; };
 		EFBB75A3280AE69900DA777D /* Sound.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sound.xcassets; sourceTree = "<group>"; };
+		EFBB75A5280AE83800DA777D /* TrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingState.swift; sourceTree = "<group>"; };
+		EFBB75A7280AE9E500DA777D /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		EFBB75A9280AF04500DA777D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		EFBB75AB280AF0C800DA777D /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		EFBB75AD280AF12600DA777D /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
 		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
 		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardView.swift; sourceTree = "<group>"; };
@@ -148,6 +158,7 @@
 		DDD4186927FD26E200A46DD2 /* WheelchairRun */ = {
 			isa = PBXGroup;
 			children = (
+				DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */,
 				AB57766C280AA05E008A05AC /* Info.plist */,
 				EF77119127FD2891004414A8 /* Resource */,
 				EF77119027FD288D004414A8 /* Source */,
@@ -179,7 +190,7 @@
 		EF77119027FD288D004414A8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */,
+				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
 				EFBB75A0280ADB5200DA777D /* State */,
 				EF77119927FD28CB004414A8 /* Global */,
 				EF77119827FD28C1004414A8 /* Model */,
@@ -213,7 +224,6 @@
 		EF77119327FD289B004414A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
 				AF77751B27FD3713001BCA2F /* HomeView.swift */,
 			);
 			path = Home;
@@ -319,6 +329,11 @@
 		EFBB75A0280ADB5200DA777D /* State */ = {
 			isa = PBXGroup;
 			children = (
+				EFBB75A7280AE9E500DA777D /* State.swift */,
+				EFBB75A5280AE83800DA777D /* TrackingState.swift */,
+				EFBB75A9280AF04500DA777D /* Store.swift */,
+				EFBB75AD280AF12600DA777D /* Reducer.swift */,
+				EFBB75AB280AF0C800DA777D /* Action.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -412,11 +427,14 @@
 				EFED3A82280472F800D99B27 /* VoiceMentorHeaderView.swift in Sources */,
 				ABC24AB32806C6C30073E3B6 /* StatsInfoModule.swift in Sources */,
 				EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */,
+				EFBB75A8280AE9E500DA777D /* State.swift in Sources */,
 				EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */,
 				EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */,
 				EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */,
+				EFBB75AC280AF0C800DA777D /* Action.swift in Sources */,
 				ABEDFDCB2804722F00ADA500 /* Sound.swift in Sources */,
 				EFBB75A2280AE3A200DA777D /* StatisticMainView.swift in Sources */,
+				EFBB75AE280AF12600DA777D /* Reducer.swift in Sources */,
 				ABC24AB12806C6850073E3B6 /* ProgramProgressBar.swift in Sources */,
 				EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */,
 				CD0D7BFD2805546300C7B876 /* BarGraph.swift in Sources */,
@@ -438,6 +456,7 @@
 				EFED3A842804757500D99B27 /* Popup.swift in Sources */,
 				ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */,
 				ABC24AAF2806C3ED0073E3B6 /* CompleteView.swift in Sources */,
+				EFBB75AA280AF04500DA777D /* Store.swift in Sources */,
 				ABEDFDAF2802BEA500ADA500 /* TrackingViewState.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
@@ -445,6 +464,7 @@
 				CD0D7BD82805090300C7B876 /* DiaryData.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
 				EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */,
+				EFBB75A6280AE83800DA777D /* TrackingState.swift in Sources */,
 				AF5B6D8E2807655300F1043B /* ProfileView.swift in Sources */,
 				EF8703EC28067EF100835EA7 /* EmptyRecentView.swift in Sources */,
 				EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */,
@@ -579,7 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WheelchairRun/Preview Content\"";
-				DEVELOPMENT_TEAM = H4DUZUZV8Z;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WheelchairRun/Info.plist;
@@ -595,7 +615,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairRun1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Milgo;
 				PRODUCT_NAME = "milGo!";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -611,7 +631,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WheelchairRun/Preview Content\"";
-				DEVELOPMENT_TEAM = H4DUZUZV8Z;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WheelchairRun/Info.plist;
@@ -627,7 +647,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairRun1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Milgo;
 				PRODUCT_NAME = "milGo!";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

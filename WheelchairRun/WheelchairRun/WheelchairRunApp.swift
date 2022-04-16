@@ -10,11 +10,16 @@ import SwiftUI
 @main
 struct WheelchairRunApp: App {
     let persistenceController = PersistenceController.shared
-
+    let store = MilgoStore(
+        initial: MilgoState(),
+        reducer: milgoReducer
+    )
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(store)
         }
     }
 }
