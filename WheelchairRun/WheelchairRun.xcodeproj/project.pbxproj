@@ -41,6 +41,7 @@
 		EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */; };
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
 		EFBB75A2280AE3A200DA777D /* StatisticMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A1280AE3A200DA777D /* StatisticMainView.swift */; };
+		EFBB75A4280AE69900DA777D /* Sound.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFBB75A3280AE69900DA777D /* Sound.xcassets */; };
 		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
 		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
 		EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */; };
@@ -88,6 +89,7 @@
 		EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
 		EFBB75A1280AE3A200DA777D /* StatisticMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticMainView.swift; sourceTree = "<group>"; };
+		EFBB75A3280AE69900DA777D /* Sound.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sound.xcassets; sourceTree = "<group>"; };
 		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
 		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardView.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			children = (
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
 				DDD4186E27FD26E400A46DD2 /* Assets.xcassets */,
+				EFBB75A3280AE69900DA777D /* Sound.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDD4187227FD26E400A46DD2 /* Preview Assets.xcassets in Resources */,
+				EFBB75A4280AE69900DA777D /* Sound.xcassets in Resources */,
 				DDD4186F27FD26E400A46DD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
