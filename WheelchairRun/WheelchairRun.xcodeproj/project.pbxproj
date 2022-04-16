@@ -38,7 +38,6 @@
 		EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */; };
 		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
 		EF8703E62806642B00835EA7 /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703E52806642B00835EA7 /* ProgramModel.swift */; };
-		EF8703E828066ED400835EA7 /* TrackingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703E728066ED400835EA7 /* TrackingState.swift */; };
 		EF8703EC28067EF100835EA7 /* EmptyRecentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */; };
 		EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */; };
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
@@ -54,6 +53,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB57766C280AA05E008A05AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		ABC24AAE2806C3ED0073E3B6 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		ABC24AB02806C6850073E3B6 /* ProgramProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramProgressBar.swift; sourceTree = "<group>"; };
 		ABC24AB22806C6C30073E3B6 /* StatsInfoModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsInfoModule.swift; sourceTree = "<group>"; };
@@ -85,7 +85,6 @@
 		EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorView.swift; sourceTree = "<group>"; };
 		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
 		EF8703E52806642B00835EA7 /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
-		EF8703E728066ED400835EA7 /* TrackingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingState.swift; sourceTree = "<group>"; };
 		EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecentView.swift; sourceTree = "<group>"; };
 		EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
@@ -147,6 +146,7 @@
 		DDD4186927FD26E200A46DD2 /* WheelchairRun */ = {
 			isa = PBXGroup;
 			children = (
+				AB57766C280AA05E008A05AC /* Info.plist */,
 				EF77119127FD2891004414A8 /* Resource */,
 				EF77119027FD288D004414A8 /* Source */,
 				DDD4187027FD26E400A46DD2 /* Preview Content */,
@@ -221,7 +221,6 @@
 				ABEDFDAE2802BEA500ADA500 /* TrackingViewState.swift */,
 				ABEDFDCA2804722F00ADA500 /* Sound.swift */,
 				ABEDFDAA27FD332100ADA500 /* TrackingView.swift */,
-				EF8703E728066ED400835EA7 /* TrackingState.swift */,
 				ABC24AAE2806C3ED0073E3B6 /* CompleteView.swift */,
 				ABC24AB02806C6850073E3B6 /* ProgramProgressBar.swift */,
 				ABC24AB22806C6C30073E3B6 /* StatsInfoModule.swift */,
@@ -401,7 +400,6 @@
 				EFED3A82280472F800D99B27 /* VoiceMentorHeaderView.swift in Sources */,
 				ABC24AB32806C6C30073E3B6 /* StatsInfoModule.swift in Sources */,
 				EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */,
-				EF8703E828066ED400835EA7 /* TrackingState.swift in Sources */,
 				EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */,
 				EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */,
 				EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */,
@@ -572,6 +570,8 @@
 				DEVELOPMENT_TEAM = 8QSTXVD8H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WheelchairRun/Info.plist;
+				INFOPLIST_KEY_NSMotionUsageDescription = "In order to count steps I need an access to your pedometer";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -602,6 +602,8 @@
 				DEVELOPMENT_TEAM = 8QSTXVD8H9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WheelchairRun/Info.plist;
+				INFOPLIST_KEY_NSMotionUsageDescription = "In order to count steps I need an access to your pedometer";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

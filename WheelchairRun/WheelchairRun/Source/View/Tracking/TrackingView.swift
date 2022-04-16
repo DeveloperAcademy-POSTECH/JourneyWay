@@ -10,6 +10,8 @@ import Combine
 import CoreData
 
 struct TrackingView: View {
+    var pedometerDistanceText: String = "0.00"
+    
     @ObservedObject var program: TrackingViewState
     @Binding var isPresented: Bool
     @State var counter: Double = 4.0
@@ -108,7 +110,7 @@ struct EmergencyButton: View {
 struct TrackingView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TrackingView(program: Program.dummy[0], isPresented: .constant(false))
+        TrackingView(program: Program(programName: nil, duration: "", description: "", color: Pallete.Gradient.purple, emoji: ""), isPresented: .constant(false))
             .previewInterfaceOrientation(.portrait)
     }
 }

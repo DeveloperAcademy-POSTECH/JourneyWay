@@ -37,12 +37,12 @@ struct ProgramProgressBar: View {
                                 } else {
                                     program.progressValue += 0.1
                                 }
-                                program.updateStats_test()
                             }
                         } else if program.player?.currentTime == 0.0 {
                             timer.upstream.connect().cancel()
                             program.markComplete()
                             program.player?.stop()
+                            program.stopTracking()
                         }
                     }
                 if program.program.programName != nil {
