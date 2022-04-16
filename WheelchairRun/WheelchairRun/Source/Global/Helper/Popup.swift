@@ -71,6 +71,7 @@ extension View {
         modifier(Popup(alignment: alignment,
                        direction: direction,
                        content: content))
+        .zIndex(1)
     }
     
 }

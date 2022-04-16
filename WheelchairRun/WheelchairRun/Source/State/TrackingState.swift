@@ -7,8 +7,8 @@
 
 import Foundation
 
-/// 앱 트래킹 상태
-enum AppState {
+/// 앱 상태
+enum TrackingState {
     case none           // 트래킹과 관련하여 어떤 상태도 아님
     case tracking
 }

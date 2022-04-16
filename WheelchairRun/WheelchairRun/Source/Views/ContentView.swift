@@ -11,7 +11,7 @@ import CoreData
 struct ContentView: View {
     @EnvironmentObject var store: MilgoStore
     var body: some View {
-        switch store.state.trackingState {
+        switch store.state.homeTrackingState {
         case .none:
             HomeView()
         case .tracking:

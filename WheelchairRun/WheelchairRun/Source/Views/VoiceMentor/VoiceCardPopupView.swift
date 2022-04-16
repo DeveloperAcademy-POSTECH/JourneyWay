@@ -17,8 +17,7 @@ struct VoiceCardPopupView: View {
 // 모달 카드 뷰
 struct ModalView : View {
     @EnvironmentObject var store: MilgoStore
-    @Environment(\.presentationMode) private var presentationMode
-    @State private var isPresented = false
+
     var body: some View {
         ZStack {
             store.state.selectedProgram.color
@@ -78,8 +77,9 @@ struct ModalView : View {
                 // start 버튼
                 Button(action: {
                     UIView.setAnimationsEnabled(false)
-                    isPresented.toggle()
-                    
+                    store.isVoicePartnerPresented = false
+            
+//                    store.dispatch(.startWithVoice)
                 }) {
                     Text("START!")
                         .font(.title)
@@ -89,11 +89,7 @@ struct ModalView : View {
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
                         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 10)
-                }.fullScreenCover(isPresented: $isPresented, onDismiss: {
-                    presentationMode.wrappedValue.dismiss()
-                }, content: {
-                    TrackingView(program: .init(program: store.state.selectedProgram))
-                })
+                }
             }
             .padding(.bottom, 25)
         }

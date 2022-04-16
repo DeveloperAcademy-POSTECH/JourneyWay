@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct RecentVoiceMentorList: View {
-    @Binding var recentPrograms: [Program]
+    @EnvironmentObject var store: MilgoStore
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 12) {
                 Color.clear.padding(0)
-                ForEach(recentPrograms.indices, id: \.self) { id in
-                    VoiceMentorCardView(program: recentPrograms[id])
+                ForEach(store.state.recentPrograms.indices, id: \.self) { id in
+                    VoiceMentorCardView(program: store.state.recentPrograms[id])
                 }
             }
         }
@@ -23,6 +23,6 @@ struct RecentVoiceMentorList: View {
 
 struct RecentVoiceMentorList_Previews: PreviewProvider {
     static var previews: some View {
-        RecentVoiceMentorList(recentPrograms: .constant(Program.dummy))
+        RecentVoiceMentorList()
     }
 }

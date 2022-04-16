@@ -9,10 +9,9 @@ import SwiftUI
 
 struct VoiceMentorView: View {
     @EnvironmentObject var store: MilgoStore
-    @Binding var recentProgram: [Program]
+    // FIXME: 레이아웃 수정
     private let columns: [GridItem] = [GridItem(.fixed(164), spacing: 12, alignment: .center),
                                        GridItem(.fixed(164), spacing: (UIScreen.main.bounds.width - 376) / 2, alignment: .center)]
-    var isEmpty: Bool = false
     
     var body: some View {
         ZStack {
@@ -20,16 +19,16 @@ struct VoiceMentorView: View {
                 VoiceMentorHeaderView()
                     .padding([.top,.leading,.trailing, .bottom], 24)
                 ScrollView {
-                    Text("최근 ")
+                    Text("최근")
                         .headLineFont()
                         .padding(.leading, 24)
-                    if isEmpty {
+                    if store.state.recentPrograms.isEmpty {
                         EmptyRecentView()
                             .padding([.leading, .trailing], 24)
                             .frame(width: UIScreen.main.bounds.width,height: 130)
                     } else {
-                        RecentVoiceMentorList(recentPrograms: $recentProgram)
-                        .frame(width: UIScreen.main.bounds.width,height: 130)
+                        RecentVoiceMentorList()
+                            .frame(width: UIScreen.main.bounds.width,height: 130)
                     }
                     
                     Text("새로운")
@@ -44,26 +43,25 @@ struct VoiceMentorView: View {
                 }
             }
             
-            if store.state.isPopupPresented {
-                Button(action: {
-                    // TODO: 팝업 dismiss 액션 추가
-                    withAnimation {
-                        store.dispatch(.dismissPopup)
-                    }
-                }) {
-                    Color.black.opacity(0.7)
+            Button(action: {
+                withAnimation {
+                    store.dispatch(.dismissPopup)
                 }
-                .buttonStyle(PopupBackgroundButtonStyle())
-                .animation(.easeIn(duration: 3), value: store.state.isPopupPresented)
-                .ignoresSafeArea()
+            }) {
+                Color.black.opacity(store.state.isPopupPresented ? 0.7 : 0)
             }
+            .buttonStyle(PopupBackgroundButtonStyle())
+            .ignoresSafeArea()
+            .popup(alignment: .center,
+                   direction: .bottom,
+                   content: { VoiceCardPopupView() })
+            
         }
     }
 }
 
 struct VoiceMentorView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceMentorView(recentProgram: .constant(Program.dummy),
-                        isEmpty: false)
+        VoiceMentorView()
     }
 }

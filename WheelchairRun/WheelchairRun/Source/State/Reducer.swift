@@ -14,20 +14,30 @@ let milgoReducer: Reducer<MilgoState, MilgoAction> = { state, action in
     
     switch action {
     case .startTracking:
-        newState.selectedProgram = Program.none
-        newState.trackingState = .tracking
+        newState.selectedProgram = .none
+        newState.homeTrackingState = .tracking
+        
     case .endTracking:
-        newState.selectedProgram = Program.none
-        newState.trackingState = .none
-    case .startWithVoice(let program):
-        // TODO: selectedProgram에 다시 업데이트는 필요없다. 필요한 건, 화면 내리는 행동.ㅠ
-        newState.selectedProgram = program
-        newState.trackingState = .tracking
+        newState.homeTrackingState = .none
+        newState.selectedProgram = .none
+        
+    case .startWithVoice:
+        // TODO: 화면 내리는 행동 미들웨어 장착해야함
+        newState.isPopupPresented = false
+        newState.isProgramSelected = true
+        newState.homeTrackingState = .tracking
+        
+    case .endTrackingWithVoice:
+        newState.homeTrackingState = .none
+        newState.selectedProgram = .none
+        
     case .showPopup(let program):
         newState.selectedProgram = program
         newState.isPopupPresented = true
+        
     case .dismissPopup:
         newState.isPopupPresented = false
+    
     }
     return newState
 }

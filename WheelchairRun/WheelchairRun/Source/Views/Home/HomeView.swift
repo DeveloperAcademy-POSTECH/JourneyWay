@@ -38,7 +38,7 @@ struct Hello_Profile: View {
                         Text("요셉")
                             .font(.title)
                             .fontWeight(.semibold)
-                            
+                        
                     }
                     Text("보이스 파트너와 함께")
                         .font(.title3)
@@ -50,9 +50,9 @@ struct Hello_Profile: View {
                 .padding(.top, -30)
                 Spacer(minLength: 50)
                 NavigationLink(destination: ProfileView()) {
-                        Image("Profile_img")
-                            .resizable()
-                            .frame(width: 50, height: 50)
+                    Image("Profile_img")
+                        .resizable()
+                        .frame(width: 50, height: 50)
                 }
                 .navigationBarBackButtonHidden(true)
                 Spacer(minLength: 40)
@@ -163,11 +163,11 @@ struct Today_Record: View {
 
 
 struct with_voice_mentor: View {
-    @State private var isPresented = false
+    @EnvironmentObject var store: MilgoStore
     
     var body: some View {
         Button(action: {
-            isPresented.toggle()
+            store.presentVoicePartner()
         }) {
             Text("보이스 파트너와 함께하기")
                 .font(.body)
@@ -178,8 +178,8 @@ struct with_voice_mentor: View {
                     .frame(width: 230, height: 50))
         }
         .padding(.vertical, 50)
-        .fullScreenCover(isPresented: $isPresented,
-                         content: { VoiceMentorContainerView() })
+        .fullScreenCover(isPresented: $store.isVoicePartnerPresented,
+                         content: { VoiceMentorView() })
         
     }
 }

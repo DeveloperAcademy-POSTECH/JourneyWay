@@ -9,8 +9,13 @@ import Foundation
 
 /// 뷰의 모든 상태를 관리
 struct MilgoState {
-    var trackingState: AppState = .none 
+    // MARK: Home
+    var homeTrackingState: TrackingState = .none 
     var selectedProgram: Program
     
+    // MARK: Voice Partner
+    var voicePartnerTrackingState: TrackingState = .none
     var isPopupPresented: Bool = false
+    var isProgramSelected: Bool = false
+    var recentPrograms: [Program]
 }
