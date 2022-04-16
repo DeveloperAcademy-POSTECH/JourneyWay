@@ -16,6 +16,7 @@ struct PlayBackController: View {
                 Button {
                     program.isComplete = true
                     program.player?.stop()
+                    program.stopTracking()
                 } label: {
                     Circle()
                         .foregroundColor(.black)
