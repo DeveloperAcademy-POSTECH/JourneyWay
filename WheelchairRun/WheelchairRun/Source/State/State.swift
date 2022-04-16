@@ -10,5 +10,7 @@ import Foundation
 /// 뷰의 모든 상태를 관리
 struct MilgoState {
     var trackingState: TrackingState = .none 
+    var selectedProgram: Program
     
+    var isPopupPresented: Bool = false
 }

@@ -10,8 +10,10 @@ import Combine
 import CoreData
 
 struct TrackingView: View {
+    // TODO: 나스닥한테 물어보기
     var pedometerDistanceText: String = "0.00"
     
+    // TODO: 나스닥한테 물어보기 - TrackingViewState는 프로그램이 아니라 상태를 관리하는 객체인데 program이라는 명명이 맞을까?
     @ObservedObject var program: TrackingViewState
     @State var counter: Double = 4.0
     
@@ -106,7 +108,7 @@ struct TrackingView_Previews: PreviewProvider {
         TrackingView(program: .init(program: Program(programName: nil,
                                                      duration: "",
                                                      description: "",
-                                                     color: Pallete.Gradient.purple,
+                                                     color: Pallete.noProgramColor,
                                                      emoji: "")))
             .previewInterfaceOrientation(.portrait)
     }

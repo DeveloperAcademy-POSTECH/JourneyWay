@@ -15,11 +15,7 @@ struct ContentView: View {
         case .none:
             HomeView()
         case .tracking:
-            TrackingView(program: .init(program: Program(programName: nil,
-                                                         duration: "",
-                                                         description: "",
-                                                         color: Pallete.noProgramColor,
-                                                         emoji: "")))
+            TrackingView(program: .init(program: store.state.selectedProgram))
         }
     }
 }

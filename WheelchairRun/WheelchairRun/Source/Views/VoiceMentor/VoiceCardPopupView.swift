@@ -11,30 +11,30 @@ struct VoiceCardPopupView: View {
     @State private var isShowingModal = true
     @State private var modalOpacity: Double = 1.0
     
-    @Binding var selectedProgram: Program
+//    @Binding var selectedProgram: Program
     
     var body: some View {
         ModalView(isShowingModal: $isShowingModal,
-                  modalOpacity: $modalOpacity,
-                  selectedProgram: $selectedProgram)
+                  modalOpacity: $modalOpacity)
     }
 }
 
 // 모달 카드 뷰
 struct ModalView : View {
+    @EnvironmentObject var store: MilgoStore
     @Environment(\.presentationMode) private var presentationMode
     @Binding var isShowingModal: Bool
     @Binding var modalOpacity: Double
     @State private var isPresented = false
-    @Binding var selectedProgram: Program
+//    @Binding var selectedProgram: Program
     
     var body: some View {
         ZStack {
-            selectedProgram.color
+            store.state.selectedProgram.color
             
             // 카드
             VStack {
-                Image(selectedProgram.mentor?.photo ?? "ellinImage")
+                Image(store.state.selectedProgram.mentor?.photo ?? "ellinImage")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(height: 200)
@@ -46,12 +46,12 @@ struct ModalView : View {
                     // 프로그램, 강사, 시간
                     HStack(alignment: .lastTextBaseline) {
                         VStack(alignment: .leading) {
-                            Text(selectedProgram.programName ?? "")
+                            Text(store.state.selectedProgram.programName ?? "")
                                 .font(.title)
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                             Spacer().frame(height: 5)
-                            Text(selectedProgram.mentor?.name ?? "")
+                            Text(store.state.selectedProgram.mentor?.name ?? "")
                                 .font(.subheadline)
                                 .foregroundColor(.white)
                         }
@@ -60,7 +60,7 @@ struct ModalView : View {
                             Text("⏰")
                                 .font(.title3)
                                 .offset(y: -3)
-                            Text("\(selectedProgram.duration)")
+                            Text("\(store.state.selectedProgram.duration)")
                                 .foregroundColor(.white)
                                 .font(.system(size: 35, weight: .bold))
                                 .fontWeight(.heavy)
@@ -72,7 +72,7 @@ struct ModalView : View {
                     Spacer()
                     // 프로그램 설명
                     HStack {
-                        Text(selectedProgram.description)
+                        Text(store.state.selectedProgram.description)
                             .lineLimit(4)
                             .multilineTextAlignment(.leading)
                             .font(.callout)
@@ -93,7 +93,7 @@ struct ModalView : View {
                     Text("START!")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundLinearGradient(gradient: selectedProgram.color)
+                        .foregroundLinearGradient(gradient: store.state.selectedProgram.color)
                         .frame(width: 290, height: 60)
                         .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: 30))
@@ -101,7 +101,7 @@ struct ModalView : View {
                 }.fullScreenCover(isPresented: $isPresented, onDismiss: {
                     presentationMode.wrappedValue.dismiss()
                 }, content: {
-                    TrackingView(program: .init(program: selectedProgram))
+                    TrackingView(program: .init(program: store.state.selectedProgram))
                 })
             }
             .padding(.bottom, 25)
@@ -117,6 +117,6 @@ struct ModalView : View {
 
 struct VoiceCardPopupView__Previews: PreviewProvider {
     static var previews: some View {
-        VoiceCardPopupView(selectedProgram: .constant(Program.dummy[0]))
+        VoiceCardPopupView()
     }
 }

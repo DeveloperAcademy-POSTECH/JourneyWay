@@ -178,11 +178,8 @@ struct with_voice_mentor: View {
                     .frame(width: 230, height: 50))
         }
         .padding(.vertical, 50)
-        .fullScreenCover(isPresented: $isPresented, onDismiss: {
-            UIView.setAnimationsEnabled(true)
-        }, content: {
-            VoiceMentorContainerView()
-        })
+        .fullScreenCover(isPresented: $isPresented,
+                         content: { VoiceMentorContainerView() })
         
     }
 }

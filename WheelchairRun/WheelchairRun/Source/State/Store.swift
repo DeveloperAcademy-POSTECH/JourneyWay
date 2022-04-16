@@ -12,6 +12,7 @@ import SwiftUI
 class Store<State, Action>: ObservableObject {
     @Published private(set) var state: State
     private let reducer: Reducer<State, Action>
+    
     private let queue = DispatchQueue(
         label: "com.Milgo",
         qos: .userInitiated)

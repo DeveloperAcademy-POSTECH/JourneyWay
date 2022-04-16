@@ -11,7 +11,7 @@ import SwiftUI
 struct WheelchairRunApp: App {
     let persistenceController = PersistenceController.shared
     let store = MilgoStore(
-        initial: MilgoState(),
+        initial: MilgoState(selectedProgram: Program.none),
         reducer: milgoReducer
     )
     

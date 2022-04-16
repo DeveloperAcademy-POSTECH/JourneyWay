@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RecentVoiceMentorList: View {
-    @Binding var isPopupPresented: Bool
-    @Binding var selectedProgram: Program
+//    @Binding var isPopupPresented: Bool
+//    @Binding var selectedProgram: Program
     
     @Binding var recentPrograms: [Program]
     var body: some View {
@@ -17,9 +17,7 @@ struct RecentVoiceMentorList: View {
             LazyHStack(spacing: 12) {
                 Color.clear.padding(0)
                 ForEach(recentPrograms.indices, id: \.self) { id in
-                    VoiceMentorCardView(isPopupPresented: $isPopupPresented,
-                                        selectedProgram: $selectedProgram,
-                                        program: recentPrograms[id])
+                    VoiceMentorCardView(program: recentPrograms[id])
                 }
             }
         }
@@ -28,8 +26,6 @@ struct RecentVoiceMentorList: View {
 
 struct RecentVoiceMentorList_Previews: PreviewProvider {
     static var previews: some View {
-        RecentVoiceMentorList(isPopupPresented: .constant(false),
-                              selectedProgram: .constant(Program.dummy[0]),
-                              recentPrograms: .constant(Program.dummy))
+        RecentVoiceMentorList(recentPrograms: .constant(Program.dummy))
     }
 }
