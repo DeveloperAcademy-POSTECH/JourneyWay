@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct RecentVoiceMentorList: View {
-//    @Binding var isPopupPresented: Bool
-//    @Binding var selectedProgram: Program
-    
     @Binding var recentPrograms: [Program]
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {

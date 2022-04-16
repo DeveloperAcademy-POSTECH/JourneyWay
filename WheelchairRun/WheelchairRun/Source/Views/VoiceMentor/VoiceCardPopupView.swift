@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct VoiceCardPopupView: View {
-    @State private var isShowingModal = true
-    @State private var modalOpacity: Double = 1.0
-    
-//    @Binding var selectedProgram: Program
-    
+
     var body: some View {
-        ModalView(isShowingModal: $isShowingModal,
-                  modalOpacity: $modalOpacity)
+        ModalView()
     }
 }
 
@@ -23,11 +18,7 @@ struct VoiceCardPopupView: View {
 struct ModalView : View {
     @EnvironmentObject var store: MilgoStore
     @Environment(\.presentationMode) private var presentationMode
-    @Binding var isShowingModal: Bool
-    @Binding var modalOpacity: Double
     @State private var isPresented = false
-//    @Binding var selectedProgram: Program
-    
     var body: some View {
         ZStack {
             store.state.selectedProgram.color
@@ -107,9 +98,7 @@ struct ModalView : View {
             .padding(.bottom, 25)
         }
         .frame(width: 345, height: 530)
-        .opacity(modalOpacity)
         .cornerRadius(20).shadow(radius: 5)
-        .animation(.linear, value: modalOpacity)
         
     }
 }

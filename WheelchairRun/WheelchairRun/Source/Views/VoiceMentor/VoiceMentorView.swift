@@ -9,7 +9,6 @@ import SwiftUI
 
 struct VoiceMentorView: View {
     @EnvironmentObject var store: MilgoStore
-//    @Binding var selectedProgram: Program
     @Binding var recentProgram: [Program]
     private let columns: [GridItem] = [GridItem(.fixed(164), spacing: 12, alignment: .center),
                                        GridItem(.fixed(164), spacing: (UIScreen.main.bounds.width - 376) / 2, alignment: .center)]

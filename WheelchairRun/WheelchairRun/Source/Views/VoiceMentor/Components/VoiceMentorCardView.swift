@@ -9,18 +9,12 @@ import SwiftUI
 
 struct VoiceMentorCardView: View {
     @EnvironmentObject var store: MilgoStore
-//    @Binding var isPopupPresented: Bool
-//    @Binding var selectedProgram: Program
     var program: Program
     
-    // TODO: 폰트 정리
     var body: some View {
         Button(action: {
             withAnimation {
-                // TODO: 팝업 처리 액션
                 store.dispatch(.showPopup(program))
-//                isPopupPresented.toggle()
-//                selectedProgram = program
             }
         }) {
             program.color

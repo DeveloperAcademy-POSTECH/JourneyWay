@@ -14,6 +14,7 @@ let milgoReducer: Reducer<MilgoState, MilgoAction> = { state, action in
     
     switch action {
     case .startTracking:
+        newState.selectedProgram = Program.none
         newState.trackingState = .tracking
     case .endTracking:
         newState.selectedProgram = Program.none

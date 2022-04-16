@@ -9,11 +9,8 @@ import SwiftUI
 
 struct VoiceMentorContainerView: View {
     @EnvironmentObject var store: MilgoStore
-//    @State var isPopupPresented: Bool = false
-    //    @StateObject var selectedProgram = ProgramModel()
     @State var recentProgram: [Program] = []
 
-    
     // TODO: isEmpty 변수 CoreData의 보이스로 수정 (가져오는 데이터 최대 5개)
     @State var isEmpty: Bool = false
     var body: some View {
