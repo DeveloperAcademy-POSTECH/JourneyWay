@@ -23,7 +23,6 @@
 		CD0D7BFC2805546300C7B876 /* PushDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BF82805546300C7B876 /* PushDiaryView.swift */; };
 		CD0D7BFD2805546300C7B876 /* BarGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BF92805546300C7B876 /* BarGraph.swift */; };
 		CD0D7BFE2805546300C7B876 /* HealthGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0D7BFA2805546300C7B876 /* HealthGraphView.swift */; };
-		CE47BBA22803CFCD0007DC07 /* StatisticMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */; };
 		DDAF1F752802FC25000974FA /* VoiceCardPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */; };
 		DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */; };
 		DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4186C27FD26E200A46DD2 /* ContentView.swift */; };
@@ -42,6 +41,7 @@
 		EF8703EC28067EF100835EA7 /* EmptyRecentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */; };
 		EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */; };
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
+		EFBB75A2280AE3A200DA777D /* StatisticMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A1280AE3A200DA777D /* StatisticMainView.swift */; };
 		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
 		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
 		EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */; };
@@ -69,7 +69,6 @@
 		CD0D7BF82805546300C7B876 /* PushDiaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushDiaryView.swift; sourceTree = "<group>"; };
 		CD0D7BF92805546300C7B876 /* BarGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarGraph.swift; sourceTree = "<group>"; };
 		CD0D7BFA2805546300C7B876 /* HealthGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthGraphView.swift; sourceTree = "<group>"; };
-		CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatisticMainView.swift; path = WheelchairRun/Source/View/Statistic/StatisticMainView.swift; sourceTree = SOURCE_ROOT; };
 		DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceCardPopupView.swift; sourceTree = "<group>"; };
 		DDD4186727FD26E200A46DD2 /* WheelchairRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairRunApp.swift; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecentView.swift; sourceTree = "<group>"; };
 		EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
+		EFBB75A1280AE3A200DA777D /* StatisticMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticMainView.swift; sourceTree = "<group>"; };
 		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
 		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardView.swift; sourceTree = "<group>"; };
@@ -178,9 +178,10 @@
 			isa = PBXGroup;
 			children = (
 				DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */,
+				EFBB75A0280ADB5200DA777D /* State */,
 				EF77119927FD28CB004414A8 /* Global */,
 				EF77119827FD28C1004414A8 /* Model */,
-				EF77119227FD2896004414A8 /* View */,
+				EF77119227FD2896004414A8 /* Views */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -194,7 +195,7 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		EF77119227FD2896004414A8 /* View */ = {
+		EF77119227FD2896004414A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AF5B6D8A2807652200F1043B /* Profile */,
@@ -203,7 +204,7 @@
 				EF77119427FD289E004414A8 /* Tracking */,
 				EF77119327FD289B004414A8 /* Home */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EF77119327FD289B004414A8 /* Home */ = {
@@ -233,7 +234,7 @@
 		EF77119527FD28A4004414A8 /* Statistic */ = {
 			isa = PBXGroup;
 			children = (
-				CE47BBA12803CFCD0007DC07 /* StatisticMainView.swift */,
+				EFBB75A1280AE3A200DA777D /* StatisticMainView.swift */,
 				CD0D7BF92805546300C7B876 /* BarGraph.swift */,
 				CD0D7BF72805546300C7B876 /* DiaryList.swift */,
 				CD0D7BFA2805546300C7B876 /* HealthGraphView.swift */,
@@ -311,6 +312,13 @@
 				EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		EFBB75A0280ADB5200DA777D /* State */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 		EFED3A89280499A300D99B27 /* Helper */ = {
@@ -406,12 +414,12 @@
 				EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */,
 				EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */,
 				ABEDFDCB2804722F00ADA500 /* Sound.swift in Sources */,
+				EFBB75A2280AE3A200DA777D /* StatisticMainView.swift in Sources */,
 				ABC24AB12806C6850073E3B6 /* ProgramProgressBar.swift in Sources */,
 				EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */,
 				CD0D7BFD2805546300C7B876 /* BarGraph.swift in Sources */,
 				CD0D7BFB2805546300C7B876 /* DiaryList.swift in Sources */,
 				CD0D7BFE2805546300C7B876 /* HealthGraphView.swift in Sources */,
-				CE47BBA22803CFCD0007DC07 /* StatisticMainView.swift in Sources */,
 				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
 				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
 				ABEDFDAD2802BE6400ADA500 /* Program.swift in Sources */,
