@@ -76,10 +76,9 @@ struct ModalView : View {
     
                 // start 버튼
                 Button(action: {
-                    UIView.setAnimationsEnabled(false)
-                    store.isVoicePartnerPresented = false
-            
-//                    store.dispatch(.startWithVoice)
+                    withAnimation {
+                        store.dispatch(.startWithVoice)
+                    }
                 }) {
                     Text("START!")
                         .font(.title)

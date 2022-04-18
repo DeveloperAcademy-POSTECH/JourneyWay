@@ -10,6 +10,7 @@ import Combine
 import CoreData
 
 struct TrackingView: View {
+    @EnvironmentObject var store: MilgoStore
     // TODO: 나스닥한테 물어보기
     var pedometerDistanceText: String = "0.00"
     
@@ -79,6 +80,8 @@ struct TrackingView: View {
                         .animation(.linear, value: counter)
                 }
             }
+        }
+        .onAppear {
         }
     }
 }

@@ -10,7 +10,12 @@ import SwiftUI
 struct VoicePartnerContentView: View {
     @EnvironmentObject var store: MilgoStore
     var body: some View {
-        VoiceMentorView()
+        switch store.state.voicePartnerTrackingState {
+        case .none:
+            VoiceMentorView()
+        case .tracking:
+            TrackingView(program: .init(program: store.state.selectedProgram))
+        }
     }
 }
 

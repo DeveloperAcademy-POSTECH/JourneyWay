@@ -14,8 +14,8 @@ struct MilgoState {
     var selectedProgram: Program
     
     // MARK: Voice Partner
+    var isVoicePartnerViewPresented: Bool = false
     var voicePartnerTrackingState: TrackingState = .none
     var isPopupPresented: Bool = false
-    var isProgramSelected: Bool = false
     var recentPrograms: [Program]
 }

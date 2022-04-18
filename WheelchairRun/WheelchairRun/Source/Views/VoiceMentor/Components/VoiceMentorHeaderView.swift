@@ -16,7 +16,7 @@ struct VoiceMentorHeaderView: View {
                 Text("보이스 파트너")
                     .titleFont()
                 Button(action: {
-                    store.dismissVoicePartner()
+                    store.dispatch(.dismissVoicepartnerView)
                 }) {
                     WCRXButton()
                 }

@@ -11,8 +11,7 @@ import Combine
 /// 단방향 흐름을 도와주는 상태관리 Store 객체
 /// - reducer, State, middleware를 관리
 class Store<State, Action>: ObservableObject {
-    @Published private(set) var state: State
-    @Published var isVoicePartnerPresented: Bool = false // FIXME: 모달 화면전환때문에 존재하는 코드, 상태 코드인데 fullScreenCover에 바인드시켜야하므로 어쩔 수 없는 상황 ㅠㅠ
+    @Published var state: State // TODO: private(set) 생각필요
      
     private let reducer: Reducer<State, Action>
     private let middlewares: [Middleware<State, Action>]
@@ -54,13 +53,13 @@ class Store<State, Action>: ObservableObject {
 
 extension MilgoStore {
    
-    func presentVoicePartner() {
-        isVoicePartnerPresented = true
-    }
-    
-    func dismissVoicePartner() {
-        isVoicePartnerPresented = false
-    }
+//    func presentVoicePartner() {
+//        isVoicePartnerPresented = true
+//    }
+//    
+//    func dismissVoicePartner() {
+//        isVoicePartnerPresented = false
+//    }
 }
 
 typealias MilgoStore = Store<MilgoState, MilgoAction>

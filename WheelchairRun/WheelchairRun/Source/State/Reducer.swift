@@ -18,18 +18,25 @@ let milgoReducer: Reducer<MilgoState, MilgoAction> = { state, action in
         newState.homeTrackingState = .tracking
         
     case .endTracking:
-        newState.homeTrackingState = .none
+        if newState.homeTrackingState == .tracking {
+            newState.homeTrackingState = .none
+        }
+        
+        if newState.voicePartnerTrackingState == .tracking {
+            newState.voicePartnerTrackingState = .none
+            newState.isPopupPresented = false
+            newState.isVoicePartnerViewPresented = false
+        }
         newState.selectedProgram = .none
         
     case .startWithVoice:
-        // TODO: 화면 내리는 행동 미들웨어 장착해야함
-        newState.isPopupPresented = false
-        newState.isProgramSelected = true
-        newState.homeTrackingState = .tracking
+        newState.voicePartnerTrackingState = .tracking
         
-    case .endTrackingWithVoice:
-        newState.homeTrackingState = .none
-        newState.selectedProgram = .none
+    case .presentVoicepartnerView:
+        newState.isVoicePartnerViewPresented = true
+        
+    case .dismissVoicepartnerView:
+        newState.isVoicePartnerViewPresented = false
         
     case .showPopup(let program):
         newState.selectedProgram = program
@@ -37,7 +44,6 @@ let milgoReducer: Reducer<MilgoState, MilgoAction> = { state, action in
         
     case .dismissPopup:
         newState.isPopupPresented = false
-    
     }
     return newState
 }

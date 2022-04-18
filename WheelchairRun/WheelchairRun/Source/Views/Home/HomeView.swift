@@ -167,7 +167,7 @@ struct with_voice_mentor: View {
     
     var body: some View {
         Button(action: {
-            store.presentVoicePartner()
+            store.dispatch(.presentVoicepartnerView)
         }) {
             Text("보이스 파트너와 함께하기")
                 .font(.body)
@@ -178,8 +178,8 @@ struct with_voice_mentor: View {
                     .frame(width: 230, height: 50))
         }
         .padding(.vertical, 50)
-        .fullScreenCover(isPresented: $store.isVoicePartnerPresented,
-                         content: { VoiceMentorView() })
+        .fullScreenCover(isPresented: $store.state.isVoicePartnerViewPresented,
+                         content: { VoicePartnerContentView() })
         
     }
 }

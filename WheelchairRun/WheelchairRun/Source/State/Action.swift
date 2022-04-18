@@ -14,7 +14,8 @@ enum MilgoAction {
     
     // MARK: Voice Partner
     case startWithVoice             // 프로그램 있이 트래킹 시작
-    case endTrackingWithVoice
+    case presentVoicepartnerView
+    case dismissVoicepartnerView
     case showPopup(Program)
     case dismissPopup
 }

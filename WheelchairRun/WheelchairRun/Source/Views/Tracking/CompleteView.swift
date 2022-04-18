@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CompleteView: View {
     @EnvironmentObject var store: MilgoStore
+    @Environment(\.presentationMode) private var presentationMode
     @State var date: Date = Date()
     @ObservedObject var program: TrackingViewState
     @Environment(\.managedObjectContext) private var viewContext
