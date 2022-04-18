@@ -15,22 +15,22 @@ let milgoReducer: Reducer<MilgoState, MilgoAction> = { state, action in
     switch action {
     case .startTracking:
         newState.selectedProgram = .none
-        newState.homeTrackingState = .tracking
+        newState.homeAppState = .tracking
         
     case .endTracking:
-        if newState.homeTrackingState == .tracking {
-            newState.homeTrackingState = .none
+        if newState.homeAppState == .tracking {
+            newState.homeAppState = .none
         }
         
-        if newState.voicePartnerTrackingState == .tracking {
-            newState.voicePartnerTrackingState = .none
+        if newState.voicePartnerAppState == .tracking {
+            newState.voicePartnerAppState = .none
             newState.isPopupPresented = false
             newState.isVoicePartnerViewPresented = false
         }
         newState.selectedProgram = .none
         
     case .startWithVoice:
-        newState.voicePartnerTrackingState = .tracking
+        newState.voicePartnerAppState = .tracking
         
     case .presentVoicepartnerView:
         newState.isVoicePartnerViewPresented = true

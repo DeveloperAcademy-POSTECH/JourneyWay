@@ -51,15 +51,4 @@ class Store<State, Action>: ObservableObject {
     
 }
 
-extension MilgoStore {
-   
-//    func presentVoicePartner() {
-//        isVoicePartnerPresented = true
-//    }
-//    
-//    func dismissVoicePartner() {
-//        isVoicePartnerPresented = false
-//    }
-}
-
 typealias MilgoStore = Store<MilgoState, MilgoAction>
