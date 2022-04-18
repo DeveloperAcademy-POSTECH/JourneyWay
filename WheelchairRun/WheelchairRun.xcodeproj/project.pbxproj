@@ -35,6 +35,10 @@
 		EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3505662805898B007E1315 /* TrackingRecord.swift */; };
 		EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */; };
 		EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */; };
+		EF71FAB7280D83D500EF8318 /* HelloProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FAB6280D83D500EF8318 /* HelloProfileView.swift */; };
+		EF71FAB9280D83E800EF8318 /* PushNgoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FAB8280D83E800EF8318 /* PushNgoButton.swift */; };
+		EF71FABB280D842100EF8318 /* TodayRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FABA280D842100EF8318 /* TodayRecordView.swift */; };
+		EF71FABD280D842B00EF8318 /* WithVoiceMentorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FABC280D842B00EF8318 /* WithVoiceMentorButton.swift */; };
 		EF77119C27FD28D8004414A8 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* View+.swift */; };
 		EF8703EC28067EF100835EA7 /* EmptyRecentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */; };
 		EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */; };
@@ -89,6 +93,10 @@
 		EF3505662805898B007E1315 /* TrackingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingRecord.swift; sourceTree = "<group>"; };
 		EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentVoiceMentorList.swift; sourceTree = "<group>"; };
 		EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorView.swift; sourceTree = "<group>"; };
+		EF71FAB6280D83D500EF8318 /* HelloProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloProfileView.swift; sourceTree = "<group>"; };
+		EF71FAB8280D83E800EF8318 /* PushNgoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNgoButton.swift; sourceTree = "<group>"; };
+		EF71FABA280D842100EF8318 /* TodayRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecordView.swift; sourceTree = "<group>"; };
+		EF71FABC280D842B00EF8318 /* WithVoiceMentorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithVoiceMentorButton.swift; sourceTree = "<group>"; };
 		EF77119B27FD28D8004414A8 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecentView.swift; sourceTree = "<group>"; };
 		EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
@@ -227,6 +235,10 @@
 			isa = PBXGroup;
 			children = (
 				AF77751B27FD3713001BCA2F /* HomeView.swift */,
+				EF71FABC280D842B00EF8318 /* WithVoiceMentorButton.swift */,
+				EF71FABA280D842100EF8318 /* TodayRecordView.swift */,
+				EF71FAB8280D83E800EF8318 /* PushNgoButton.swift */,
+				EF71FAB6280D83D500EF8318 /* HelloProfileView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -466,14 +478,18 @@
 				AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */,
 				CD0D7BD82805090300C7B876 /* DiaryData.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
+				EF71FABB280D842100EF8318 /* TodayRecordView.swift in Sources */,
 				EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */,
+				EF71FABD280D842B00EF8318 /* WithVoiceMentorButton.swift in Sources */,
 				EFBB75A6280AE83800DA777D /* TrackingState.swift in Sources */,
 				AF5B6D8E2807655300F1043B /* ProfileView.swift in Sources */,
 				EF8703EC28067EF100835EA7 /* EmptyRecentView.swift in Sources */,
 				EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */,
+				EF71FAB7280D83D500EF8318 /* HelloProfileView.swift in Sources */,
 				EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */,
 				DDAF1F752802FC25000974FA /* VoiceCardPopupView.swift in Sources */,
 				EFBB75B2280B213100DA777D /* startVoiceTrackingMiddleware.swift in Sources */,
+				EF71FAB9280D83E800EF8318 /* PushNgoButton.swift in Sources */,
 				EF35056128058961007E1315 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
