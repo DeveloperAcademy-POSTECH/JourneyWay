@@ -81,8 +81,6 @@ struct TrackingView: View {
                 }
             }
         }
-        .onAppear {
-        }
     }
 }
 
