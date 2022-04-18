@@ -13,13 +13,9 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 HelloProfileView()
-                Spacer()
                 PushNgoButton()
-                Spacer()
                 TodayRecordView()
-                Spacer()
                 WithVoiceMentorButton()
-                Spacer()
             }
         }
     }
