@@ -10,22 +10,18 @@ import Combine
 import CoreData
 
 struct TrackingView: View {
+    @EnvironmentObject var store: MilgoStore
+    // TODO: 나스닥한테 물어보기
     var pedometerDistanceText: String = "0.00"
     
+    // TODO: 나스닥한테 물어보기 - TrackingViewState는 프로그램이 아니라 상태를 관리하는 객체인데 program이라는 명명이 맞을까?
     @ObservedObject var program: TrackingViewState
-    @Binding var isPresented: Bool
     @State var counter: Double = 4.0
     
     private let timer = Timer.publish(every: 0.1, tolerance: 0.01, on: .main, in: .common).autoconnect()
     private let readyText: [String] = ["오늘 컨디션을 어떠세요?",
                                        "길 안전은 확인하셨나요?",
                                        "이제 휠체어를 밀어볼까요?"]
-    
-    
-    init(program: Program, isPresented: Binding<Bool>) {
-        self._isPresented = isPresented
-        _program = ObservedObject(wrappedValue: TrackingViewState(program: program))
-    }
     
     var body: some View {
         ZStack {
@@ -45,7 +41,7 @@ struct TrackingView: View {
                         Spacer(minLength: 50)
                         PlayBackController(program: program)
                     } else {
-                        CompleteView(program: program, isPresented: $isPresented)
+                        CompleteView(program: program)
                     }
                 }
                 .onAppear {
@@ -110,7 +106,11 @@ struct EmergencyButton: View {
 struct TrackingView_Previews: PreviewProvider {
     
     static var previews: some View {
-        TrackingView(program: Program(programName: nil, duration: "", description: "", color: Pallete.Gradient.purple, emoji: ""), isPresented: .constant(false))
+        TrackingView(program: .init(program: Program(programName: nil,
+                                                     duration: "",
+                                                     description: "",
+                                                     color: Pallete.noProgramColor,
+                                                     emoji: "")))
             .previewInterfaceOrientation(.portrait)
     }
 }

@@ -31,18 +31,17 @@ struct Popup<T: View>: ViewModifier {
     let popup: T
     let alignment: Alignment
     let direction: PopupDirection
-    @Binding var isPopupPresented: Bool
+    @EnvironmentObject var store: MilgoStore
+//    @Binding var isPopupPresented: Bool
     
-    fileprivate init(isPopupPresented: Binding<Bool>,
-         alignment: Alignment,
-         direction: PopupDirection,
-         @ViewBuilder content: () -> T) {
-        self._isPopupPresented = isPopupPresented
+    fileprivate init(alignment: Alignment,
+                     direction: PopupDirection,
+                     @ViewBuilder content: () -> T) {
         self.alignment = alignment
         self.direction = direction
         popup = content()
     }
-
+    
     func body(content: Content) -> some View {
         ZStack {
             content
@@ -53,9 +52,9 @@ struct Popup<T: View>: ViewModifier {
     private func popupContent() -> some View {
         GeometryReader { geometry in
             
-            if isPopupPresented {
+            if store.state.isPopupPresented {
                 popup
-                    .animation(.spring(), value: isPopupPresented)
+                    .animation(.spring(), value: store.state.isPopupPresented)
                     .transition(.offset(x: 0, y: direction.offset(popupFrame: geometry.frame(in: .global))))
                     .frame(width: geometry.size.width,
                            height: geometry.size.height,
@@ -66,14 +65,13 @@ struct Popup<T: View>: ViewModifier {
 }
 
 extension View {
-    func popup<T: View>(isPopupPresented: Binding<Bool>,
-                        alignment: Alignment,
+    func popup<T: View>(alignment: Alignment,
                         direction: PopupDirection,
                         @ViewBuilder content: () -> T) -> some View {
-        modifier(Popup(isPopupPresented: isPopupPresented,
-                            alignment: alignment,
-                            direction: direction,
-                            content: content))
+        modifier(Popup(alignment: alignment,
+                       direction: direction,
+                       content: content))
+        .zIndex(1)
     }
     
 }

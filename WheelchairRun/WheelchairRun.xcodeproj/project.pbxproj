@@ -35,20 +35,31 @@
 		EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3505662805898B007E1315 /* TrackingRecord.swift */; };
 		EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */; };
 		EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */; };
-		EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* UIView+Woody.swift */; };
-		EF8703E62806642B00835EA7 /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703E52806642B00835EA7 /* ProgramModel.swift */; };
+		EF71FAB7280D83D500EF8318 /* HelloProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FAB6280D83D500EF8318 /* HelloProfileView.swift */; };
+		EF71FAB9280D83E800EF8318 /* PushNgoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FAB8280D83E800EF8318 /* PushNgoButton.swift */; };
+		EF71FABB280D842100EF8318 /* TodayRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FABA280D842100EF8318 /* TodayRecordView.swift */; };
+		EF71FABD280D842B00EF8318 /* WithVoiceMentorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71FABC280D842B00EF8318 /* WithVoiceMentorButton.swift */; };
+		EF77119C27FD28D8004414A8 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77119B27FD28D8004414A8 /* View+.swift */; };
 		EF8703EC28067EF100835EA7 /* EmptyRecentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */; };
 		EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */; };
 		EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */; };
 		EFBB75A2280AE3A200DA777D /* StatisticMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A1280AE3A200DA777D /* StatisticMainView.swift */; };
-		EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */; };
+		EFBB75A4280AE69900DA777D /* Sound.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFBB75A3280AE69900DA777D /* Sound.xcassets */; };
+		EFBB75A6280AE83800DA777D /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A5280AE83800DA777D /* AppState.swift */; };
+		EFBB75A8280AE9E500DA777D /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A7280AE9E500DA777D /* State.swift */; };
+		EFBB75AA280AF04500DA777D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75A9280AF04500DA777D /* Store.swift */; };
+		EFBB75AC280AF0C800DA777D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75AB280AF0C800DA777D /* Action.swift */; };
+		EFBB75AE280AF12600DA777D /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75AD280AF12600DA777D /* Reducer.swift */; };
+		EFBB75B0280B1FF800DA777D /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75AF280B1FF800DA777D /* Middleware.swift */; };
+		EFBB75B2280B213100DA777D /* startVoiceTrackingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75B1280B213100DA777D /* startVoiceTrackingMiddleware.swift */; };
+		EFBB75B6280B319300DA777D /* VoicePartnerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBB75B5280B319300DA777D /* VoicePartnerContentView.swift */; };
+		EFDF4AFA27FFDB97000C175B /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AF927FFDB97000C175B /* Color+.swift */; };
 		EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4AFC27FFDCCE000C175B /* Pallete.swift */; };
 		EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */; };
-		EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */; };
+		EFED3A7E28046FDD00D99B27 /* Text+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7D28046FDD00D99B27 /* Text+.swift */; };
 		EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A7F2804700600D99B27 /* WCRXButton.swift */; };
 		EFED3A82280472F800D99B27 /* VoiceMentorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */; };
 		EFED3A842804757500D99B27 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A832804757500D99B27 /* Popup.swift */; };
-		EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */; };
 		EFED3A88280497EA00D99B27 /* ButtonStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED3A87280497EA00D99B27 /* ButtonStyle+.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,20 +93,31 @@
 		EF3505662805898B007E1315 /* TrackingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingRecord.swift; sourceTree = "<group>"; };
 		EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentVoiceMentorList.swift; sourceTree = "<group>"; };
 		EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorView.swift; sourceTree = "<group>"; };
-		EF77119B27FD28D8004414A8 /* UIView+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Woody.swift"; sourceTree = "<group>"; };
-		EF8703E52806642B00835EA7 /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
+		EF71FAB6280D83D500EF8318 /* HelloProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloProfileView.swift; sourceTree = "<group>"; };
+		EF71FAB8280D83E800EF8318 /* PushNgoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNgoButton.swift; sourceTree = "<group>"; };
+		EF71FABA280D842100EF8318 /* TodayRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayRecordView.swift; sourceTree = "<group>"; };
+		EF71FABC280D842B00EF8318 /* WithVoiceMentorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithVoiceMentorButton.swift; sourceTree = "<group>"; };
+		EF77119B27FD28D8004414A8 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyRecentView.swift; sourceTree = "<group>"; };
 		EFA5EA8F2802BC0100872A42 /* UserDefaultProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultProtocol.swift; sourceTree = "<group>"; };
 		EFA5EA922802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentUsedVoiceMentorUserDefault.swift; sourceTree = "<group>"; };
 		EFBB75A1280AE3A200DA777D /* StatisticMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticMainView.swift; sourceTree = "<group>"; };
-		EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Woody.swift"; sourceTree = "<group>"; };
+		EFBB75A3280AE69900DA777D /* Sound.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Sound.xcassets; sourceTree = "<group>"; };
+		EFBB75A5280AE83800DA777D /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		EFBB75A7280AE9E500DA777D /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		EFBB75A9280AF04500DA777D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		EFBB75AB280AF0C800DA777D /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		EFBB75AD280AF12600DA777D /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		EFBB75AF280B1FF800DA777D /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
+		EFBB75B1280B213100DA777D /* startVoiceTrackingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = startVoiceTrackingMiddleware.swift; sourceTree = "<group>"; };
+		EFBB75B5280B319300DA777D /* VoicePartnerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePartnerContentView.swift; sourceTree = "<group>"; };
+		EFDF4AF927FFDB97000C175B /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		EFDF4AFC27FFDCCE000C175B /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorCardView.swift; sourceTree = "<group>"; };
-		EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Woody.swift"; sourceTree = "<group>"; };
+		EFED3A7D28046FDD00D99B27 /* Text+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+.swift"; sourceTree = "<group>"; };
 		EFED3A7F2804700600D99B27 /* WCRXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCRXButton.swift; sourceTree = "<group>"; };
 		EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorHeaderView.swift; sourceTree = "<group>"; };
 		EFED3A832804757500D99B27 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
-		EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMentorContainerView.swift; sourceTree = "<group>"; };
 		EFED3A87280497EA00D99B27 /* ButtonStyle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ButtonStyle+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +168,7 @@
 		DDD4186927FD26E200A46DD2 /* WheelchairRun */ = {
 			isa = PBXGroup;
 			children = (
+				DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */,
 				AB57766C280AA05E008A05AC /* Info.plist */,
 				EF77119127FD2891004414A8 /* Resource */,
 				EF77119027FD288D004414A8 /* Source */,
@@ -165,10 +188,7 @@
 		EF6C515528027548008D83A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
-				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
 				EFED3A7F2804700600D99B27 /* WCRXButton.swift */,
-				EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */,
 				EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */,
 			);
 			path = Components;
@@ -177,9 +197,8 @@
 		EF77119027FD288D004414A8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				DDD4186A27FD26E200A46DD2 /* WheelchairRunApp.swift */,
-				EFBB75A0280ADB5200DA777D /* State */,
 				EF77119927FD28CB004414A8 /* Global */,
+				EFBB75A0280ADB5200DA777D /* State */,
 				EF77119827FD28C1004414A8 /* Model */,
 				EF77119227FD2896004414A8 /* Views */,
 			);
@@ -191,6 +210,7 @@
 			children = (
 				EFDF4AFC27FFDCCE000C175B /* Pallete.swift */,
 				DDD4186E27FD26E400A46DD2 /* Assets.xcassets */,
+				EFBB75A3280AE69900DA777D /* Sound.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -198,6 +218,7 @@
 		EF77119227FD2896004414A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
 				AF5B6D8A2807652200F1043B /* Profile */,
 				EF77119627FD28AC004414A8 /* VoiceMentor */,
 				EF77119527FD28A4004414A8 /* Statistic */,
@@ -210,8 +231,11 @@
 		EF77119327FD289B004414A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
 				AF77751B27FD3713001BCA2F /* HomeView.swift */,
+				EF71FABC280D842B00EF8318 /* WithVoiceMentorButton.swift */,
+				EF71FABA280D842100EF8318 /* TodayRecordView.swift */,
+				EF71FAB8280D83E800EF8318 /* PushNgoButton.swift */,
+				EF71FAB6280D83D500EF8318 /* HelloProfileView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -245,10 +269,12 @@
 		EF77119627FD28AC004414A8 /* VoiceMentor */ = {
 			isa = PBXGroup;
 			children = (
-				EFED3A852804979100D99B27 /* VoiceMentorContainerView.swift */,
+				EFBB75B5280B319300DA777D /* VoicePartnerContentView.swift */,
 				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
 				DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */,
-				EF8703E52806642B00835EA7 /* ProgramModel.swift */,
+				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
+				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
+				EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */,
 				EF6C515528027548008D83A5 /* Components */,
 			);
 			path = VoiceMentor;
@@ -281,9 +307,9 @@
 		EF77119A27FD28D0004414A8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				EF77119B27FD28D8004414A8 /* UIView+Woody.swift */,
-				EFDF4AF927FFDB97000C175B /* UIColor+Woody.swift */,
-				EFED3A7D28046FDD00D99B27 /* Text+Woody.swift */,
+				EF77119B27FD28D8004414A8 /* View+.swift */,
+				EFDF4AF927FFDB97000C175B /* Color+.swift */,
+				EFED3A7D28046FDD00D99B27 /* Text+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -316,6 +342,13 @@
 		EFBB75A0280ADB5200DA777D /* State */ = {
 			isa = PBXGroup;
 			children = (
+				EFBB75A7280AE9E500DA777D /* State.swift */,
+				EFBB75AB280AF0C800DA777D /* Action.swift */,
+				EFBB75A5280AE83800DA777D /* AppState.swift */,
+				EFBB75A9280AF04500DA777D /* Store.swift */,
+				EFBB75AD280AF12600DA777D /* Reducer.swift */,
+				EFBB75AF280B1FF800DA777D /* Middleware.swift */,
+				EFBB75B1280B213100DA777D /* startVoiceTrackingMiddleware.swift */,
 			);
 			path = State;
 			sourceTree = "<group>";
@@ -394,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDD4187227FD26E400A46DD2 /* Preview Assets.xcassets in Resources */,
+				EFBB75A4280AE69900DA777D /* Sound.xcassets in Resources */,
 				DDD4186F27FD26E400A46DD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,18 +442,21 @@
 				EFED3A82280472F800D99B27 /* VoiceMentorHeaderView.swift in Sources */,
 				ABC24AB32806C6C30073E3B6 /* StatsInfoModule.swift in Sources */,
 				EF3505672805898B007E1315 /* TrackingRecord.swift in Sources */,
-				EFED3A7E28046FDD00D99B27 /* Text+Woody.swift in Sources */,
+				EFBB75A8280AE9E500DA777D /* State.swift in Sources */,
+				EFED3A7E28046FDD00D99B27 /* Text+.swift in Sources */,
 				EFA5EA902802BC0100872A42 /* UserDefaultProtocol.swift in Sources */,
-				EFED3A862804979100D99B27 /* VoiceMentorContainerView.swift in Sources */,
+				EFBB75AC280AF0C800DA777D /* Action.swift in Sources */,
 				ABEDFDCB2804722F00ADA500 /* Sound.swift in Sources */,
 				EFBB75A2280AE3A200DA777D /* StatisticMainView.swift in Sources */,
+				EFBB75AE280AF12600DA777D /* Reducer.swift in Sources */,
 				ABC24AB12806C6850073E3B6 /* ProgramProgressBar.swift in Sources */,
 				EF6C515028026DFC008D83A5 /* RecentVoiceMentorList.swift in Sources */,
 				CD0D7BFD2805546300C7B876 /* BarGraph.swift in Sources */,
 				CD0D7BFB2805546300C7B876 /* DiaryList.swift in Sources */,
 				CD0D7BFE2805546300C7B876 /* HealthGraphView.swift in Sources */,
-				EF77119C27FD28D8004414A8 /* UIView+Woody.swift in Sources */,
-				EFDF4AFA27FFDB97000C175B /* UIColor+Woody.swift in Sources */,
+				EF77119C27FD28D8004414A8 /* View+.swift in Sources */,
+				EFBB75B6280B319300DA777D /* VoicePartnerContentView.swift in Sources */,
+				EFDF4AFA27FFDB97000C175B /* Color+.swift in Sources */,
 				ABEDFDAD2802BE6400ADA500 /* Program.swift in Sources */,
 				CD0D7BFC2805546300C7B876 /* PushDiaryView.swift in Sources */,
 				ABC24AB52806C6F20073E3B6 /* PlayBackController.swift in Sources */,
@@ -427,25 +464,32 @@
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
 				EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */,
 				EFDF4AFD27FFDCCE000C175B /* Pallete.swift in Sources */,
-				EF8703E62806642B00835EA7 /* ProgramModel.swift in Sources */,
 				EF35056328058970007E1315 /* BadgeStage.swift in Sources */,
 				EFA5EA932802BCD000872A42 /* RecentUsedVoiceMentorUserDefault.swift in Sources */,
 				EFED3A88280497EA00D99B27 /* ButtonStyle+.swift in Sources */,
 				EFED3A842804757500D99B27 /* Popup.swift in Sources */,
 				ABEDFDAB27FD332100ADA500 /* TrackingView.swift in Sources */,
 				ABC24AAF2806C3ED0073E3B6 /* CompleteView.swift in Sources */,
+				EFBB75B0280B1FF800DA777D /* Middleware.swift in Sources */,
+				EFBB75AA280AF04500DA777D /* Store.swift in Sources */,
 				ABEDFDAF2802BEA500ADA500 /* TrackingViewState.swift in Sources */,
 				DDD4186D27FD26E200A46DD2 /* ContentView.swift in Sources */,
 				DDD4186B27FD26E200A46DD2 /* WheelchairRunApp.swift in Sources */,
 				AF77751C27FD3713001BCA2F /* HomeView.swift in Sources */,
 				CD0D7BD82805090300C7B876 /* DiaryData.swift in Sources */,
 				DDD4187727FD26E400A46DD2 /* WheelchairRun.xcdatamodeld in Sources */,
+				EF71FABB280D842100EF8318 /* TodayRecordView.swift in Sources */,
 				EFED3A802804700600D99B27 /* WCRXButton.swift in Sources */,
+				EF71FABD280D842B00EF8318 /* WithVoiceMentorButton.swift in Sources */,
+				EFBB75A6280AE83800DA777D /* AppState.swift in Sources */,
 				AF5B6D8E2807655300F1043B /* ProfileView.swift in Sources */,
 				EF8703EC28067EF100835EA7 /* EmptyRecentView.swift in Sources */,
 				EF6C515C280277DE008D83A5 /* VoiceMentorView.swift in Sources */,
+				EF71FAB7280D83D500EF8318 /* HelloProfileView.swift in Sources */,
 				EFDF4B0327FFE150000C175B /* VoiceMentorCardView.swift in Sources */,
 				DDAF1F752802FC25000974FA /* VoiceCardPopupView.swift in Sources */,
+				EFBB75B2280B213100DA777D /* startVoiceTrackingMiddleware.swift in Sources */,
+				EF71FAB9280D83E800EF8318 /* PushNgoButton.swift in Sources */,
 				EF35056128058961007E1315 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,7 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WheelchairRun/Preview Content\"";
-				DEVELOPMENT_TEAM = H4DUZUZV8Z;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WheelchairRun/Info.plist;
@@ -591,7 +635,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairRun1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Milgo;
 				PRODUCT_NAME = "milGo!";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -607,7 +651,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WheelchairRun/Preview Content\"";
-				DEVELOPMENT_TEAM = H4DUZUZV8Z;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WheelchairRun/Info.plist;
@@ -623,7 +667,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairRun1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Milgo;
 				PRODUCT_NAME = "milGo!";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

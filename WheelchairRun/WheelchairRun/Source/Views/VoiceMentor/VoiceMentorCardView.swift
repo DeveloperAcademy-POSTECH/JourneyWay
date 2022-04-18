@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct VoiceMentorCardView: View {
-    @Binding var isPopupPresented: Bool
-    @Binding var selectedProgram: Program
+    @EnvironmentObject var store: MilgoStore
     var program: Program
     
-    // TODO: 폰트 정리
     var body: some View {
         Button(action: {
             withAnimation {
-                isPopupPresented.toggle()
-                selectedProgram = program
+                store.dispatch(.showPopup(program))
             }
         }) {
             program.color
@@ -66,8 +63,6 @@ extension Text {
 
 struct VoiceMentorCardView_Previews: PreviewProvider {
     static var previews: some View {
-        VoiceMentorCardView(isPopupPresented: .constant(false),
-                            selectedProgram: .constant(Program.dummy[0]),
-                            program: Program.dummy[0])
+        VoiceMentorCardView(program: Program.dummy[0])
     }
 }

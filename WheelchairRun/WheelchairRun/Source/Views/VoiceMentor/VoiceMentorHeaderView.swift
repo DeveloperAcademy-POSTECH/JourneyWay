@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct VoiceMentorHeaderView: View {
-    @Environment(\.presentationMode) private var presentationMode
+    @EnvironmentObject var store: MilgoStore
 
     var body: some View {
         VStack {
@@ -16,7 +16,7 @@ struct VoiceMentorHeaderView: View {
                 Text("보이스 파트너")
                     .titleFont()
                 Button(action: {
-                    presentationMode.wrappedValue.dismiss()
+                    store.dispatch(.dismissVoicepartnerView)
                 }) {
                     WCRXButton()
                 }

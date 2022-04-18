@@ -108,4 +108,10 @@ struct Program {
                emoji: "💪"),
         ]
     
+    static let none: Program = Program(programName: nil,
+                                            duration: "",
+                                            description: "",
+                                            color: Pallete.noProgramColor,
+                                            emoji: "")
+    
 }

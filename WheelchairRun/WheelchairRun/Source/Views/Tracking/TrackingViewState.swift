@@ -18,7 +18,7 @@ struct ExerciseStats {
 class TrackingViewState: ObservableObject {
     @Published var program: Program
     @Published var isComplete: Bool = false
-    @Published var isPreparing: Bool = false
+    @Published var isPreparing: Bool = true
     @Published var isRunning: Bool = true
     @Published var progressValue: Double = 0.0
     @Published var stats: ExerciseStats = ExerciseStats()
