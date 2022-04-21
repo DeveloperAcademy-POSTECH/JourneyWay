@@ -24,15 +24,11 @@ enum PopupDirection {
     }
 }
 
-/// 팝업을 사용할 때는
-/// ViewModifier 프로토콜을 준수하게 된다면,  모든 뷰에 적용할 수 있는 재사용가능한 modifier를 만듭니다.
-/// 아래 예는 여러 수정자를 결합하여 둥근 사각형으로 둘러싸인 파란색 캡션 텍스트를 만드는 데 사용할 수 있는 새 수정자를 만듭니다.
 struct Popup<T: View>: ViewModifier {
     let popup: T
     let alignment: Alignment
     let direction: PopupDirection
     @EnvironmentObject var store: MilgoStore
-//    @Binding var isPopupPresented: Bool
     
     fileprivate init(alignment: Alignment,
                      direction: PopupDirection,

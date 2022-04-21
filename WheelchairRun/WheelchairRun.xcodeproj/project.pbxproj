@@ -185,9 +185,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		EF0397ED28114C1F008305A2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AF77751B27FD3713001BCA2F /* HomeView.swift */,
+				EF71FABC280D842B00EF8318 /* WithVoiceMentorButton.swift */,
+				EF71FABA280D842100EF8318 /* TodayRecordView.swift */,
+				EF71FAB8280D83E800EF8318 /* PushNgoButton.swift */,
+				EF71FAB6280D83D500EF8318 /* HelloProfileView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		EF6C515528027548008D83A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
+				DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */,
+				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
+				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
+				EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */,
 				EFED3A7F2804700600D99B27 /* WCRXButton.swift */,
 				EF8703EB28067EF100835EA7 /* EmptyRecentView.swift */,
 			);
@@ -218,12 +235,11 @@
 		EF77119227FD2896004414A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
-				AF5B6D8A2807652200F1043B /* Profile */,
+				EF77119327FD289B004414A8 /* Home */,
 				EF77119627FD28AC004414A8 /* VoiceMentor */,
 				EF77119527FD28A4004414A8 /* Statistic */,
 				EF77119427FD289E004414A8 /* Tracking */,
-				EF77119327FD289B004414A8 /* Home */,
+				AF5B6D8A2807652200F1043B /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,11 +247,8 @@
 		EF77119327FD289B004414A8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				AF77751B27FD3713001BCA2F /* HomeView.swift */,
-				EF71FABC280D842B00EF8318 /* WithVoiceMentorButton.swift */,
-				EF71FABA280D842100EF8318 /* TodayRecordView.swift */,
-				EF71FAB8280D83E800EF8318 /* PushNgoButton.swift */,
-				EF71FAB6280D83D500EF8318 /* HelloProfileView.swift */,
+				DDD4186C27FD26E200A46DD2 /* ContentView.swift */,
+				EF0397ED28114C1F008305A2 /* Components */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -270,11 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				EFBB75B5280B319300DA777D /* VoicePartnerContentView.swift */,
-				EF6C515B280277DE008D83A5 /* VoiceMentorView.swift */,
-				DDAF1F742802FC25000974FA /* VoiceCardPopupView.swift */,
-				EFDF4B0227FFE150000C175B /* VoiceMentorCardView.swift */,
-				EF6C514F28026DFC008D83A5 /* RecentVoiceMentorList.swift */,
-				EFED3A81280472F800D99B27 /* VoiceMentorHeaderView.swift */,
 				EF6C515528027548008D83A5 /* Components */,
 			);
 			path = VoiceMentor;
